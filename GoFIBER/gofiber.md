@@ -1,8 +1,8 @@
 ---
 id: phgfxrea1z10a
 title: "GoFiber"
-cover: "_assets/6023f6f58bbe1899a4efe78daae2b2ef.jpg"
-cover_position: 0
+cover: "_assets/f0156048e8664424adb085df213d38a4.jpg"
+cover_position: 50
 sort: 1000
 version: 1
 ---
