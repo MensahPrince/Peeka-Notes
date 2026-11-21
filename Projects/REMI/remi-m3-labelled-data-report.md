@@ -181,6 +181,7 @@ Real places from our own 2025 image, exactly as they look in QGIS. Each square i
 | --- | --- | --- |
 | **Galamsey** (top left) | Cream sand heaps, holes, **green or brown ponds**, ragged shape, on a stream | **mining** |
 | **Industrial mine** (Tarkwa) | **Huge** terraced pit walls like giant steps, wide pale haul roads | **mining** + note "industrial pit" |
+| **Tailings dam** (part of an industrial mine) | A **huge square or rounded pond** of brown or grey mine waste, inside **high white earth walls** with a road along the top. Tens of hectares. Example: **rank 4** | **mining** + note "tailings dam" |
 | **Quarry** | **One compact** bright white or grey rock face cut into a hill, **next to a road**. Small next to a mine | **quarry** |
 | **Road** | **Thin line of the same width all along**, smooth curves, runs a long way and **joins places**. Grey (tarmac) or **orange** (dirt) | **road** |
 | **River** | **Winding** band whose width changes, with trees along the banks. ⚠️ In this box the Ankobra is so silted and mined that it often looks like **pale sand**, not water. Tick **Rivers (OSM)** in QGIS to see where it runs | (not a candidate itself; mining *on* it is **mining**) |
@@ -189,6 +190,8 @@ Real places from our own 2025 image, exactly as they look in QGIS. Each square i
 | **Stream worked by galamsey** | A **thin sandy strip following a valley**, wider in places, with pits. Easy to confuse with a road: a road keeps the **same width** and **goes somewhere**; a mined stream **wiggles with the valley** and has blobs | **mining** |
 
 <callout icon="💡">
+
+**Everything that belongs to a gold mine is "mining"**: the pit, waste rock dumps, **tailings dams**, haul roads inside the mine, processing plants. **"Quarry" is only for small building-stone or gravel pits.** In the top 30, the **industrial mines around Tarkwa** (south of the box) are ranks **2, 3, 4, 5, 7, 13, 18, 19 and 25** (pits, waste dumps, a tailings dam). **All the others**, including rank 1, are along the rivers in the **north** of the box: **galamsey**. A quick hint: if the patch is near the bottom of the map, think industrial; if it's in the north on a river, think galamsey.
 
 **Road or mined stream?** Ask two questions. *Does it keep the same width?* Roads do; mined streams bulge and narrow. *Does it connect two places?* Roads do; mined streams follow the valley bottom and end in blobs of sand. Tick **Roads (OSM)** or **Rivers (OSM)** in QGIS: if an OSM road runs along it, it's a road.
 
