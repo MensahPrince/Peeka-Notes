@@ -1,0 +1,22 @@
+{
+  "id": "olopyciwkg",
+  "order": "a1",
+  "name": "All tasks",
+  "layout": "table",
+  "query": {
+    "filter": null,
+    "group_by": null,
+    "search": "",
+    "sorts": [
+      {
+        "descending": false,
+        "field": {
+          "column": "qdo29twlhu"
+        }
+      }
+    ]
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

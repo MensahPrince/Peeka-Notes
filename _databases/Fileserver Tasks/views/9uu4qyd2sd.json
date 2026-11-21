@@ -1,0 +1,22 @@
+{
+  "id": "9uu4qyd2sd",
+  "order": "a1",
+  "name": "By layer",
+  "layout": "table",
+  "query": {
+    "filter": null,
+    "group_by": null,
+    "search": "",
+    "sorts": [
+      {
+        "descending": false,
+        "field": {
+          "column": "vd7iyt29t7"
+        }
+      }
+    ]
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

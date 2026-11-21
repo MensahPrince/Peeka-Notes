@@ -1,0 +1,40 @@
+{
+  "id": "i4vkcg1lml",
+  "order": "a2",
+  "name": "Area",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "fikdih4krk",
+        "name": "Windowing",
+        "color": "gray"
+      },
+      {
+        "id": "ilv3ngfjog",
+        "name": "Input",
+        "color": "brown"
+      },
+      {
+        "id": "0wytbdfsdb",
+        "name": "Rendering",
+        "color": "orange"
+      },
+      {
+        "id": "m6pwqkf3bh",
+        "name": "Assets",
+        "color": "yellow"
+      },
+      {
+        "id": "eezbr3bi9i",
+        "name": "Tooling",
+        "color": "green"
+      },
+      {
+        "id": "5tm40t595m",
+        "name": "Docs",
+        "color": "blue"
+      }
+    ]
+  }
+}

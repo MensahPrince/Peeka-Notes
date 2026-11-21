@@ -1,0 +1,17 @@
+{
+  "id": "ic8kou4q4x",
+  "order": "a0",
+  "name": "Board",
+  "layout": "board",
+  "query": {
+    "filter": null,
+    "group_by": {
+      "column": "c06jed89nu"
+    },
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

@@ -1,0 +1,9 @@
+{
+  "id": "yuqfzbmhyl",
+  "order": "a3",
+  "name": "Effort",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

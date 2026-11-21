@@ -1,0 +1,50 @@
+{
+  "id": "vd7iyt29t7",
+  "order": "a1",
+  "name": "Layer",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "j2lgdu2y30",
+        "name": "config",
+        "color": "gray"
+      },
+      {
+        "id": "gjvxb26mgo",
+        "name": "metadata",
+        "color": "brown"
+      },
+      {
+        "id": "2nzip3w30f",
+        "name": "storage",
+        "color": "orange"
+      },
+      {
+        "id": "8xxm2c7yxu",
+        "name": "fileservice",
+        "color": "yellow"
+      },
+      {
+        "id": "wdqnn92kj6",
+        "name": "grpcserver",
+        "color": "green"
+      },
+      {
+        "id": "y22gtg359g",
+        "name": "httpserver",
+        "color": "blue"
+      },
+      {
+        "id": "relmhztv32",
+        "name": "cmd",
+        "color": "purple"
+      },
+      {
+        "id": "31h97pfprq",
+        "name": "infra",
+        "color": "pink"
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "c06jed89nu",
+  "order": "a0",
+  "name": "Status",
+  "kind": {
+    "type": "status",
+    "options": [
+      {
+        "id": "n09f9vcf81",
+        "name": "Not started",
+        "color": "gray"
+      },
+      {
+        "id": "za7mebzetx",
+        "name": "In progress",
+        "color": "blue"
+      },
+      {
+        "id": "63nfsa5lhk",
+        "name": "Done",
+        "color": "green"
+      }
+    ]
+  }
+}

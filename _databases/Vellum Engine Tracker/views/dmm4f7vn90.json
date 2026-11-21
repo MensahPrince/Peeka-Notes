@@ -1,0 +1,17 @@
+{
+  "id": "dmm4f7vn90",
+  "order": "a2",
+  "name": "By area",
+  "layout": "board",
+  "query": {
+    "filter": null,
+    "group_by": {
+      "column": "i4vkcg1lml"
+    },
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

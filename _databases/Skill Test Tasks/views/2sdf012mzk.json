@@ -1,0 +1,17 @@
+{
+  "id": "2sdf012mzk",
+  "order": "a2",
+  "name": "Calendar",
+  "layout": "calendar",
+  "query": {
+    "filter": null,
+    "group_by": {
+      "column": "51hglzdb6a"
+    },
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

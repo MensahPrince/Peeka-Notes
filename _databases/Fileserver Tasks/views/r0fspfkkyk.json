@@ -1,0 +1,17 @@
+{
+  "id": "r0fspfkkyk",
+  "order": "a2",
+  "name": "By due date",
+  "layout": "calendar",
+  "query": {
+    "filter": null,
+    "group_by": {
+      "column": "wofvdsdfn4"
+    },
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

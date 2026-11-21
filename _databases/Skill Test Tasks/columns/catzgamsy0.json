@@ -1,0 +1,25 @@
+{
+  "id": "catzgamsy0",
+  "order": "a1",
+  "name": "Area",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "23xhktmiye",
+        "name": "Blocks",
+        "color": "gray"
+      },
+      {
+        "id": "jbaoskgefq",
+        "name": "Databases",
+        "color": "brown"
+      },
+      {
+        "id": "aodtlyapwi",
+        "name": "Links",
+        "color": "orange"
+      }
+    ]
+  }
+}

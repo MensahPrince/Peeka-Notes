@@ -1,0 +1,22 @@
+{
+  "id": "jt27o73lgb",
+  "order": "a0",
+  "name": "All tasks",
+  "layout": "table",
+  "query": {
+    "filter": null,
+    "group_by": null,
+    "search": "",
+    "sorts": [
+      {
+        "descending": false,
+        "field": {
+          "column": "51hglzdb6a"
+        }
+      }
+    ]
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}
