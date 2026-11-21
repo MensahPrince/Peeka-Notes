@@ -14,7 +14,11 @@ By
 
 [John Mitzewich](https://www.allrecipes.com/author/chef-john/)
 
-![Chef John](_assets/91d58a6c17062db4e43ab6cf5751640f.jpg)
+<image src="_assets/91d58a6c17062db4e43ab6cf5751640f.jpg" width=0.3427>
+
+Chef John
+
+</image>
 
 John Mitzewich — aka Chef John — has produced more than 1,500 cooking videos for Allrecipes. He's the actor, director, and screenwriter whose hands and voice confidently walk you through techniques.
 
