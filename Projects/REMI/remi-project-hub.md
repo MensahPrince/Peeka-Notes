@@ -48,6 +48,7 @@ Reported galamsey sites gathered from news, government and research (12 reports;
 - [REMI QGIS Walkthrough: Water Mask](page:f4yout9h9z): build the water mask by hand in QGIS and check it against the script
 - [REMI Concession Data Request](page:jnd1xbtqpj): the email asking the Minerals Commission for licence boundaries (draft, not sent)
 - [REMI M3 Labelled Data Report](page:spbr0bdedd): weak labels, the candidate list, how to label it in QGIS, and reported galamsey sites
+- [REMI Mining Maps Explained](page:eezqbdbynt): pictures of the two published mining maps, and what "a pixel is mining" means
 - [REMI Sources](page:841cvgtq57): every dataset, method, paper and news report used, where it's used and why (for citing)
 - Data sources: below
 
