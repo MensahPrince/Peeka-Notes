@@ -21,6 +21,20 @@ Every dataset, method, paper and report used in REMI so far: **what it is**, **w
 | **Landsat 8/9 Collection 2 Level-2**, via the **Microsoft Planetary Computer** (collection `landsat-c2-l2`) | Surface reflectance at 30 m, every \~8 days with both satellites, archive back to 2013 (and older Landsats to 1984) | `landsat_planetary.py`. [REMI Test Imagery](page:epzdv5qm9v) | Longer history than Sentinel-2, for older "before" dates. The Planetary Computer was used because USGS EarthExplorer was down on 2026-10-21 (503 errors) |
 | **Copernicus DEM GLO-30**, via the Planetary Computer (collection `cop-dem-glo-30`) | Elevation at 30 m | `dem_streams.py` → `data/derived/streams_dem.gpkg`. [REMI Project Hub](page:imqxd436oq) (OSM river gap) | Free, global, and the best open 30 m elevation model. Water flows downhill, so it gives the small streams OSM is missing, even under forest |
 
+### Original providers: USGS and Copernicus (checked 2026-11-21)
+
+Our images **are** Copernicus and USGS data, downloaded from **mirrors** (identical copies that are quicker to script). Going to the originals gives the same pixels at the same resolution. They're kept as the **second route** for each satellite, since USGS was down on 2026-10-21.
+
+| Provider | What it gives REMI | Status | Links |
+| --- | --- | --- | --- |
+| **USGS EROS** (EarthExplorer, M2M API) | Landsat Collection 2 (30 m; 15 m panchromatic, black and white only). The original of our Landsat images | ✅ **Back up** (was 503 on 2026-10-21). ⚠️ **Planned maintenance Monday 2026-11-23, 7:00 a.m.–\~2:00 p.m. CT = 13:00–\~20:00 Ghana time**: EarthExplorer and sign-up unavailable. Our pipeline isn't affected (it uses the Planetary Computer copy). **To do: create the free account** | Account: https://ers.cr.usgs.gov/register · EarthExplorer: https://earthexplorer.usgs.gov |
+| **Copernicus Data Space Ecosystem** (CDSE) | Sentinel-2 (the original of our images), Sentinel-1 radar, Copernicus DEM | ✅ Up; backup route for Sentinel-2 | https://dataspace.copernicus.eu · STAC: https://catalogue.dataspace.copernicus.eu/stac/ |
+| **Copernicus Sentinel-1** (radar) | 10–20 m, every few days, **sees through cloud**; shows water (new mining ponds) and disturbed ground clearly | **Not used yet, recommended.** Clouds hid 12.7 % of our Sentinel-2 pair, and the rainy season is worse. Available on the same mirrors (Planetary Computer, Earth Search) and CDSE | CDSE (above) |
+| **Copernicus Contributing Missions** (CCM, very high resolution, up to 2 m) | Commercial VHR imagery bought by the EU | **Probably not available to REMI:** restricted to Copernicus Services and EU institutional users by user category, and the big VHR collections cover Europe | https://dataspace.copernicus.eu/node/2764 · https://dataspace.copernicus.eu/node/1125 · https://dataspace.copernicus.eu/node/3162 |
+| **ESA Third Party Missions** | Commercial imagery for research, via project proposals | **Unconfirmed** whether it applies to REMI; worth asking ESA | https://www.euspaceimaging.com/open-access-data/ |
+
+**Bottom line:** neither gives anything **sharper** than Sentinel-2's 10 m for free in Ghana. The real gain from Copernicus is **Sentinel-1 radar** for cloudy periods. For sharp imagery, see Planet below.
+
 ### Higher-resolution options (researched 2026-11-21, not used yet)
 
 Compared on [🛰️R.E.M.I](page:ckbvimllzp), under Open questions → Aerial data. **Why:** Sentinel-2's 10 m pixels miss the narrowest riverbed workings.
