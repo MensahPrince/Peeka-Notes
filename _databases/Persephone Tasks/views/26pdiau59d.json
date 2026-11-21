@@ -1,0 +1,17 @@
+{
+  "id": "26pdiau59d",
+  "order": "a2",
+  "name": "By service",
+  "layout": "board",
+  "query": {
+    "filter": null,
+    "group_by": {
+      "column": "igsjfm5mem"
+    },
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

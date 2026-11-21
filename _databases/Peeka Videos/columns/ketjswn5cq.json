@@ -1,0 +1,8 @@
+{
+  "id": "ketjswn5cq",
+  "order": "a6",
+  "name": "Publish date",
+  "kind": {
+    "type": "date"
+  }
+}

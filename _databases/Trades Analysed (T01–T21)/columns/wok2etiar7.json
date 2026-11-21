@@ -1,0 +1,9 @@
+{
+  "id": "wok2etiar7",
+  "order": "a9",
+  "name": "Risk ($)",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

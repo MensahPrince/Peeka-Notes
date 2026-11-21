@@ -1,0 +1,25 @@
+{
+  "id": "tsi044177t",
+  "order": "a0",
+  "name": "Status",
+  "kind": {
+    "type": "status",
+    "options": [
+      {
+        "id": "9vl2v8or11",
+        "name": "Not started",
+        "color": "gray"
+      },
+      {
+        "id": "l0u9a95akh",
+        "name": "In progress",
+        "color": "blue"
+      },
+      {
+        "id": "tt9u5dt7lm",
+        "name": "Done",
+        "color": "green"
+      }
+    ]
+  }
+}

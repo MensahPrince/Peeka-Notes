@@ -1,0 +1,20 @@
+{
+  "id": "h3rf402rh9",
+  "order": "a4",
+  "name": "Direction",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "ucbg811ha1",
+        "name": "Buy",
+        "color": "gray"
+      },
+      {
+        "id": "oksu5bo5p3",
+        "name": "Sell",
+        "color": "brown"
+      }
+    ]
+  }
+}

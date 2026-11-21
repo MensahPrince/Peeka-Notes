@@ -1,0 +1,9 @@
+{
+  "id": "n3ad69f6cw",
+  "order": "a8",
+  "name": "P&L ($)",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

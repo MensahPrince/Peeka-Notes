@@ -1,0 +1,17 @@
+{
+  "id": "ljw9o9l6o2",
+  "order": "a2",
+  "name": "By series",
+  "layout": "board",
+  "query": {
+    "filter": null,
+    "group_by": {
+      "column": "ce3clyy7sb"
+    },
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

@@ -1,0 +1,15 @@
+{
+  "id": "33tmca59xl",
+  "order": "a1",
+  "name": "✓ / ✗",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "vbnl8p5wbx",
+        "name": "✓ / ✗",
+        "color": "gray"
+      }
+    ]
+  }
+}

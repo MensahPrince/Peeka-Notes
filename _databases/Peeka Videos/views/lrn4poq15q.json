@@ -1,0 +1,22 @@
+{
+  "id": "lrn4poq15q",
+  "order": "a1",
+  "name": "Recording order",
+  "layout": "table",
+  "query": {
+    "filter": null,
+    "group_by": null,
+    "search": "",
+    "sorts": [
+      {
+        "descending": false,
+        "field": {
+          "column": "akkrppwwv0"
+        }
+      }
+    ]
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

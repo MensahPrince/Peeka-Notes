@@ -1,0 +1,8 @@
+{
+  "id": "8kus1vshh2",
+  "order": "a2",
+  "name": "Close Time",
+  "kind": {
+    "type": "time"
+  }
+}

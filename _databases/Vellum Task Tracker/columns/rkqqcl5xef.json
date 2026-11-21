@@ -1,0 +1,9 @@
+{
+  "id": "rkqqcl5xef",
+  "order": "a5",
+  "name": "Estimate (h)",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

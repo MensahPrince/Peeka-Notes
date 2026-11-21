@@ -1,0 +1,9 @@
+{
+  "id": "mw0iqmyx3q",
+  "order": "aA",
+  "name": "Risk (% of account)",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "wl1am9gyv8",
+  "order": "a1",
+  "name": "Priority",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "e2ar7wuhtn",
+        "name": "Must have",
+        "color": "gray"
+      },
+      {
+        "id": "u98d1ngtvv",
+        "name": "Sets Peeka apart",
+        "color": "brown"
+      },
+      {
+        "id": "rhlmlt55xx",
+        "name": "Later",
+        "color": "orange"
+      }
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "l8yte1of8s",
+  "order": "a1",
+  "name": "Metric 2",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "bw8qedam7q",
+        "name": "Avg Loss ($)",
+        "color": "gray"
+      },
+      {
+        "id": "iwmv0pf9p2",
+        "name": "Profit Factor",
+        "color": "brown"
+      },
+      {
+        "id": "la6wc6gs07",
+        "name": "Avg R:R",
+        "color": "orange"
+      },
+      {
+        "id": "3abssr1fm8",
+        "name": "Best Trade ($)",
+        "color": "yellow"
+      },
+      {
+        "id": "5k0giwt5nv",
+        "name": "Worst Trade ($)",
+        "color": "green"
+      },
+      {
+        "id": "wqitic8k5z",
+        "name": "Total Pips",
+        "color": "blue"
+      },
+      {
+        "id": "vu8f9wjhqi",
+        "name": "Avg Pips/Trade",
+        "color": "purple"
+      },
+      {
+        "id": "0luo12cxrf",
+        "name": "Wins",
+        "color": "pink"
+      },
+      {
+        "id": "nux3h8a1fx",
+        "name": "0",
+        "color": "red"
+      },
+      {
+        "id": "f4gc2rc4h6",
+        "name": "6",
+        "color": "gray"
+      },
+      {
+        "id": "07carbquhg",
+        "name": "2",
+        "color": "brown"
+      },
+      {
+        "id": "xpvs63ibid",
+        "name": "3",
+        "color": "orange"
+      },
+      {
+        "id": "ra6y98nk3m",
+        "name": "Win Rate",
+        "color": "yellow"
+      }
+    ]
+  }
+}

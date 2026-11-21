@@ -1,0 +1,55 @@
+{
+  "id": "tx9mosxoeg",
+  "order": "a1",
+  "name": "Milestone",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "qv07tmqik3",
+        "name": "M1 Data access",
+        "color": "gray"
+      },
+      {
+        "id": "5aomc2q4gj",
+        "name": "M2 Preprocessing",
+        "color": "brown"
+      },
+      {
+        "id": "f5lmpg6k8t",
+        "name": "M3 Labelled data",
+        "color": "orange"
+      },
+      {
+        "id": "jmzzektatr",
+        "name": "M4 Land classification",
+        "color": "yellow"
+      },
+      {
+        "id": "kijxl83q0x",
+        "name": "M5 Change detection",
+        "color": "green"
+      },
+      {
+        "id": "bxvprdzmmk",
+        "name": "M6 Segmentation",
+        "color": "blue"
+      },
+      {
+        "id": "06y8t4b4su",
+        "name": "M7 Decision & alerts",
+        "color": "purple"
+      },
+      {
+        "id": "bfw26zaxja",
+        "name": "M8 Evaluation",
+        "color": "pink"
+      },
+      {
+        "id": "kbn7nkg9o7",
+        "name": "M9 Dashboard & API",
+        "color": "red"
+      }
+    ]
+  }
+}

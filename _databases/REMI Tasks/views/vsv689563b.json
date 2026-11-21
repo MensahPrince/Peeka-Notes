@@ -1,0 +1,17 @@
+{
+  "id": "vsv689563b",
+  "order": "a2",
+  "name": "By layer",
+  "layout": "board",
+  "query": {
+    "filter": null,
+    "group_by": {
+      "column": "s2gzega84h"
+    },
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

@@ -1,0 +1,9 @@
+{
+  "id": "g6hivde75n",
+  "order": "a0",
+  "name": "Tags",
+  "kind": {
+    "type": "multi_select",
+    "options": []
+  }
+}

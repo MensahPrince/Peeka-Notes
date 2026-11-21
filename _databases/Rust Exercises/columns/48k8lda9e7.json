@@ -1,0 +1,110 @@
+{
+  "id": "48k8lda9e7",
+  "order": "a0",
+  "name": "Module",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "y7umeu1vw8",
+        "name": "01 What Is Rust",
+        "color": "gray"
+      },
+      {
+        "id": "jzek2h3ll6",
+        "name": "02 Variables Types and Control Flow",
+        "color": "brown"
+      },
+      {
+        "id": "n4vfahc6c7",
+        "name": "03 Ownership and Borrowing",
+        "color": "orange"
+      },
+      {
+        "id": "frtgr7xr0o",
+        "name": "04 Structs Enums and Pattern Matching",
+        "color": "yellow"
+      },
+      {
+        "id": "yjnh3stx9c",
+        "name": "05 Collections Strings and Errors",
+        "color": "green"
+      },
+      {
+        "id": "p7kxr623xy",
+        "name": "06 Modules Crates and Cargo",
+        "color": "blue"
+      },
+      {
+        "id": "msud8m1d14",
+        "name": "07 Generics Traits and Lifetimes",
+        "color": "purple"
+      },
+      {
+        "id": "4vamj74h89",
+        "name": "08 Closures and Iterators",
+        "color": "pink"
+      },
+      {
+        "id": "tpgdx8s1xw",
+        "name": "09 Smart Pointers and Interior Mutability",
+        "color": "red"
+      },
+      {
+        "id": "zjss4w95c4",
+        "name": "10 Fearless Concurrency",
+        "color": "gray"
+      },
+      {
+        "id": "e7k20e1sl2",
+        "name": "11 Async Rust",
+        "color": "brown"
+      },
+      {
+        "id": "m4eox8vggy",
+        "name": "12 Testing and Tooling",
+        "color": "orange"
+      },
+      {
+        "id": "nasjtzefza",
+        "name": "13 Macros",
+        "color": "yellow"
+      },
+      {
+        "id": "aabd7osl0t",
+        "name": "14 Advanced Types and Traits",
+        "color": "green"
+      },
+      {
+        "id": "oh7ab125hi",
+        "name": "15 Unsafe Rust",
+        "color": "blue"
+      },
+      {
+        "id": "hhe05wkmqs",
+        "name": "16 FFI: Rust and C",
+        "color": "purple"
+      },
+      {
+        "id": "evv1bl8wlw",
+        "name": "17 Memory Layout and Performance",
+        "color": "pink"
+      },
+      {
+        "id": "jqiyw63els",
+        "name": "18 Inline Assembly",
+        "color": "red"
+      },
+      {
+        "id": "yunysg79oa",
+        "name": "19 no_std and Bare Metal",
+        "color": "gray"
+      },
+      {
+        "id": "k7vthr9lgv",
+        "name": "20 Capstone Projects",
+        "color": "brown"
+      }
+    ]
+  }
+}

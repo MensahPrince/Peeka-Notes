@@ -1,0 +1,8 @@
+{
+  "id": "a751xucufa",
+  "order": "a4",
+  "name": "Account Size",
+  "kind": {
+    "type": "string"
+  }
+}

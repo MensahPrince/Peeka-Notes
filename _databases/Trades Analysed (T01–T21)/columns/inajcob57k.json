@@ -1,0 +1,9 @@
+{
+  "id": "inajcob57k",
+  "order": "a2",
+  "name": "Hour (GMT)",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

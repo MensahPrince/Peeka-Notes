@@ -1,0 +1,30 @@
+{
+  "id": "8gnkp85mko",
+  "order": "a1",
+  "name": "Level",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "4l5alqjp2z",
+        "name": "Basics",
+        "color": "gray"
+      },
+      {
+        "id": "13fwwxqm4j",
+        "name": "Intermediate",
+        "color": "brown"
+      },
+      {
+        "id": "j3gzdokmez",
+        "name": "Advanced",
+        "color": "orange"
+      },
+      {
+        "id": "u36inbbxz7",
+        "name": "Expert",
+        "color": "yellow"
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "jyde7e5yu7",
+  "order": "a5",
+  "name": "Estimate (h)",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

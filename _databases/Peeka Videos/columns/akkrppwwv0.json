@@ -1,0 +1,10 @@
+{
+  "id": "akkrppwwv0",
+  "order": "a0",
+  "name": "Order",
+  "key": "Order (column)",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

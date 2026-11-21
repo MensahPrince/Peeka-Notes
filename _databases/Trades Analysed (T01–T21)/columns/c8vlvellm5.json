@@ -1,0 +1,9 @@
+{
+  "id": "c8vlvellm5",
+  "order": "a7",
+  "name": "Lot",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

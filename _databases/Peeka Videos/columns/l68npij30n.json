@@ -1,0 +1,25 @@
+{
+  "id": "l68npij30n",
+  "order": "a3",
+  "name": "Priority",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "o5e3x2cmsc",
+        "name": "First wave",
+        "color": "gray"
+      },
+      {
+        "id": "otzr0pr7az",
+        "name": "Next",
+        "color": "brown"
+      },
+      {
+        "id": "2tifhz86fl",
+        "name": "Later",
+        "color": "orange"
+      }
+    ]
+  }
+}

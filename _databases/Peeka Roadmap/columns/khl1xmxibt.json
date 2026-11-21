@@ -1,0 +1,8 @@
+{
+  "id": "khl1xmxibt",
+  "order": "a5",
+  "name": "Exit test",
+  "kind": {
+    "type": "string"
+  }
+}

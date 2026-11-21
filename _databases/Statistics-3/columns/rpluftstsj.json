@@ -1,0 +1,65 @@
+{
+  "id": "rpluftstsj",
+  "order": "a3",
+  "name": "Column 5",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "en1yg59wpz",
+        "name": "Total Pips",
+        "color": "gray"
+      },
+      {
+        "id": "xz45xrbi15",
+        "name": "0",
+        "color": "brown"
+      },
+      {
+        "id": "7e4kbnjb0o",
+        "name": "48708.497999989835",
+        "color": "orange"
+      },
+      {
+        "id": "hqayvlv8dd",
+        "name": "-137609.99999999057",
+        "color": "yellow"
+      },
+      {
+        "id": "jlotxkgbkp",
+        "name": "189969.99999999843",
+        "color": "green"
+      },
+      {
+        "id": "nrr6o683qp",
+        "name": "P&L ($)",
+        "color": "blue"
+      },
+      {
+        "id": "07nxvobkek",
+        "name": "Impact",
+        "color": "purple"
+      },
+      {
+        "id": "mdt9pcmi81",
+        "name": "-",
+        "color": "pink"
+      },
+      {
+        "id": "osgthxsl4a",
+        "name": "Total P&L",
+        "color": "red"
+      },
+      {
+        "id": "hdwj4ny46b",
+        "name": "285.05700000001593",
+        "color": "gray"
+      },
+      {
+        "id": "ifazt4qc40",
+        "name": "359.45099999996023",
+        "color": "brown"
+      }
+    ]
+  }
+}

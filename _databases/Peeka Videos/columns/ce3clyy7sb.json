@@ -1,0 +1,50 @@
+{
+  "id": "ce3clyy7sb",
+  "order": "a1",
+  "name": "Series",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "cp6cm4v2o0",
+        "name": "Getting started",
+        "color": "gray"
+      },
+      {
+        "id": "07bi3nxzhs",
+        "name": "Writing",
+        "color": "brown"
+      },
+      {
+        "id": "ucejw2a38s",
+        "name": "Databases",
+        "color": "orange"
+      },
+      {
+        "id": "m70yy70k33",
+        "name": "Organizing",
+        "color": "yellow"
+      },
+      {
+        "id": "j2f3pe1wko",
+        "name": "Daily workflow",
+        "color": "green"
+      },
+      {
+        "id": "nopk7b2vrj",
+        "name": "Peeka + AI",
+        "color": "blue"
+      },
+      {
+        "id": "yppwka8yc2",
+        "name": "Sharing",
+        "color": "purple"
+      },
+      {
+        "id": "33z0wr9h56",
+        "name": "Moving in and out",
+        "color": "pink"
+      }
+    ]
+  }
+}

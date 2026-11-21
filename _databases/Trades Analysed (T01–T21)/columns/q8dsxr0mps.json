@@ -1,0 +1,9 @@
+{
+  "id": "q8dsxr0mps",
+  "order": "aD",
+  "name": "Hold (min)",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

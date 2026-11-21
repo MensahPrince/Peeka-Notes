@@ -1,0 +1,17 @@
+{
+  "id": "wevyj1h1i5",
+  "order": "a0",
+  "name": "By priority",
+  "layout": "board",
+  "query": {
+    "filter": null,
+    "group_by": {
+      "column": "wl1am9gyv8"
+    },
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

@@ -1,0 +1,9 @@
+{
+  "id": "c6lku3vjbb",
+  "order": "aB",
+  "name": "Pips (+/-)",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

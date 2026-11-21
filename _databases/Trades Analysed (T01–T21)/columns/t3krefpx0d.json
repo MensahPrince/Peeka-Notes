@@ -1,0 +1,20 @@
+{
+  "id": "t3krefpx0d",
+  "order": "a5",
+  "name": "Outcome",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "sal8zo7s7d",
+        "name": "Win",
+        "color": "gray"
+      },
+      {
+        "id": "kjn1nfn74w",
+        "name": "Loss",
+        "color": "brown"
+      }
+    ]
+  }
+}

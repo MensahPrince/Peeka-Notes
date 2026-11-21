@@ -1,0 +1,17 @@
+{
+  "id": "mrd56lsm0q",
+  "order": "a2",
+  "name": "By level",
+  "layout": "board",
+  "query": {
+    "filter": null,
+    "group_by": {
+      "column": "8gnkp85mko"
+    },
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

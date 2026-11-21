@@ -1,0 +1,22 @@
+{
+  "id": "bre3rk8n5z",
+  "order": "a1",
+  "name": "By milestone",
+  "layout": "table",
+  "query": {
+    "filter": null,
+    "group_by": null,
+    "search": "",
+    "sorts": [
+      {
+        "descending": false,
+        "field": {
+          "column": "j4bdet05lt"
+        }
+      }
+    ]
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

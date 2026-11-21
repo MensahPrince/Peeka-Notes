@@ -1,0 +1,40 @@
+{
+  "id": "hqm5tok3fz",
+  "order": "a1",
+  "name": "Weekday",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "d9c0qlp8js",
+        "name": "Mon",
+        "color": "gray"
+      },
+      {
+        "id": "82rdt3vzx4",
+        "name": "Tue",
+        "color": "brown"
+      },
+      {
+        "id": "l1r0uh16bb",
+        "name": "Wed",
+        "color": "orange"
+      },
+      {
+        "id": "vctsol5arr",
+        "name": "Thu",
+        "color": "yellow"
+      },
+      {
+        "id": "pqcti5g5a7",
+        "name": "Fri",
+        "color": "green"
+      },
+      {
+        "id": "hkazwlxjku",
+        "name": "Sun",
+        "color": "blue"
+      }
+    ]
+  }
+}

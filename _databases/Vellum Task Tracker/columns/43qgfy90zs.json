@@ -1,0 +1,65 @@
+{
+  "id": "43qgfy90zs",
+  "order": "a2",
+  "name": "Area",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "59ziqj65bp",
+        "name": "Platform",
+        "color": "gray"
+      },
+      {
+        "id": "xosvlxi10p",
+        "name": "Render core",
+        "color": "brown"
+      },
+      {
+        "id": "ohv40953sy",
+        "name": "Scene",
+        "color": "orange"
+      },
+      {
+        "id": "e02hiqvauz",
+        "name": "Shading",
+        "color": "yellow"
+      },
+      {
+        "id": "ri8plkv7e8",
+        "name": "Lines",
+        "color": "green"
+      },
+      {
+        "id": "g8d8s26xjs",
+        "name": "Compositing",
+        "color": "blue"
+      },
+      {
+        "id": "vkhdz91wx9",
+        "name": "Animation",
+        "color": "purple"
+      },
+      {
+        "id": "jrq7oiq9lp",
+        "name": "Iteration",
+        "color": "pink"
+      },
+      {
+        "id": "ti5br2hpci",
+        "name": "Content",
+        "color": "red"
+      },
+      {
+        "id": "fkm7cgcgpl",
+        "name": "Measure",
+        "color": "gray"
+      },
+      {
+        "id": "thjs59f7sd",
+        "name": "Marks",
+        "color": "brown"
+      }
+    ]
+  }
+}

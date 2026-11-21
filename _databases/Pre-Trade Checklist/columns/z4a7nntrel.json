@@ -1,0 +1,15 @@
+{
+  "id": "z4a7nntrel",
+  "order": "a1",
+  "name": "✓ / ✗",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "ub67wp8um6",
+        "name": "✓ / ✗",
+        "color": "gray"
+      }
+    ]
+  }
+}

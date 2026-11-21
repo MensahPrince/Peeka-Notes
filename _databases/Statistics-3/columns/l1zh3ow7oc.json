@@ -1,0 +1,70 @@
+{
+  "id": "l1zh3ow7oc",
+  "order": "a0",
+  "name": "Value",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "gmty4cphsd",
+        "name": "21",
+        "color": "gray"
+      },
+      {
+        "id": "vxvfkmgizw",
+        "name": "11",
+        "color": "brown"
+      },
+      {
+        "id": "33qfu68agq",
+        "name": "10",
+        "color": "orange"
+      },
+      {
+        "id": "jo7u2wg16o",
+        "name": "0",
+        "color": "yellow"
+      },
+      {
+        "id": "ron3k8acl4",
+        "name": "644.5079999999762",
+        "color": "green"
+      },
+      {
+        "id": "47kmuobrdu",
+        "name": "88.48945454545274",
+        "color": "blue"
+      },
+      {
+        "id": "0fr1ptol4g",
+        "name": "Trades",
+        "color": "purple"
+      },
+      {
+        "id": "bc77vmx3bp",
+        "name": "14",
+        "color": "pink"
+      },
+      {
+        "id": "2kb95evu4t",
+        "name": "4",
+        "color": "red"
+      },
+      {
+        "id": "i0hkkb3xfk",
+        "name": "3",
+        "color": "gray"
+      },
+      {
+        "id": "5kf1qqg7ik",
+        "name": "9",
+        "color": "brown"
+      },
+      {
+        "id": "trme1vpldt",
+        "name": "12",
+        "color": "orange"
+      }
+    ]
+  }
+}

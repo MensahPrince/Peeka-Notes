@@ -1,0 +1,9 @@
+{
+  "id": "tn04ylbxig",
+  "order": "aJ",
+  "name": "% of Account",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

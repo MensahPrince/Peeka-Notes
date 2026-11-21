@@ -1,0 +1,360 @@
+{
+  "id": "j4bdet05lt",
+  "order": "a1",
+  "name": "Milestone",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "3rjgbz339p",
+        "name": "M1 Window & loop",
+        "color": "gray"
+      },
+      {
+        "id": "3linyqwf7o",
+        "name": "M2 Lit mesh",
+        "color": "brown"
+      },
+      {
+        "id": "bmfp4bvow9",
+        "name": "M3 Camera",
+        "color": "orange"
+      },
+      {
+        "id": "d5n5l89rev",
+        "name": "M4 Scene",
+        "color": "yellow"
+      },
+      {
+        "id": "3exvp0j8z8",
+        "name": "M5 Prepass",
+        "color": "green"
+      },
+      {
+        "id": "45v3q6nmyi",
+        "name": "M6 Cel shading",
+        "color": "blue"
+      },
+      {
+        "id": "7a6wzgg3nb",
+        "name": "M7 Lines",
+        "color": "purple"
+      },
+      {
+        "id": "fraqaszfog",
+        "name": "M8 Palette compositor",
+        "color": "pink"
+      },
+      {
+        "id": "7xxoab4u15",
+        "name": "M9 Animation & timing",
+        "color": "red"
+      },
+      {
+        "id": "1k6uc0hyk2",
+        "name": "M10 Shots & overrides",
+        "color": "gray"
+      },
+      {
+        "id": "t2gj4e1x6m",
+        "name": "M11 Post & output",
+        "color": "brown"
+      },
+      {
+        "id": "hkt6f3ik1k",
+        "name": "M12 Refinement",
+        "color": "orange"
+      },
+      {
+        "id": "ripwsp3osv",
+        "name": "M13 Measure",
+        "color": "yellow"
+      },
+      {
+        "id": "0bl4tahp5v",
+        "name": "Parked",
+        "color": "green"
+      },
+      {
+        "id": "o7w20y6hcd",
+        "name": "M14 Lights",
+        "color": "blue"
+      },
+      {
+        "id": "1lam2qmw10",
+        "name": "M15 Basic materials",
+        "color": "purple"
+      },
+      {
+        "id": "vrkvijvd1s",
+        "name": "M16 Unlit and emissive",
+        "color": "pink"
+      },
+      {
+        "id": "vqmqma9nuh",
+        "name": "M17 Workflow baseline",
+        "color": "red"
+      },
+      {
+        "id": "f87pk69yxo",
+        "name": "M18 Per-vertex data",
+        "color": "gray"
+      },
+      {
+        "id": "zjwgriwqs4",
+        "name": "M19 Coloured light",
+        "color": "brown"
+      },
+      {
+        "id": "b1yrrduq4p",
+        "name": "M20 Face shadow maps",
+        "color": "orange"
+      },
+      {
+        "id": "6esb5adlbh",
+        "name": "M21 Hero shot",
+        "color": "yellow"
+      },
+      {
+        "id": "hxxat032a2",
+        "name": "M22 Comparison",
+        "color": "green"
+      },
+      {
+        "id": "lkbse97l5p",
+        "name": "M19b Shadow-aware shading",
+        "color": "blue"
+      },
+      {
+        "id": "suki87ci4i",
+        "name": "M18b Hard surface",
+        "color": "purple"
+      },
+      {
+        "id": "p5gib6qkm7",
+        "name": "M19c Lamp shadow fixes",
+        "color": "pink"
+      },
+      {
+        "id": "h7e45truh7",
+        "name": "M20b Light linking and cookies",
+        "color": "red"
+      },
+      {
+        "id": "fjgrmntibj",
+        "name": "M20c Drawn lines",
+        "color": "gray"
+      },
+      {
+        "id": "q8o98b8tue",
+        "name": "M19d Light groups",
+        "color": "brown"
+      },
+      {
+        "id": "y8ynw15sco",
+        "name": "M20d Soft lights",
+        "color": "orange"
+      },
+      {
+        "id": "j0qsd8c804",
+        "name": "VRM avatars",
+        "color": "yellow"
+      },
+      {
+        "id": "ua5k259xzx",
+        "name": "M23 Painted reflections",
+        "color": "green"
+      },
+      {
+        "id": "k5x122dcgo",
+        "name": "M24 Transparency",
+        "color": "blue"
+      },
+      {
+        "id": "azqooi8186",
+        "name": "M25 Screen-space reflections",
+        "color": "purple"
+      },
+      {
+        "id": "f9hdjalp97",
+        "name": "Release 0.1",
+        "color": "pink"
+      },
+      {
+        "id": "7sy4lpyf1d",
+        "name": "M27 Highlight shapes",
+        "color": "red"
+      },
+      {
+        "id": "s5blpqz62w",
+        "name": "M28 Cel water",
+        "color": "gray"
+      },
+      {
+        "id": "hptpy9vzxm",
+        "name": "M29 Shadow map studio",
+        "color": "brown"
+      },
+      {
+        "id": "5y18442w1y",
+        "name": "M35 Hatching",
+        "color": "orange"
+      },
+      {
+        "id": "nosrjcyvr1",
+        "name": "M36 Cross-hatching",
+        "color": "yellow"
+      },
+      {
+        "id": "wc9ug2w6lm",
+        "name": "M37 Screentone and stippling",
+        "color": "green"
+      },
+      {
+        "id": "imldz3b11g",
+        "name": "M31 Hair shadows on the face",
+        "color": "blue"
+      },
+      {
+        "id": "42xxmxuqlr",
+        "name": "M38 Blender add-on",
+        "color": "purple"
+      },
+      {
+        "id": "4wl8ezbtif",
+        "name": "M39 Edge band bleed",
+        "color": "pink"
+      },
+      {
+        "id": "814vi3xgjy",
+        "name": "M40 Blender cameras and lights",
+        "color": "red"
+      },
+      {
+        "id": "ykbby4862e",
+        "name": "M41 Vellum file",
+        "color": "gray"
+      },
+      {
+        "id": "be3zqku3g0",
+        "name": "M30 Shadow map studio 2",
+        "color": "brown"
+      },
+      {
+        "id": "vyb2d3vk6s",
+        "name": "M32 Paint-over and hand-off",
+        "color": "orange"
+      },
+      {
+        "id": "gyu5i4ryfm",
+        "name": "M42 File menu and browser",
+        "color": "yellow"
+      },
+      {
+        "id": "a8t4286gbv",
+        "name": "M33 Anime effects",
+        "color": "green"
+      },
+      {
+        "id": "gpfbr1z352",
+        "name": "M43 Threads",
+        "color": "blue"
+      },
+      {
+        "id": "z3vgpm0377",
+        "name": "M44 Chrome",
+        "color": "purple"
+      },
+      {
+        "id": "dhsgku60i9",
+        "name": "M45 Collections",
+        "color": "pink"
+      },
+      {
+        "id": "dc774dzpvq",
+        "name": "M46 Workspace tabs and Paint",
+        "color": "red"
+      },
+      {
+        "id": "fwpj82sin1",
+        "name": "M46b Painting colour ink and shine",
+        "color": "gray"
+      },
+      {
+        "id": "p51pz9tfvb",
+        "name": "M47 Clips and timeline",
+        "color": "brown"
+      },
+      {
+        "id": "f54ddz0yjv",
+        "name": "R6 Installers",
+        "color": "orange"
+      },
+      {
+        "id": "oq5k2uxscp",
+        "name": "M48 Painted projection",
+        "color": "yellow"
+      },
+      {
+        "id": "l5wuwvyaga",
+        "name": "R7 Installer",
+        "color": "green"
+      },
+      {
+        "id": "l1b1h8wm6k",
+        "name": "M49 Areas",
+        "color": "blue"
+      },
+      {
+        "id": "9pjl9m1n0e",
+        "name": "M50 Image paint and layers",
+        "color": "purple"
+      },
+      {
+        "id": "lo8lxh9fju",
+        "name": "M51 Ramps",
+        "color": "pink"
+      },
+      {
+        "id": "6rwoaw3igc",
+        "name": "M52 Texture strength",
+        "color": "red"
+      },
+      {
+        "id": "qkevv1lzke",
+        "name": "M53 Line distance fade",
+        "color": "gray"
+      },
+      {
+        "id": "d8rp5i5cfi",
+        "name": "M54 Look panel and presets",
+        "color": "brown"
+      },
+      {
+        "id": "6qv7uz7ssa",
+        "name": "M55 Thresholds and cleanup",
+        "color": "orange"
+      },
+      {
+        "id": "f9k7o1fgno",
+        "name": "M56 Cloth folds",
+        "color": "yellow"
+      },
+      {
+        "id": "z0w9doswtw",
+        "name": "M57 Background materials",
+        "color": "green"
+      },
+      {
+        "id": "z5wasyuvu0",
+        "name": "M58 Inverted hull",
+        "color": "blue"
+      },
+      {
+        "id": "8i4kzh09p5",
+        "name": "M59 World ambient",
+        "color": "purple"
+      }
+    ]
+  }
+}

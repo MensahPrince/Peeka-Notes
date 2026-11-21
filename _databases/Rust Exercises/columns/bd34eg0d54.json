@@ -1,0 +1,30 @@
+{
+  "id": "bd34eg0d54",
+  "order": "a2",
+  "name": "Kind",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "70145uqwtb",
+        "name": "Drill",
+        "color": "gray"
+      },
+      {
+        "id": "4xszjhoxbq",
+        "name": "Challenge",
+        "color": "brown"
+      },
+      {
+        "id": "27e8vx22se",
+        "name": "Mini-project",
+        "color": "orange"
+      },
+      {
+        "id": "iunp3ja4ck",
+        "name": "Project",
+        "color": "yellow"
+      }
+    ]
+  }
+}

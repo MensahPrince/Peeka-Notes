@@ -1,0 +1,20 @@
+{
+  "id": "tqbcsq6qd4",
+  "order": "a6",
+  "name": "Column 8",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "8nkg4ompi7",
+        "name": "Best Pair",
+        "color": "gray"
+      },
+      {
+        "id": "uad1s7b9bl",
+        "name": "-",
+        "color": "brown"
+      }
+    ]
+  }
+}

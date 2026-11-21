@@ -1,0 +1,40 @@
+{
+  "id": "jksr9he3t6",
+  "order": "a4",
+  "name": "Seen in",
+  "kind": {
+    "type": "multi_select",
+    "options": [
+      {
+        "id": "8hr1h8a4uh",
+        "name": "Notion",
+        "color": "gray"
+      },
+      {
+        "id": "fbt4535l1l",
+        "name": "Obsidian",
+        "color": "brown"
+      },
+      {
+        "id": "sl0yzc15wi",
+        "name": "Logseq",
+        "color": "orange"
+      },
+      {
+        "id": "60i3sgpbqf",
+        "name": "AFFiNE",
+        "color": "yellow"
+      },
+      {
+        "id": "wo8jtaejp5",
+        "name": "Anytype",
+        "color": "green"
+      },
+      {
+        "id": "u12834z2oi",
+        "name": "Reflect",
+        "color": "blue"
+      }
+    ]
+  }
+}

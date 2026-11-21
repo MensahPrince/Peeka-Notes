@@ -1,0 +1,15 @@
+{
+  "id": "z5jb7ulmj0",
+  "order": "a0",
+  "name": "Table",
+  "layout": "table",
+  "query": {
+    "filter": null,
+    "group_by": null,
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

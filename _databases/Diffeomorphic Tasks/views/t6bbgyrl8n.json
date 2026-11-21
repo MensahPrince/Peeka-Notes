@@ -1,0 +1,17 @@
+{
+  "id": "t6bbgyrl8n",
+  "order": "a2",
+  "name": "By area board",
+  "layout": "board",
+  "query": {
+    "filter": null,
+    "group_by": {
+      "column": "j85hbmwydp"
+    },
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

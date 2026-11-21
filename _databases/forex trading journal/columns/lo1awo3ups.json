@@ -1,0 +1,9 @@
+{
+  "id": "lo1awo3ups",
+  "order": "a6",
+  "name": "Lot Size",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

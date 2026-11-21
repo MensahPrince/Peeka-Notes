@@ -1,0 +1,15 @@
+{
+  "id": "zmyr37ik9b",
+  "order": "aG",
+  "name": "Emotion",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "9t376dfiq7",
+        "name": "Calm",
+        "color": "gray"
+      }
+    ]
+  }
+}

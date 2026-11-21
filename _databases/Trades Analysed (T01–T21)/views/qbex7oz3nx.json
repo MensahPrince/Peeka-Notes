@@ -1,0 +1,22 @@
+{
+  "id": "qbex7oz3nx",
+  "order": "a0",
+  "name": "Trades",
+  "layout": "table",
+  "query": {
+    "filter": null,
+    "group_by": null,
+    "search": "",
+    "sorts": [
+      {
+        "descending": false,
+        "field": {
+          "column": "d8ptm1q7to"
+        }
+      }
+    ]
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

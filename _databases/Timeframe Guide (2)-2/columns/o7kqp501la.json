@@ -1,0 +1,45 @@
+{
+  "id": "o7kqp501la",
+  "order": "a5",
+  "name": "Good For Gold?",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "advrszt627",
+        "name": "⚠️ Risky",
+        "color": "gray"
+      },
+      {
+        "id": "2in8n92mn0",
+        "name": "✅ Popular",
+        "color": "brown"
+      },
+      {
+        "id": "l5fa8awbwg",
+        "name": "✅ Good",
+        "color": "orange"
+      },
+      {
+        "id": "asadmbkpz5",
+        "name": "✅ Very Good",
+        "color": "yellow"
+      },
+      {
+        "id": "513o58udnf",
+        "name": "✅ Excellent",
+        "color": "green"
+      },
+      {
+        "id": "9l4jfau51b",
+        "name": "⚡ Context",
+        "color": "blue"
+      },
+      {
+        "id": "qpknp9bjby",
+        "name": "⚡ Big Picture",
+        "color": "purple"
+      }
+    ]
+  }
+}

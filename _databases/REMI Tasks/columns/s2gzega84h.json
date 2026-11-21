@@ -1,0 +1,50 @@
+{
+  "id": "s2gzega84h",
+  "order": "a2",
+  "name": "Layer",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "8jdevmaq3e",
+        "name": "L1 Data",
+        "color": "gray"
+      },
+      {
+        "id": "dmgbypchnp",
+        "name": "L2 Preprocessing",
+        "color": "brown"
+      },
+      {
+        "id": "3xi9fcsfql",
+        "name": "L3 Classification",
+        "color": "orange"
+      },
+      {
+        "id": "804kugtfpy",
+        "name": "L4 Change",
+        "color": "yellow"
+      },
+      {
+        "id": "cy7uxpvoxe",
+        "name": "L5 Segmentation",
+        "color": "green"
+      },
+      {
+        "id": "ojeyrcpsf8",
+        "name": "L6 Decision",
+        "color": "blue"
+      },
+      {
+        "id": "yjoc9aajg5",
+        "name": "L7 Visualization",
+        "color": "purple"
+      },
+      {
+        "id": "3dxb76mcjy",
+        "name": "Cross-cutting",
+        "color": "pink"
+      }
+    ]
+  }
+}

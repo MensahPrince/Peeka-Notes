@@ -1,0 +1,50 @@
+{
+  "id": "qkin2k1zqq",
+  "order": "a1",
+  "name": "Phase",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "wlli0c1m41",
+        "name": "Warm-up",
+        "color": "gray"
+      },
+      {
+        "id": "8uyx55mlqm",
+        "name": "Setup",
+        "color": "brown"
+      },
+      {
+        "id": "0luszgsq49",
+        "name": "Phase 1 Basic gRPC",
+        "color": "orange"
+      },
+      {
+        "id": "gf17imwqdd",
+        "name": "Phase 2 Streaming",
+        "color": "yellow"
+      },
+      {
+        "id": "92rbvywkgu",
+        "name": "Phase 3 Multiple services",
+        "color": "green"
+      },
+      {
+        "id": "uenu6iwmhs",
+        "name": "Phase 4 Auth",
+        "color": "blue"
+      },
+      {
+        "id": "qd1b2kses4",
+        "name": "Phase 5 Docker",
+        "color": "purple"
+      },
+      {
+        "id": "41gwjew4e6",
+        "name": "Later",
+        "color": "pink"
+      }
+    ]
+  }
+}

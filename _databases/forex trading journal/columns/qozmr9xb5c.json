@@ -1,0 +1,15 @@
+{
+  "id": "qozmr9xb5c",
+  "order": "a4",
+  "name": "Pair",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "vcledostwd",
+        "name": "XAUUSD",
+        "color": "gray"
+      }
+    ]
+  }
+}

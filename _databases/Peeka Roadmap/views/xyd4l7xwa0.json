@@ -1,0 +1,22 @@
+{
+  "id": "xyd4l7xwa0",
+  "order": "a1",
+  "name": "All",
+  "layout": "table",
+  "query": {
+    "filter": null,
+    "group_by": null,
+    "search": "",
+    "sorts": [
+      {
+        "descending": false,
+        "field": {
+          "column": "h4diah0w8m"
+        }
+      }
+    ]
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

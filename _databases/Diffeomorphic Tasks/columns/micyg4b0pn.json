@@ -1,0 +1,25 @@
+{
+  "id": "micyg4b0pn",
+  "order": "a2",
+  "name": "Figure",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "6c8lo9xwph",
+        "name": "Genesis 9",
+        "color": "gray"
+      },
+      {
+        "id": "5by4em8ace",
+        "name": "Genesis 8",
+        "color": "brown"
+      },
+      {
+        "id": "zceprnpljl",
+        "name": "Any",
+        "color": "orange"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "mow2uaj6y6",
+  "order": "a1",
+  "name": "Used in",
+  "kind": {
+    "type": "multi_select",
+    "options": [
+      {
+        "id": "j4s25tmxrb",
+        "name": "L1 Data",
+        "color": "gray"
+      },
+      {
+        "id": "ojzxwx1ilt",
+        "name": "L3 Classification",
+        "color": "brown"
+      },
+      {
+        "id": "b6ixckv206",
+        "name": "L4 Change",
+        "color": "orange"
+      },
+      {
+        "id": "uopclq9pqa",
+        "name": "L6 Decision",
+        "color": "yellow"
+      }
+    ]
+  }
+}

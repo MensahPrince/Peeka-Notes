@@ -1,0 +1,30 @@
+{
+  "id": "j85hbmwydp",
+  "order": "a1",
+  "name": "Area",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "xiqf7eh3da",
+        "name": "Rigify face",
+        "color": "gray"
+      },
+      {
+        "id": "hp9d5ssqva",
+        "name": "CloudRig",
+        "color": "brown"
+      },
+      {
+        "id": "yabjjarzfa",
+        "name": "Genesis 8",
+        "color": "orange"
+      },
+      {
+        "id": "b5nos6kyqr",
+        "name": "Release",
+        "color": "yellow"
+      }
+    ]
+  }
+}

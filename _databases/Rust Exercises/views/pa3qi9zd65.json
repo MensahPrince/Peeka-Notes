@@ -1,0 +1,20 @@
+{
+  "id": "pa3qi9zd65",
+  "order": "a0",
+  "name": "By module",
+  "layout": "table",
+  "query": {
+    "filter": null,
+    "group_by": null,
+    "search": "",
+    "sorts": [
+      {
+        "descending": false,
+        "field": "title"
+      }
+    ]
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

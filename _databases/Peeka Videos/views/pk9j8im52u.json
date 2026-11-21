@@ -1,0 +1,17 @@
+{
+  "id": "pk9j8im52u",
+  "order": "a3",
+  "name": "Publishing",
+  "layout": "calendar",
+  "query": {
+    "filter": null,
+    "group_by": {
+      "column": "ketjswn5cq"
+    },
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

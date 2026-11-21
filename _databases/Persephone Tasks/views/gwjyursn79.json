@@ -1,0 +1,22 @@
+{
+  "id": "gwjyursn79",
+  "order": "a1",
+  "name": "By phase",
+  "layout": "table",
+  "query": {
+    "filter": null,
+    "group_by": null,
+    "search": "",
+    "sorts": [
+      {
+        "descending": false,
+        "field": {
+          "column": "qkin2k1zqq"
+        }
+      }
+    ]
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

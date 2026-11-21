@@ -1,0 +1,35 @@
+{
+  "id": "b3y77ry59x",
+  "order": "a0",
+  "name": "Status",
+  "kind": {
+    "type": "status",
+    "options": [
+      {
+        "id": "l317y3yx8a",
+        "name": "Not started",
+        "color": "gray"
+      },
+      {
+        "id": "0v7v0zamgh",
+        "name": "In progress",
+        "color": "brown"
+      },
+      {
+        "id": "y8j3atqity",
+        "name": "Done",
+        "color": "orange"
+      },
+      {
+        "id": "idvbtq5oxi",
+        "name": "Parked",
+        "color": "yellow"
+      },
+      {
+        "id": "w3a5y0t7ph",
+        "name": "Superseded",
+        "color": "green"
+      }
+    ]
+  }
+}

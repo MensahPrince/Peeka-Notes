@@ -1,0 +1,85 @@
+{
+  "id": "bm0vcjg30z",
+  "order": "a2",
+  "name": "Value 2",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "4l3swmo7ed",
+        "name": "-32.887600000000404",
+        "color": "gray"
+      },
+      {
+        "id": "0cgh5l4u1d",
+        "name": "2.959729502912855",
+        "color": "brown"
+      },
+      {
+        "id": "z29drcxpso",
+        "name": "1.8932334123223047",
+        "color": "orange"
+      },
+      {
+        "id": "0qm6yfre5b",
+        "name": "215.48999999999978",
+        "color": "yellow"
+      },
+      {
+        "id": "w896zm3ipt",
+        "name": "-100.75000000000045",
+        "color": "green"
+      },
+      {
+        "id": "t5cykpojko",
+        "name": "101068.49799999766",
+        "color": "blue"
+      },
+      {
+        "id": "duwyw05buq",
+        "name": "5319.394631578824",
+        "color": "purple"
+      },
+      {
+        "id": "y5g07gdxnr",
+        "name": "Win Rate",
+        "color": "pink"
+      },
+      {
+        "id": "2oc1fnpr5k",
+        "name": "0",
+        "color": "red"
+      },
+      {
+        "id": "baostyh70b",
+        "name": "Total Pips",
+        "color": "gray"
+      },
+      {
+        "id": "idhndhxuko",
+        "name": "Avg P&L",
+        "color": "brown"
+      },
+      {
+        "id": "elh2iv87wa",
+        "name": "23.198500000000266",
+        "color": "orange"
+      },
+      {
+        "id": "chc0x1cnrc",
+        "name": "Avg Pips",
+        "color": "yellow"
+      },
+      {
+        "id": "mu9r7pya0m",
+        "name": "4416.250000001015",
+        "color": "green"
+      },
+      {
+        "id": "o302sklmyu",
+        "name": "5976.227090908142",
+        "color": "blue"
+      }
+    ]
+  }
+}

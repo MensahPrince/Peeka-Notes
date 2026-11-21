@@ -1,0 +1,8 @@
+{
+  "id": "7nst2hvipq",
+  "order": "a3",
+  "name": "Trader Type",
+  "kind": {
+    "type": "string"
+  }
+}

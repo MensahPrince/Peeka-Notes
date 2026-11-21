@@ -1,0 +1,30 @@
+{
+  "id": "boq5pl4vdb",
+  "order": "a3",
+  "name": "Phase",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "fv522xawp5",
+        "name": "Warm-up",
+        "color": "gray"
+      },
+      {
+        "id": "37r4m925lh",
+        "name": "Phase 1",
+        "color": "brown"
+      },
+      {
+        "id": "izh3zavwy6",
+        "name": "Phase 3",
+        "color": "orange"
+      },
+      {
+        "id": "ejq7v156l9",
+        "name": "Phase 5",
+        "color": "yellow"
+      }
+    ]
+  }
+}

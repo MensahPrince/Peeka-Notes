@@ -1,0 +1,17 @@
+{
+  "id": "hth9ht4114",
+  "order": "a3",
+  "name": "Calendar",
+  "layout": "calendar",
+  "query": {
+    "filter": null,
+    "group_by": {
+      "column": "7k00hcknt9"
+    },
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

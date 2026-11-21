@@ -1,0 +1,25 @@
+{
+  "id": "4dob1o2isa",
+  "order": "a3",
+  "name": "Session",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "eln0yaslg3",
+        "name": "London",
+        "color": "gray"
+      },
+      {
+        "id": "b4xa45xv9w",
+        "name": "NY/London",
+        "color": "brown"
+      },
+      {
+        "id": "39lu1yg0v2",
+        "name": "NY",
+        "color": "orange"
+      }
+    ]
+  }
+}

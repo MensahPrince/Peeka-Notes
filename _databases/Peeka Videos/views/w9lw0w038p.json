@@ -1,0 +1,17 @@
+{
+  "id": "w9lw0w038p",
+  "order": "a0",
+  "name": "Production",
+  "layout": "board",
+  "query": {
+    "filter": null,
+    "group_by": {
+      "column": "gkgb187k64"
+    },
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

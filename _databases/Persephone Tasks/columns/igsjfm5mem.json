@@ -1,0 +1,50 @@
+{
+  "id": "igsjfm5mem",
+  "order": "a2",
+  "name": "Service",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "sqcbexc8x0",
+        "name": "notes-grpc",
+        "color": "gray"
+      },
+      {
+        "id": "55xjvqyadg",
+        "name": "proto",
+        "color": "brown"
+      },
+      {
+        "id": "aqjw1htmmu",
+        "name": "api",
+        "color": "orange"
+      },
+      {
+        "id": "y45jj51ssn",
+        "name": "video-service",
+        "color": "yellow"
+      },
+      {
+        "id": "gmlox1z9ts",
+        "name": "thumbnail-service",
+        "color": "green"
+      },
+      {
+        "id": "jutoywzzii",
+        "name": "metadata-service",
+        "color": "blue"
+      },
+      {
+        "id": "mvntqaqugp",
+        "name": "postgres",
+        "color": "purple"
+      },
+      {
+        "id": "f7qtnzo9ec",
+        "name": "infra",
+        "color": "pink"
+      }
+    ]
+  }
+}

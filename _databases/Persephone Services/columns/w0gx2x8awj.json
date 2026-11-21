@@ -1,0 +1,30 @@
+{
+  "id": "w0gx2x8awj",
+  "order": "a5",
+  "name": "Status",
+  "kind": {
+    "type": "status",
+    "options": [
+      {
+        "id": "a7bu26nkxc",
+        "name": "Not started",
+        "color": "gray"
+      },
+      {
+        "id": "konqrb2xu8",
+        "name": "Stubbed",
+        "color": "brown"
+      },
+      {
+        "id": "ndvq15r6t2",
+        "name": "Running",
+        "color": "orange"
+      },
+      {
+        "id": "4328e7p524",
+        "name": "In Docker",
+        "color": "yellow"
+      }
+    ]
+  }
+}

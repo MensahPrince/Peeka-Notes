@@ -1,0 +1,8 @@
+{
+  "id": "c1rk33eyx3",
+  "order": "a0",
+  "name": "Checklist Item",
+  "kind": {
+    "type": "string"
+  }
+}

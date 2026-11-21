@@ -1,0 +1,8 @@
+{
+  "id": "ii2vfu1263",
+  "order": "a3",
+  "name": "Trader Type",
+  "kind": {
+    "type": "string"
+  }
+}

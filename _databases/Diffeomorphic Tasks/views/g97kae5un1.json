@@ -1,0 +1,22 @@
+{
+  "id": "g97kae5un1",
+  "order": "a1",
+  "name": "By area",
+  "layout": "table",
+  "query": {
+    "filter": null,
+    "group_by": null,
+    "search": "",
+    "sorts": [
+      {
+        "descending": false,
+        "field": {
+          "column": "j85hbmwydp"
+        }
+      }
+    ]
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

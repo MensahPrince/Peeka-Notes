@@ -1,0 +1,25 @@
+{
+  "id": "yyml2a6wmh",
+  "order": "a6",
+  "name": "Exit",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "bmezq0j5vz",
+        "name": "Take profit",
+        "color": "gray"
+      },
+      {
+        "id": "pw0d8b4i7v",
+        "name": "Stop loss",
+        "color": "brown"
+      },
+      {
+        "id": "hl1u2vwsey",
+        "name": "Closed manually",
+        "color": "orange"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "cc2v5am480",
+  "order": "a5",
+  "name": "Status",
+  "kind": {
+    "type": "status",
+    "options": [
+      {
+        "id": "0zdnzv8ll8",
+        "name": "Not checked",
+        "color": "gray"
+      },
+      {
+        "id": "kaymv4y9xs",
+        "name": "Requested",
+        "color": "brown"
+      },
+      {
+        "id": "8g877md2pp",
+        "name": "Access confirmed",
+        "color": "orange"
+      },
+      {
+        "id": "e1prd8dn71",
+        "name": "Downloaded",
+        "color": "yellow"
+      }
+    ]
+  }
+}

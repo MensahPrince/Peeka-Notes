@@ -1,0 +1,17 @@
+{
+  "id": "itw1170hqx",
+  "order": "a2",
+  "name": "By area",
+  "layout": "board",
+  "query": {
+    "filter": null,
+    "group_by": {
+      "column": "43qgfy90zs"
+    },
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

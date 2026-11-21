@@ -1,0 +1,9 @@
+{
+  "id": "7rcismhk55",
+  "order": "a8",
+  "name": "Stop Loss",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

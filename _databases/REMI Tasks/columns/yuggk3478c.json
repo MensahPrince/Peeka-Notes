@@ -1,0 +1,25 @@
+{
+  "id": "yuggk3478c",
+  "order": "a3",
+  "name": "Priority",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "92ct4imlec",
+        "name": "High",
+        "color": "gray"
+      },
+      {
+        "id": "dl4eujbt5s",
+        "name": "Medium",
+        "color": "brown"
+      },
+      {
+        "id": "b2ndn0mz5b",
+        "name": "Low",
+        "color": "orange"
+      }
+    ]
+  }
+}

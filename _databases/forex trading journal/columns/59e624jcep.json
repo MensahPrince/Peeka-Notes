@@ -1,0 +1,9 @@
+{
+  "id": "59e624jcep",
+  "order": "a9",
+  "name": "Take Profit",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

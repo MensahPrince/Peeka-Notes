@@ -1,0 +1,17 @@
+{
+  "id": "7vegwuh8f4",
+  "order": "a2",
+  "name": "By status",
+  "layout": "board",
+  "query": {
+    "filter": null,
+    "group_by": {
+      "column": "v3ign5no7y"
+    },
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

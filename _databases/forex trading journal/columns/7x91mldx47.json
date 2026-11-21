@@ -1,0 +1,9 @@
+{
+  "id": "7x91mldx47",
+  "order": "a7",
+  "name": "Entry Price",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

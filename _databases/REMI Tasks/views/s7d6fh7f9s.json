@@ -1,0 +1,17 @@
+{
+  "id": "s7d6fh7f9s",
+  "order": "a3",
+  "name": "Calendar",
+  "layout": "calendar",
+  "query": {
+    "filter": null,
+    "group_by": {
+      "column": "roru2syims"
+    },
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

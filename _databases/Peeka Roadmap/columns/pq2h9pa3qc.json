@@ -1,0 +1,25 @@
+{
+  "id": "pq2h9pa3qc",
+  "order": "a3",
+  "name": "Size",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "dh6y9nn12f",
+        "name": "Small",
+        "color": "gray"
+      },
+      {
+        "id": "ctyaegxdeb",
+        "name": "Medium",
+        "color": "brown"
+      },
+      {
+        "id": "uxkk3xjc40",
+        "name": "Large",
+        "color": "orange"
+      }
+    ]
+  }
+}

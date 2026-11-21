@@ -1,0 +1,9 @@
+{
+  "id": "81dmuvoj04",
+  "order": "a5",
+  "name": "Minutes",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

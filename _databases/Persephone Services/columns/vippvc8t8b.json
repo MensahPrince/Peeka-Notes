@@ -1,0 +1,30 @@
+{
+  "id": "vippvc8t8b",
+  "order": "a1",
+  "name": "Protocol",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "frpj5d96d7",
+        "name": "HTTP / JSON",
+        "color": "gray"
+      },
+      {
+        "id": "320vmmiya5",
+        "name": "gRPC",
+        "color": "brown"
+      },
+      {
+        "id": "w7e2g5j2ph",
+        "name": "SQL",
+        "color": "orange"
+      },
+      {
+        "id": "oxoxrp5pql",
+        "name": "Redis",
+        "color": "yellow"
+      }
+    ]
+  }
+}

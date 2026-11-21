@@ -1,0 +1,17 @@
+{
+  "id": "t19eiduak0",
+  "order": "a1",
+  "name": "By outcome",
+  "layout": "board",
+  "query": {
+    "filter": null,
+    "group_by": {
+      "column": "t3krefpx0d"
+    },
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

@@ -1,0 +1,35 @@
+{
+  "id": "gkgb187k64",
+  "order": "a2",
+  "name": "Status",
+  "kind": {
+    "type": "status",
+    "options": [
+      {
+        "id": "ejmz6b0969",
+        "name": "Idea",
+        "color": "gray"
+      },
+      {
+        "id": "nkshkwxzuo",
+        "name": "Scripting",
+        "color": "brown"
+      },
+      {
+        "id": "55h6ul0gye",
+        "name": "Recording",
+        "color": "orange"
+      },
+      {
+        "id": "hhghrlu7md",
+        "name": "Editing",
+        "color": "yellow"
+      },
+      {
+        "id": "agl43ee1ty",
+        "name": "Published",
+        "color": "green"
+      }
+    ]
+  }
+}

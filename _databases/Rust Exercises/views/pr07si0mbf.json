@@ -1,0 +1,17 @@
+{
+  "id": "pr07si0mbf",
+  "order": "a1",
+  "name": "Progress",
+  "layout": "board",
+  "query": {
+    "filter": null,
+    "group_by": {
+      "column": "9xw8e8s6xs"
+    },
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

@@ -1,0 +1,285 @@
+{
+  "id": "lmm3nm89xn",
+  "order": "a4",
+  "name": "Features shown",
+  "kind": {
+    "type": "multi_select",
+    "options": [
+      {
+        "id": "es4fiux8uw",
+        "name": "Tour",
+        "color": "gray"
+      },
+      {
+        "id": "45inz7apqy",
+        "name": "Claude",
+        "color": "brown"
+      },
+      {
+        "id": "ncrbzvqbvr",
+        "name": "Sidebar",
+        "color": "orange"
+      },
+      {
+        "id": "kmgwo4vi47",
+        "name": "Pages",
+        "color": "yellow"
+      },
+      {
+        "id": "h4lm5xkf30",
+        "name": "Folders",
+        "color": "green"
+      },
+      {
+        "id": "rx263q73qy",
+        "name": "Covers",
+        "color": "blue"
+      },
+      {
+        "id": "bsyy392t65",
+        "name": "Themes",
+        "color": "purple"
+      },
+      {
+        "id": "tq7p4odp97",
+        "name": "Installer",
+        "color": "pink"
+      },
+      {
+        "id": "1zuvjdgyvd",
+        "name": "peeka-mcp",
+        "color": "red"
+      },
+      {
+        "id": "qzylrox79g",
+        "name": "Links to pages",
+        "color": "gray"
+      },
+      {
+        "id": "7wx7wscj96",
+        "name": "Move and copy",
+        "color": "brown"
+      },
+      {
+        "id": "3fw8vpmylo",
+        "name": "Slash menu",
+        "color": "orange"
+      },
+      {
+        "id": "tata2vfpcd",
+        "name": "Callouts",
+        "color": "yellow"
+      },
+      {
+        "id": "ysldxircy6",
+        "name": "Toggles",
+        "color": "green"
+      },
+      {
+        "id": "vcipu3psqo",
+        "name": "Columns",
+        "color": "blue"
+      },
+      {
+        "id": "zc9v8t497x",
+        "name": "Code",
+        "color": "purple"
+      },
+      {
+        "id": "qklr0b11l7",
+        "name": "Equations",
+        "color": "pink"
+      },
+      {
+        "id": "gskaxomyyi",
+        "name": "Mermaid",
+        "color": "red"
+      },
+      {
+        "id": "pn04xgblte",
+        "name": "Embeds",
+        "color": "gray"
+      },
+      {
+        "id": "3vda43eg9r",
+        "name": "Links",
+        "color": "brown"
+      },
+      {
+        "id": "3miibq7idj",
+        "name": "Backlinks",
+        "color": "orange"
+      },
+      {
+        "id": "57k9xbema3",
+        "name": "Graph view",
+        "color": "yellow"
+      },
+      {
+        "id": "vwod6nn4w5",
+        "name": "PDF export",
+        "color": "green"
+      },
+      {
+        "id": "2vqw0040gp",
+        "name": "Databases",
+        "color": "blue"
+      },
+      {
+        "id": "2rwzp1v1gl",
+        "name": "Views",
+        "color": "purple"
+      },
+      {
+        "id": "rzswdb1myz",
+        "name": "Filters and sorts",
+        "color": "pink"
+      },
+      {
+        "id": "3zsvty6pat",
+        "name": "Formulas",
+        "color": "red"
+      },
+      {
+        "id": "neboi6pc5y",
+        "name": "Automations",
+        "color": "gray"
+      },
+      {
+        "id": "9m9j1ocoh2",
+        "name": "Notifications",
+        "color": "brown"
+      },
+      {
+        "id": "4nws1dhn1f",
+        "name": "Relations",
+        "color": "orange"
+      },
+      {
+        "id": "t7ane2qqp7",
+        "name": "Rollups",
+        "color": "yellow"
+      },
+      {
+        "id": "sm9y2bxwwq",
+        "name": "Charts",
+        "color": "green"
+      },
+      {
+        "id": "9lgh5psrdz",
+        "name": "CSV",
+        "color": "blue"
+      },
+      {
+        "id": "nzlrn4vwnj",
+        "name": "Excel",
+        "color": "purple"
+      },
+      {
+        "id": "78lgsrmh0r",
+        "name": "Templates",
+        "color": "pink"
+      },
+      {
+        "id": "rsz0c304ep",
+        "name": "Properties",
+        "color": "red"
+      },
+      {
+        "id": "3mx2p71upr",
+        "name": "Tags",
+        "color": "gray"
+      },
+      {
+        "id": "rliwyp5ssv",
+        "name": "Boards",
+        "color": "brown"
+      },
+      {
+        "id": "kkx2ly6why",
+        "name": "Synced blocks",
+        "color": "orange"
+      },
+      {
+        "id": "nay03cwqdo",
+        "name": "Duplicates",
+        "color": "yellow"
+      },
+      {
+        "id": "urwncdz5f6",
+        "name": "Daily notes",
+        "color": "green"
+      },
+      {
+        "id": "hfix9w7ykt",
+        "name": "Schedule",
+        "color": "blue"
+      },
+      {
+        "id": "j83s47cjwg",
+        "name": "Quick capture",
+        "color": "purple"
+      },
+      {
+        "id": "4jdus2auxm",
+        "name": "Keyboard shortcut",
+        "color": "pink"
+      },
+      {
+        "id": "svu09zkb84",
+        "name": "Reminders",
+        "color": "red"
+      },
+      {
+        "id": "2xxiv6rdel",
+        "name": "Month view",
+        "color": "gray"
+      },
+      {
+        "id": "q4bxlg46ez",
+        "name": "Taskbar",
+        "color": "brown"
+      },
+      {
+        "id": "bwjo5zotja",
+        "name": "Page history",
+        "color": "orange"
+      },
+      {
+        "id": "enpbon5xki",
+        "name": "peeka-notion skill",
+        "color": "yellow"
+      },
+      {
+        "id": "b7rvvngnvb",
+        "name": "Shared spaces",
+        "color": "green"
+      },
+      {
+        "id": "oj0866otew",
+        "name": "Invites",
+        "color": "blue"
+      },
+      {
+        "id": "sgu3zeicua",
+        "name": "Sync",
+        "color": "purple"
+      },
+      {
+        "id": "70q2qj6ikg",
+        "name": "Notion import",
+        "color": "pink"
+      },
+      {
+        "id": "ehyf5ojn8j",
+        "name": "Obsidian import",
+        "color": "red"
+      },
+      {
+        "id": "gu2aivadt3",
+        "name": "Markdown export",
+        "color": "gray"
+      }
+    ]
+  }
+}

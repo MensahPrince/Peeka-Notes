@@ -1,0 +1,50 @@
+{
+  "id": "ls1wufosre",
+  "order": "a6",
+  "name": "Noise Level",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "rvzfs5a4qs",
+        "name": "Very High",
+        "color": "gray"
+      },
+      {
+        "id": "imzothbsej",
+        "name": "High",
+        "color": "brown"
+      },
+      {
+        "id": "3yludcmr3e",
+        "name": "Medium-High",
+        "color": "orange"
+      },
+      {
+        "id": "vj1dbb7bnj",
+        "name": "Medium",
+        "color": "yellow"
+      },
+      {
+        "id": "vtec4csns7",
+        "name": "Low-Medium",
+        "color": "green"
+      },
+      {
+        "id": "a5enowbzvj",
+        "name": "Low",
+        "color": "blue"
+      },
+      {
+        "id": "lcn5d8uyu3",
+        "name": "Very Low",
+        "color": "purple"
+      },
+      {
+        "id": "5zm98zgokl",
+        "name": "Minimal",
+        "color": "pink"
+      }
+    ]
+  }
+}
