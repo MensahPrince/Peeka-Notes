@@ -1,6 +1,8 @@
 ---
 id: uvhchbwrgv
 title: "REMI Software Stack"
+cover: "_assets/030577d9f2f7eea091a45d8b5c434135.jpg"
+cover_position: 50
 sort: 6000
 version: 1
 ---
