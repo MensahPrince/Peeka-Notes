@@ -209,13 +209,13 @@ The result has one number per pixel:
 
 ## ✅ Checklist
 
-- [ ] Installed `gdal-python-tools` and restarted QGIS
-- [ ] Loaded the two images and two cloud masks
-- [ ] MNDWI for both dates
-- [ ] Water / land / cloud for both dates
-- [ ] Specks removed for both dates
-- [ ] Change map built and coloured
-- [ ] Areas measured and compared with the script
+- [x] Installed `gdal-python-tools` and restarted QGIS
+- [x] Loaded the two images and two cloud masks
+- [x] MNDWI for both dates
+- [x] Water / land / cloud for both dates
+- [x] Specks removed for both dates
+- [x] Change map built and coloured
+- [x] Areas measured and compared with the script
 
 <toggle>
 
