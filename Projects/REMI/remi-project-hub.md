@@ -19,11 +19,13 @@ version: 1
 
 ### 📍 Where it stands
 
-**Phase:** M2 (Preprocessing) done; M1 done except the concession data request. *Updated 2026-11-21.*
+**Phase:** M3 (Labelled data) in progress; M2 done; M1 done except the concession data (request drafted). *Updated 2026-11-21.*
 
 **Done:** M1 data for the pilot box (Prestea, Western Region): before/after images for both satellites ([REMI Test Imagery](page:epzdv5qm9v)), OSM roads and rivers, and a stream network computed from the elevation map. M2 steps 1–4: cloud and water masks, Sentinel-2 tile seams removed, dates matched in brightness, water change rebuilt on the matched images, and aligned 256 × 256 before/after patches with block-based train/val/test splits ([REMI M2 Preprocessing Report](page:8u0jq0qub6)).
 
-**Next up:** M3 labelled data (known galamsey sites, land classes), which also lets the split be stratified. Still open from M1: request the concession data.
+M3 steps 1–2: weak labels from WorldCover 2021 and published mining outlines, a ranked list of 639 candidate clearings, and the tile split stratified by mining area ([REMI M3 Labelled Data Report](page:spbr0bdedd)).
+
+**Next up:** review the candidates in QGIS (start with the 179 of 2 ha or more), then gather known galamsey sites. Send the [REMI Concession Data Request](page:jnd1xbtqpj).
 
 **Code:** `github.com/MensahPrince/REMI` (git since 2026-11-21).
 
@@ -43,6 +45,7 @@ version: 1
 - [REMI M2 Preprocessing Report](page:8u0jq0qub6): cloud and water masks, and the rest of M2 as it's done
 - [REMI QGIS Walkthrough: Water Mask](page:f4yout9h9z): build the water mask by hand in QGIS and check it against the script
 - [REMI Concession Data Request](page:jnd1xbtqpj): the email asking the Minerals Commission for licence boundaries (draft, not sent)
+- [REMI M3 Labelled Data Report](page:spbr0bdedd): weak labels, the candidate list, and how to label it in QGIS
 - Data sources: below
 
 </column>

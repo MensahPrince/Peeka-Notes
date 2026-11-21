@@ -1,0 +1,136 @@
+---
+id: spbr0bdedd
+title: "REMI M3 Labelled Data Report"
+sort: 10000
+version: 1
+---
+
+Progress report for **M3 (Labelled data)**: examples of mining scars and land classes for the models to learn from. Inputs are the M2 outputs on [REMI M2 Preprocessing Report](page:8u0jq0qub6); tracking is on [REMI Project Hub](page:imqxd436oq). *Started 2026-11-21.*
+
+<callout icon="🎯">
+
+**Approach: start from open datasets, then have a person correct them.** Labelling the whole box by hand would take weeks. Two published datasets give rough labels straight away (**weak labels**), and a script lists the places where they are most likely wrong, so the hand labelling goes where it matters.
+
+</callout>
+
+## Progress
+
+| Step | What it does | Status |
+| --- | --- | --- |
+| 1 · Weak labels | Land classes from ESA WorldCover 2021; mining outlines from Tang & Werner (2023) | ✅ Done 2026-11-21 |
+| 2 · Candidate list | Places green in 2021 but bare now, ranked, for a person to label | ✅ Done 2026-11-21 |
+| 3 · Review in QGIS | Label the candidates: mining, farm, road, settlement … | ⏳ Next (you) |
+| 4 · Known galamsey sites | Sites from news, NGO and government reports, to check the labels | Not started |
+
+---
+
+## 🗺️ Step 1 · Weak labels
+
+**Method.** `labels.py` puts two datasets onto the exact pixel grids of the images (Sentinel-2 at 10 m, Landsat at 30 m), so they line up with every tile.
+
+1. **ESA WorldCover 2021** (10 m, from the Planetary Computer), regrouped into REMI's classes: **forest**, **other vegetation** (farms, shrub, grass), **bare ground**, **built-up**, **water**.
+1. <b>Tang & Werner (2023), <i>Global mining footprint mapped from high-resolution satellite imagery</i></b> (Zenodo, CC BY 4.0): **170 outlines** touch the box, covering **9,350 ha** inside it (8.5 %). They were drawn by hand, and include pits, tailings, ponds, waste dumps and plant. A second dataset, Maus et al. (2022), couldn't be downloaded: PANGAEA's file store was down. Try again later as a cross-check.
+
+| Class (WorldCover 2021) | Share of the box | Median NDVI in 2025 |
+| --- | --: | --: |
+| Forest | 85\.2 % | 0\.74 |
+| Other vegetation | 10\.1 % | 0\.68 |
+| Bare ground | 1\.6 % | 0\.23 |
+| Built-up | 2\.7 % | 0\.33 |
+| Water | 0\.3 % | 0\.22 |
+
+<callout background="yellow" icon="⚠️">
+
+**WorldCover misses most of the bare ground REMI cares about.** Of the land that is **bare in 2025** (NDVI \< 0.3, clear of cloud), WorldCover calls **40 % "forest"** and only 22 % "bare". That's land cleared since 2021, or simply mislabelled, and it's exactly the ground REMI exists to find. **Use WorldCover for green land, not for bare ground or mining.**
+
+</callout>
+
+<callout background="yellow" icon="⚠️">
+
+**The mining outlines are envelopes, not scars.** Inside them, only **31 %** of the land is bare in 2025 and **37 %** is green (NDVI ≥ 0.6): old pits growing back, and forest the outline takes in between pits. They also miss a lot: **half of all bare ground in 2025 lies outside them**, much of it along the north-west streams. So treat them as **"mining area"**, and take the scar itself as *inside an outline AND bare*.
+
+</callout>
+
+![2025-02-04 true colour: magenta = Tang & Werner mining outlines, cyan = candidate clearings (green in 2021, bare now)](_assets/d11edcc5f94605391e4715bd90bead26.png)
+
+---
+
+## 🔍 Step 2 · Candidate list
+
+**Method.** `candidates.py` finds every patch that is **bare on 2025-02-04** (NDVI \< 0.3, clear of cloud) but that **WorldCover 2021 called forest or other vegetation**. It drops thin lines such as road edges, keeps patches of **0.5 ha** or more, and writes them as polygons, biggest first, with a description of each and an **empty `label` column** to fill in.
+
+### Results
+
+|  | Patches | Area |
+| --- | --: | --: |
+| All candidates (≥ 0.5 ha) | **639** | **1,597 ha** |
+| … 2 ha or more | 179 | 1,151 ha |
+| … cleared **between** the two images (mostly green on 2024-03-31) | 199 | 394 ha |
+| … within 150 m of a river (OSM or DEM stream) | 475 | 1,277 ha (80 %) |
+| … mostly inside a Tang & Werner mining outline | 273 | 855 ha |
+
+**80 % of the candidate area lies within 150 m of a river.** That's the pattern of riverside galamsey, not of farming.
+
+![The six largest candidates, 2024-03-31 (top) and 2025-02-04 (bottom), outlined in magenta](_assets/b89201669b011ce591dc326b3f79708a.png)
+
+By eye: **#3 and #4** look like classic galamsey, scattered pits with green-tinged ponds on the streams. **#1, #2 and #6** are industrial pits at the Tarkwa mine spreading into ground that was green in March 2024 (#6 cuts a new arm into the forest). **#5** is a tailings dam wall. **None of this is confirmed**; that's step 3.
+
+<toggle>
+
+Remaining caveats
+
+- **Season.** The "before" image is from the start of the rains (March) and the "after" from the dry season (February). Some farms and burned fields will be green in one and bare in the other. The review sorts these out ("farm").
+- **Settlements are excluded** only where WorldCover calls them built-up. New building since 2021 will show up as candidates.
+- **Cloud.** 12.7 % of the Sentinel-2 pair is cloud on one date or the other, so candidates there are missing, not absent.
+- **Thresholds untuned.** NDVI \< 0.3 and 0.5 ha are first guesses; the reviewed labels will show whether to move them.
+
+</toggle>
+
+---
+
+## 🧩 Labels in the tiles, and a fairer split
+
+Each tile's **mask** file now has **4 bands**: clear, water change, **land class** and **mining** (inside an outline). The tile index has a `mining_ha` column.
+
+<callout icon="📌">
+
+**Decision: stratify the split by mining area.** With labels in place, the split could be checked: the random split had put **45 %** of the mapped mining area in val (the whole Tarkwa mine) and only **6 %** in test. `tiles.py` now tries 20,000 seeded block assignments and keeps the one closest to 70 / 15 / 15 % on **both** land and mining area. Splits stay per 7.68 km block and the same for both satellites.
+
+</callout>
+
+| Split | Sentinel-2 patches | Mining area | Share of mining |
+| --- | --: | --: | --: |
+| Train | 110 | 6,905 ha | **74 %** |
+| Val | 33 | 1,195 ha | **13 %** |
+| Test | 24 | 1,232 ha | **13 %** |
+
+![Sentinel-2 patches with the stratified split: Tarkwa mine in train, galamsey corridors in val and test](_assets/00021ca25e93d292ff3d4727005337f6.png)
+
+The Tarkwa mine is now in **train**. **Val** gets two north-west galamsey blocks, and **test** gets the Prestea–Bogoso corridor and town, so both are tested on riverside galamsey.
+
+---
+
+## ✋ Step 3 · How to review the candidates in QGIS
+
+1. Open `data/labels/candidates_s2.gpkg` over `data/interim/s2_2025-02-04_sr_matched.tif`, and add `s2_2024-03-31_sr.tif` underneath to flip between dates. Optionally add `mining_tang2023.gpkg` and a Google or Bing satellite layer (QuickMapServices plugin) for a sharper view.
+1. **Layer → Toggle Editing**, then open the attribute table, sorted by `rank`.
+1. For each patch, zoom to it (right-click → **Zoom to Feature**) and type one of these into `label`: **mining**, **farm**, **road**, **settlement**, **quarry**, **cloud/shadow**, **other**, **unsure**. Add anything useful to `note`.
+1. Save edits. The top **179 patches (≥ 2 ha)** cover 72 % of the area, so start there.
+
+Your labels stay in the file: `candidates.py` overwrites it, so don't rerun it after you start labelling without saving a copy first.
+
+---
+
+## 📁 Files
+
+All in `~/gitRepo/REMI/`. Code is in git (`github.com/MensahPrince/REMI`); `data/` is not.
+
+| File | What it is |
+| --- | --- |
+| `labels.py` | Builds the weak labels. Needs the Tang & Werner shapefile in `data/raw/external/tang2023/` (downloaded 2026-11-21 from Zenodo record 7894216, 320 MB) |
+| `candidates.py` | Builds the candidate list from the Sentinel-2 pair |
+| `data/labels/<grid>_landclass.tif` | WorldCover classes on the `s2` or `landsat` grid: 1 forest, 2 other vegetation, 3 bare, 4 built-up, 5 water, 255 none |
+| `data/labels/<grid>_mining.tif` | 1 = inside a mining outline |
+| `data/labels/mining_tang2023.gpkg` | The 170 mining outlines that touch the box, in UTM 30N |
+| `data/labels/candidates_s2.gpkg` | The 639 candidates with `area_ha`, `new_since_2024`, `river_m`, `road_m`, `mining_tw2023`, `new_water_ha`, `split`, `rank`, and the empty `label` and `note` |
+| `previews/labels_s2_overview.png`, `candidates_s2_top6.png` | The pictures above |
