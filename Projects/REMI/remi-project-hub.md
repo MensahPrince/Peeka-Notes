@@ -95,7 +95,7 @@ The full tracker is [REMI Tasks](page:xuncxrlmu3): a board by status, a table by
 Each milestone makes the next one possible. Labelled data (M3) feeds every model, so it starts as soon as the first images are in.
 
 ```mermaid
-flowchart LR
+flowchart TD
   M1[M1 Data access] --> M2[M2 Preprocessing]
   M1 --> M3[M3 Labelled data]
   M2 --> M4[M4 Land classification]
