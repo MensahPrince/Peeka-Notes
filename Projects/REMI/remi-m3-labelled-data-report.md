@@ -182,7 +182,7 @@ Real places from our own 2025 image, exactly as they look in QGIS. Each square i
 | **Galamsey** (top left) | Cream sand heaps, holes, **green or brown ponds**, ragged shape, on a stream | **mining** |
 | **Industrial mine** (Tarkwa) | **Huge** terraced pit walls like giant steps, wide pale haul roads | **mining** + note "industrial pit" |
 | **Tailings dam** (part of an industrial mine) | A **huge square or rounded pond** of brown or grey mine waste, inside **high white earth walls** with a road along the top. Tens of hectares. Example: **rank 4** | **mining** + note "tailings dam" |
-| **Quarry** | **One compact** bright white or grey rock face cut into a hill, **next to a road**. Small next to a mine | **quarry** |
+| **Quarry** | **One compact** bright white or grey rock face cut into a hill, **next to a road**. Small next to a mine. ⚠️ The example in the picture is **not certain**: OpenStreetMap calls it a quarry, but Tang & Werner map it as **mining**. Its new edge is **rank 147**; label it **unsure** (note "OSM quarry, Tang mining") unless you can tell. Real quarries are rare in this box | **quarry** (or **unsure**) |
 | **Road** | **Thin line of the same width all along**, smooth curves, runs a long way and **joins places**. Grey (tarmac) or **orange** (dirt) | **road** |
 | **River** | **Winding** band whose width changes, with trees along the banks. ⚠️ In this box the Ankobra is so silted and mined that it often looks like **pale sand**, not water. Tick **Rivers (OSM)** in QGIS to see where it runs | (not a candidate itself; mining *on* it is **mining**) |
 | **Settlement** (Prestea) | Grainy speckle of **tiny bright and grey squares** (roofs) with a grid of streets | **settlement** |
