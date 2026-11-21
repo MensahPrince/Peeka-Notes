@@ -21,6 +21,18 @@ Every dataset, method, paper and report used in REMI so far: **what it is**, **w
 | **Landsat 8/9 Collection 2 Level-2**, via the **Microsoft Planetary Computer** (collection `landsat-c2-l2`) | Surface reflectance at 30 m, every \~8 days with both satellites, archive back to 2013 (and older Landsats to 1984) | `landsat_planetary.py`. [REMI Test Imagery](page:epzdv5qm9v) | Longer history than Sentinel-2, for older "before" dates. The Planetary Computer was used because USGS EarthExplorer was down on 2026-10-21 (503 errors) |
 | **Copernicus DEM GLO-30**, via the Planetary Computer (collection `cop-dem-glo-30`) | Elevation at 30 m | `dem_streams.py` → `data/derived/streams_dem.gpkg`. [REMI Project Hub](page:imqxd436oq) (OSM river gap) | Free, global, and the best open 30 m elevation model. Water flows downhill, so it gives the small streams OSM is missing, even under forest |
 
+### Higher-resolution options (researched 2026-11-21, not used yet)
+
+Compared on [🛰️R.E.M.I](page:ckbvimllzp), under Open questions → Aerial data. **Why:** Sentinel-2's 10 m pixels miss the narrowest riverbed workings.
+
+| Source | What it offers | Status for REMI |
+| --- | --- | --- |
+| **Planet Education & Research program** (planet.com/markets/education-and-research; Planet support article 360016570538) | PlanetScope at 3 m, free Basic tier for university students and staff: \~3,000 km² a month, 30-day delay, non-commercial | **Recommended** if eligible: apply with a university email |
+| **Planet Tropical Forest Observatory** (university.planet.com/page/tfo) | Under-5 m monthly tropical basemaps, paid with discounts | Fallback if not at a university |
+| **NICFI Satellite Data Program** (nicfi.no, *NICFI satellite data program enters new phase*, 2025-01-28; Planet NICFI user guide; Planet-NICFI basemaps on the Planetary Computer) | Free 4.77 m tropical basemaps, 2020 to January 2025 | **Ended**: free access phased out by April 2025, next phase cancelled September 2025. Archive mosaics may still be on the Planetary Computer (`planet-nicfi-visual`), untested |
+| **SEN2SR / ESA OpenSR** (pypi.org/project/sen2sr; ESA Φ-lab OpenSR project) and DiffFuSR (arXiv 2506.11764) | AI super-resolution of Sentinel-2 to 2.5 m | **Not used:** generated detail, not measured. Too risky as evidence |
+| **Esri World Imagery** (server.arcgisonline.com, World\_Imagery) | \~0.5 m basemap, date varies | Used **only for viewing** in the QGIS labelling project; the date for a spot is on Esri World Imagery Wayback (livingatlas.arcgis.com/wayback) |
+
 ## 🗺️ Map data
 
 | Source | What it gives | Used in | Why |
@@ -123,5 +135,17 @@ All URLs
 - PHMA DESSAP: https://phma.gov.gh/wp-content/uploads/2022/07/DESSAP-UPDATE-FROM-2017-2021.pdf
 - Starr FM: https://starrfm.com.gh/river-ankobra-naimos-blue-water-guards-destroy-raid-galamsey-site-destroy-equipment/
 - ModernGhana: https://www.modernghana.com/news/1400995/galamsey-fight-20-blue-water-guards-deployed-to.html
+- Planet Education & Research: https://planet.com/markets/education-and-research/
+- Planet E&R registration: https://support.planet.com/hc/en-us/articles/360016570538-How-Can-I-Register-for-the-Education-and-Research-Basic-Program
+- Planet Tropical Forest Observatory: https://university.planet.com/page/tfo
+- TFO resources: https://university.planet.com/page/tfo-resources
+- NICFI new phase (2025): https://www.nicfi.no/2025/01/28/nicfi-satellite-data-program-enters-new-phase/
+- NICFI user guide: https://assets.planet.com/docs/NICFI\_User\_Guide\_EN.pdf
+- Planet-NICFI on the Planetary Computer: https://planetarycomputer.microsoft.com/dataset/planet-nicfi-visual
+- Nimbo, end of NICFI: https://nimbo.earth/stories/end-nicfi-satellite-tropical-forest-monitoring-alternative/
+- SEN2SR: https://pypi.org/project/sen2sr/0.8.0/
+- ESA OpenSR: https://cin.philab.esa.int/databases/projects/towards-explainable-ai-application-to-trustworthy-super-resolution-opensr-robust-accountable-super-resolution-for-sentinel-2-and-beyond
+- DiffFuSR: https://arxiv.org/abs/2506.11764v2
+- Esri World Imagery Wayback: https://livingatlas.arcgis.com/wayback
 
 </toggle>

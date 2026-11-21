@@ -277,7 +277,33 @@ The **confidence score** lets humans prioritise: high-confidence alerts get inve
 
 Gaps noticed while restructuring this page; tick them off or delete them.
 
-- [ ] **Aerial data:** the synopsis said REMI should also take in data from drones, helicopters and planes, but Layer 1 lists only satellites. Add them as sources, or keep them for later?
+- [ ] **Aerial data:** the synopsis said REMI should also take in data from drones, helicopters and planes, but Layer 1 lists only satellites. Add them as sources, or keep them for later? *Options for sharper imagery, checked 2026-11-21, are in the toggle below.*
+
+<toggle>
+
+🔭 Higher-resolution imagery: the options (checked 2026-11-21)
+
+Sentinel-2 is **10 m** per pixel: the best free resolution everywhere, but too coarse for the **narrowest riverbed workings**, which are thinner than one pixel (see [REMI M3 Labelled Data Report](page:spbr0bdedd)).
+
+| Option | Resolution | Cost | Catch |
+| --- | --- | --- | --- |
+| **Planet Education & Research (Basic)**, PlanetScope | **3 m**, nearly daily | **Free** for students, faculty and staff at degree-granting institutions | Needs a university email, and not every institution is eligible. About **3,000 km² a month**, and new imagery arrives **30 days late**. Non-commercial use only. A paid Research licence is listed at about US$15,000 a year |
+| **Planet Tropical Forest Observatory (TFO)**, the successor to NICFI | under 5 m, monthly mosaics | Paid (discounts for conservation work and former NICFI users) | The free **NICFI** tropical basemaps (2020 to January 2025) **ended**; free access was phased out by April 2025, and Norway cancelled the next phase in September 2025 |
+| **Commercial very-high-resolution** (Maxar, Airbus Pléiades, Planet SkySat) | 0\.3–0.5 m | Expensive, usually hundreds to thousands of dollars per image | For checking a few sites, not the whole box |
+| **Drones** | a few cm | The drone, and permission to fly | Small areas only, but the best ground truth for a few sites |
+| **Esri / Google basemaps** (already in the QGIS labelling project) | about 0.5 m | Free to **view** | Unknown date, not licensed for analysis. Good for recognising things while labelling |
+| <b><s>AI super-resolution</s></b> (e.g. ESA's SEN2SR, Sentinel-2 to 2.5 m) | "2.5 m" | Free, open models | **Not recommended for REMI:** the model *guesses* the missing detail rather than measuring it, and could draw pits that aren't there. Too risky for evidence shown to authorities. At most for display |
+
+<callout icon="📌">
+
+**Recommendation.** Keep **Sentinel-2** as the main pipeline: free, open, frequent, and covers all of Ghana. If you're at a university, apply for **Planet Education & Research Basic**: the pilot box (\~1,100 km²) fits the monthly allowance one or two dates at a time, at **3 m**. Use it for sharper **labels** and to **check hotspots**, such as the narrow channels Sentinel-2 misses. Consider **drone flights** later, for ground truth at a few verified sites.
+
+</callout>
+
+**How to apply for Planet Education & Research Basic:** register with your **university email** through Planet's Education and Research page (planet.com/markets/education-and-research), following Planet's support article *How Can I Register for the Education and Research Basic Program?*. Questions go to science@planet.com. Check that your institution is eligible before planning around it.
+
+</toggle>
+
 - [ ] **Training data:** where do labelled examples of galamsey sites and land classes come from?
 - [ ] **Measuring it:** which metrics show REMI works (precision of alerts, false alarms per month, area error)?
 - [ ] **Concession data:** is the licensing authority's boundary data available, and in what format?

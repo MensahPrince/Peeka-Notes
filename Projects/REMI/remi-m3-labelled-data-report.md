@@ -171,6 +171,70 @@ Each tile's **mask** file now has **4 bands**: clear, water change, **land class
 1. In that row's `label` cell, **pick from the dropdown**: mining, farm, road, settlement, quarry, cloud/shadow, other, unsure. Type anything useful in `note` (e.g. "pits with ponds", "cocoa farm", "new since 2024"). The other columns are locked so they can't be changed by mistake.
 1. **Save often:** the **Save Edits** button (disk with pencil), or **Ctrl+S** in the table.
 
+### 🔎 How to tell mining from a farm (and the rest)
+
+<callout icon="🎨">
+
+**Ignore the pink and yellow outlines when you decide.** The published mining maps are rough envelopes: they take in farms, forest and villages around the mining. Judge **only what you see inside the cyan patch**. A farm inside a yellow outline is still a farm. Those cases are worth finding, because they show where the published maps are wrong.
+
+</callout>
+
+<columns>
+
+<column>
+
+#### ⛏️ Mining
+
+- **Messy shape:** ragged edges, fingers that follow a stream
+- **Busy surface:** white or cream sand heaps, holes, mounds
+- **Ponds** that are green, turquoise or brown
+- **On or next to a river or stream**
+- Often **green forest in 2024, dug up in 2025**
+
+</column>
+
+<column>
+
+#### 🌾 Farm
+
+- **Neat shape:** square or rectangular, straight edges and corners
+- **Even surface:** one flat colour, brown or tan, **dark grey if burnt** (February is burning season)
+- **No** pits, mounds or ponds
+- **Near a village or road**, in a patchwork of other rectangles
+- **Small:** usually under 2 ha
+
+</column>
+
+</columns>
+
+<callout background="yellow" icon="💡">
+
+**Clear farms will be rare in this list.** Most farming here is cocoa, oil palm and plantain, which stay **green** all year, so they almost never become candidates (candidates are bare ground). Expect mostly **mining, roads, villages and building work**.
+
+</callout>
+
+| Label | What it looks like |
+| --- | --- |
+| **mining** | Pits, sand heaps, coloured ponds, ragged shape, along a stream |
+| **farm** | Neat rectangle, even brown, tan or burnt surface, near a village, no ponds |
+| **road** | Long, thin, steady-width line joining places |
+| **settlement** | Roofs: small bright or grey squares packed together, with streets. Also new building plots at a village edge |
+| **quarry** | One deep, tidy pit with terraced sides, near a road, rock-coloured |
+| **cloud/shadow** | White puff, or a dark patch beside one |
+| **other** | You know what it is but it fits nothing above: say what in `note` |
+| **unsure** | You can't tell: say why in `note` |
+
+**Examples from our images.** Each pair is the same 900 m square in March 2024 and February 2025; cyan is the candidate patch.
+
+![Top row: clear mining (ranks 43, 27, 58), 2024 then 2025. Bottom row: puzzling cases away from rivers: orange excavation (ranks 103, 390) and a village-edge strip (rank 644)](_assets/1b5496e69c426ab12ea73ca0679e19d7.png)
+
+- **Top row, ranks 43, 27, 58: clear mining.** Cream sand, holes and ponds, right on a stream, and spreading between the two dates.
+- **Bottom row: the puzzling ones.** These were picked as "away from rivers and outside both mining maps", expecting farms, but they aren't. **Ranks 103 and 390** are **orange** dug ground with fingers into the forest: freshly exposed laterite soil, so excavation, possibly mining away from a river. **Rank 644** is a small strip at a **village edge**: probably building work (settlement). If you can't decide on cases like 103, pick **unsure** and note what you see, e.g. "orange excavation, no ponds".
+
+**When the 10 m image is too blurry**, tick **Esri World Imagery**. A farm shows crop rows or a clean cleared field; mining shows a cratered "moonscape" with ponds. **Esri's photo is from an unknown date** (not a sharper version of our 2024 or 2025 images), so use it to see *what* a thing is, and our two dates to see *when* it changed. If Esri and our 2025 image disagree, pick **unsure** and say so in `note`. To find Esri's date for a spot, use **Esri World Imagery Wayback** (livingatlas.arcgis.com/wayback).
+
+**Practice first:** look at ranks **43, 27, 58** (mining), then **103** (unsure: orange excavation) in QGIS before starting from rank 1.
+
 **Tips**
 
 - **Start with ranks 1–248** (2 ha or more): they're 74 % of the candidate area. Labelling 50 already tells us a lot, so send word whenever you've done a batch.
