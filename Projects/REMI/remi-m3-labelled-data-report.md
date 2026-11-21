@@ -79,19 +79,25 @@ They **agree well**: 88 % of Tang & Werner's area lies inside Maus (overlap 0.58
 
 ## 🔍 Step 2 · Candidate list
 
-**Method.** `candidates.py` finds every patch that is **bare on 2025-02-04** (NDVI \< 0.3, clear of cloud) but that **WorldCover 2021 called forest or other vegetation**. It drops thin lines such as road edges, keeps patches of **0.5 ha** or more, and writes them as polygons, biggest first, with a description of each and an **empty `label` column** to fill in.
+**Method.** `candidates.py` finds every patch that is **bare on 2025-02-04** (NDVI \< 0.35, clear of cloud) but that **WorldCover 2021 called forest or other vegetation**. It drops 1-pixel lines such as road edges, keeps patches of **0.5 ha** or more, and writes them as polygons, biggest first, with a description of each and an **empty `label` column** to fill in.
+
+<callout icon="📌">
+
+**Rules loosened on 2026-11-21, before any labelling.** The first version (NDVI \< 0.30, and a filter that deleted anything under 3 pixels wide) missed **narrow riverbed workings**: in the north-west, **69 %** of the bare ground left out was cut by the width filter, and many pale valleys sat just above the cutoff, at NDVI 0.30–0.45. The filter now keeps strips down to **2 pixels (20 m)**, and the cutoff is **0.35**. That took the list from 639 to **914** patches, while the share inside the published mining maps barely moved (72 % → 68 %), so the extra patches are mostly mining, not farms.
+
+</callout>
 
 ### Results
 
 |  | Patches | Area |
 | --- | --: | --: |
-| All candidates (≥ 0.5 ha) | **639** | **1,597 ha** |
-| … 2 ha or more | 179 | 1,151 ha |
-| … cleared **between** the two images (mostly green on 2024-03-31) | 199 | 394 ha |
-| … within 150 m of a river (OSM or DEM stream) | 475 | 1,277 ha (80 %) |
-| … mostly inside a Tang & Werner mining outline | 273 | 855 ha |
+| All candidates (≥ 0.5 ha) | **914** | **2,467 ha** |
+| … 2 ha or more | 248 | 1,814 ha |
+| … cleared **between** the two images (mostly green on 2024-03-31) | 263 | 499 ha |
+| … within 150 m of a river (OSM or DEM stream) | 687 | 2,115 ha (86 %) |
+| … mostly inside a Tang & Werner mining outline | 345 | 1,250 ha |
 
-**80 % of the candidate area lies within 150 m of a river.** That's the pattern of riverside galamsey, not of farming.
+**86 % of the candidate area lies within 150 m of a river.** That's the pattern of riverside galamsey, not of farming. *(The pictures below are from the first version; the biggest patches are the same.)*
 
 ![The six largest candidates, 2024-03-31 (top) and 2025-02-04 (bottom), outlined in magenta](_assets/b89201669b011ce591dc326b3f79708a.png)
 
@@ -104,7 +110,8 @@ Remaining caveats
 - **Season.** The "before" image is from the start of the rains (March) and the "after" from the dry season (February). Some farms and burned fields will be green in one and bare in the other. The review sorts these out ("farm").
 - **Settlements are excluded** only where WorldCover calls them built-up. New building since 2021 will show up as candidates.
 - **Cloud.** 12.7 % of the Sentinel-2 pair is cloud on one date or the other, so candidates there are missing, not absent.
-- **Thresholds untuned.** NDVI \< 0.3 and 0.5 ha are first guesses; the reviewed labels will show whether to move them.
+- **Thresholds untuned.** NDVI \< 0.35 and 0.5 ha are first guesses; the reviewed labels will show whether to move them.
+- **The narrowest workings are still missed.** Many dug-out stream channels are narrower than one 10 m pixel, so each pixel mixes sand with the vegetation beside it, and only a few fall below the cutoff. That's a limit of 10 m imagery. During the review, **draw these in by hand** (see step 3).
 
 </toggle>
 
@@ -140,12 +147,36 @@ Each tile's **mask** file now has **4 bands**: clear, water change, **land class
 
 ## ✋ Step 3 · How to review the candidates in QGIS
 
-1. Open `data/labels/candidates_s2.gpkg` over `data/interim/s2_2025-02-04_sr_matched.tif`, and add `s2_2024-03-31_sr.tif` underneath to flip between dates. Optionally add `mining_tang2023.gpkg` and a Google or Bing satellite layer (QuickMapServices plugin) for a sharper view.
-1. **Layer → Toggle Editing**, then open the attribute table, sorted by `rank`.
-1. For each patch, zoom to it (right-click → **Zoom to Feature**) and type one of these into `label`: **mining**, **farm**, **road**, **settlement**, **quarry**, **cloud/shadow**, **other**, **unsure**. Add anything useful to `note`.
-1. Save edits. The top **179 patches (≥ 2 ha)** cover 72 % of the area, so start there.
+**Open the ready-made project:** `~/gitRepo/REMI/remi_labelling.qgz` (double-click it, or in QGIS **Project → Open**). Everything is loaded and coloured.
 
-Your labels stay in the file: `candidates.py` overwrites it, so don't rerun it after you start labelling without saving a copy first.
+![What the QGIS project shows: candidates in cyan with their rank number, Tang & Werner outlines in pink, the Ankobra in blue, a reported site as a yellow star](_assets/30388e14af3ed58d2177c5090c9ff90a.png)
+
+**What's in it** (Layers panel, top to bottom; tick a box to show a layer):
+
+| Group | Layer | Shown at start |
+| --- | --- | --- |
+| Labelling | **Candidates: label me**: cyan outline = not labelled yet; fills with a colour once labelled (red mining, green farm, grey road, orange settlement, brown quarry, white cloud, purple other, yellow unsure). Rank numbers appear when you zoom in | ✅ |
+|  | **Reported galamsey sites**: yellow stars with place and date (each is only accurate to \~2 km) | ✅ |
+| Mining maps | **Tang & Werner 2023** (pink) | ✅ |
+|  | **Maus et al. 2022** (yellow) |  |
+| Context | Rivers (OSM, blue) ✅; roads; streams from elevation; water change 2024→2025; tiles by split | Rivers only |
+| Imagery | **2025-02-04 true colour** (the "after" image) ✅; **2024-03-31 true colour** (before: tick it to flip between dates); 2025 false colour (plants show red, bare ground blue-grey); **Esri World Imagery** (much sharper, needs internet, date varies, so use it to *see detail*, not to judge *when*) | 2025 only |
+
+**How to label:**
+
+1. Right-click **Candidates: label me** → **Open Attribute Table**. Click the `rank` column header to sort: 1 is the biggest patch.
+1. Click the **pencil** (Toggle Editing) at the top of the table.
+1. Click a row's number at the far left to select it, then the **magnifier** button ("Zoom map to selected rows") to jump there.
+1. Look at it: flip the 2024 image on and off, and tick Esri World Imagery for a sharper view.
+1. In that row's `label` cell, **pick from the dropdown**: mining, farm, road, settlement, quarry, cloud/shadow, other, unsure. Type anything useful in `note` (e.g. "pits with ponds", "cocoa farm", "new since 2024"). The other columns are locked so they can't be changed by mistake.
+1. **Save often:** the **Save Edits** button (disk with pencil), or **Ctrl+S** in the table.
+
+**Tips**
+
+- **Start with ranks 1–248** (2 ha or more): they're 74 % of the candidate area. Labelling 50 already tells us a lot, so send word whenever you've done a batch.
+- **When unsure, pick "unsure"** and write why in `note`. A wrong "mining" does more harm than an honest "unsure".
+- **Mining with no cyan outline?** Narrow riverbed workings are often missed (see the caveats above). With editing on, use **Add Polygon Feature** (Ctrl+.) on the candidates layer, draw around it, finish with a right-click, and pick **mining** in the form. That's very useful: it shows what the rules miss.
+- **Your labels are safe:** `candidates.py` now refuses to overwrite a file that has any labels in it (only with `--force`, which keeps a dated backup first). Rebuilding the project (`make_qgis_project.py`) never touches your labels.
 
 ---
 
@@ -153,13 +184,13 @@ Your labels stay in the file: `candidates.py` overwrites it, so don't rerun it a
 
 **Why.** The candidates and the mining outlines are REMI's guesses and other people's maps. Reports of real mining (raids, arrests, journalists' visits) are an independent check: places where someone saw galamsey on the ground. Full citations are on [REMI Sources](page:841cvgtq57).
 
-**Method.** Reports name villages, not coordinates. `reported_sites.py` places each report on its village as OpenStreetMap has it, and **moves it onto the Ankobra** when the report says the site is on the river. So each point means "somewhere within about **2 km**", never an exact site. It then measures how much candidate clearing and mapped mining lies within 2 km, compared with an average 2 km circle in the box (**18 ha** of candidates, **137 ha** of mining outlines).
+**Method.** Reports name villages, not coordinates. `reported_sites.py` places each report on its village as OpenStreetMap has it, and **moves it onto the Ankobra** when the report says the site is on the river. So each point means "somewhere within about **2 km**", never an exact site. It then measures how much candidate clearing and mapped mining lies within 2 km, compared with an average 2 km circle in the box (**28 ha** of candidates, **137 ha** of mining outlines).
 
 ### Results
 
 | Report | Date | Located? | Candidates within 2 km | Mining outlines within 2 km |
 | --- | --- | --- | --: | --: |
-| **Himan, "Amponsah" site on the Ankobra** (MLNR: 8 changfan destroyed, 8 pumps seized) | 2025-07-10 | ✅ On the Ankobra by Himan | **46 ha** (33 patches), 2.6× average | 186 ha |
+| **Himan, "Amponsah" site on the Ankobra** (MLNR: 8 changfan destroyed, 8 pumps seized) | 2025-07-10 | ✅ On the Ankobra by Himan | **81 ha** (43 patches), 2.9× average *(46 ha, 2.6×, with the first candidate rules)* | 186 ha |
 | Bogoso (Ghanaian Times: Blue Water Guards operations) | 2025-10 | Town centre | 7 ha | 39 ha |
 | Prestea (2018 field survey community) | 2014–16 | Town centre | 10 ha | **193 ha** |
 | Aboso, Bompieso, Huni Valley (2018 field survey communities) | 2014–16 | Town centres | 0–6 ha | 0–25 ha |
@@ -201,7 +232,8 @@ All in `~/gitRepo/REMI/`. Code is in git (`github.com/MensahPrince/REMI`); `data
 | `data/labels/<grid>_mining.tif` | 1 = inside a Tang & Werner outline |
 | `data/labels/mining_tang2023.gpkg` | The 170 mining outlines that touch the box, in UTM 30N |
 | `data/labels/mining_maus2022.gpkg`, `<grid>_mining_maus.tif` | The 28 Maus et al. outlines that touch the box, and their mask (1 = inside). Source file: `data/raw/external/maus2022/global_mining_polygons_v2.gpkg` |
-| `data/labels/candidates_s2.gpkg` | The 639 candidates with `area_ha`, `new_since_2024`, `river_m`, `road_m`, `mining_tw2023`, `new_water_ha`, `split`, `rank`, and the empty `label` and `note` |
+| `remi_labelling.qgz`, `make_qgis_project.py` | The QGIS project for labelling, and the script that builds it (`QT_QPA_PLATFORM=offscreen /usr/bin/python3 make_qgis_project.py`; it uses the system Python, which has QGIS, not `.venv`). The project isn't in git: rebuild it on another machine |
+| `data/labels/candidates_s2.gpkg` | The 914 candidates with `area_ha`, `new_since_2024`, `river_m`, `road_m`, `mining_tw2023`, `new_water_ha`, `split`, `rank`, and the empty `label` and `note` |
 | `previews/labels_s2_overview.png`, `candidates_s2_top6.png` | The pictures above |
 | `reported_sites.py` | Places the reported sites and measures what's within 2 km. The reports themselves are listed in the script (`REPORTS`), so add new ones there |
 | `data/labels/reported_sites.gpkg` | One point per report and place: date, what, source, URL, how precise, and candidate and mining area within 2 km. Unlocated reports have no geometry |

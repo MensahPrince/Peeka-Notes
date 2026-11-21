@@ -23,11 +23,11 @@ version: 1
 
 **Done:** M1 data for the pilot box (Prestea, Western Region): before/after images for both satellites ([REMI Test Imagery](page:epzdv5qm9v)), OSM roads and rivers, and a stream network computed from the elevation map. M2 steps 1–4: cloud and water masks, Sentinel-2 tile seams removed, dates matched in brightness, water change rebuilt on the matched images, and aligned 256 × 256 before/after patches with block-based train/val/test splits ([REMI M2 Preprocessing Report](page:8u0jq0qub6)).
 
-M3 steps 1–2: weak labels from WorldCover 2021 and published mining outlines, a ranked list of 639 candidate clearings, and the tile split stratified by mining area ([REMI M3 Labelled Data Report](page:spbr0bdedd)).
+M3 steps 1–2: weak labels from WorldCover 2021 and published mining outlines, a ranked list of 914 candidate clearings, and the tile split stratified by mining area ([REMI M3 Labelled Data Report](page:spbr0bdedd)).
 
 Reported galamsey sites gathered from news, government and research (12 reports; the Himan raid on the Ankobra matches a growing mining field in the images).
 
-**Next up:** review the candidates in QGIS (start with the 179 of 2 ha or more), and place the five reported villages OSM doesn't know. Send the [REMI Concession Data Request](page:jnd1xbtqpj).
+**Next up:** review the candidates in QGIS: open `~/gitRepo/REMI/remi_labelling.qgz` and start with ranks 1–248 (2 ha or more), and place the five reported villages OSM doesn't know. Send the [REMI Concession Data Request](page:jnd1xbtqpj).
 
 **Code:** `github.com/MensahPrince/REMI` (git since 2026-11-21).
 
