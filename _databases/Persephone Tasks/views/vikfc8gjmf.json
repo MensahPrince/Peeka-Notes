@@ -1,0 +1,15 @@
+{
+  "id": "vikfc8gjmf",
+  "order": "a1V",
+  "name": "Table",
+  "layout": "table",
+  "query": {
+    "filter": null,
+    "group_by": null,
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

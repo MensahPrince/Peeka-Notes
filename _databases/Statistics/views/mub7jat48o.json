@@ -1,0 +1,15 @@
+{
+  "id": "mub7jat48o",
+  "order": "a0",
+  "name": "Table",
+  "layout": "table",
+  "query": {
+    "filter": null,
+    "group_by": null,
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}
