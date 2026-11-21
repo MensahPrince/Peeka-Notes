@@ -132,7 +132,7 @@ Step-by-step downloads for Sentinel-2, Landsat and OpenStreetMap are in the [REM
 
 <callout background="orange" icon="🚧">
 
-**Update 2026-11-21: USGS is back up, and the REMI account is created ✅.** Sign-up: https://ers.cr.usgs.gov/register (EarthExplorer: https://earthexplorer.usgs.gov). ⚠️ Planned maintenance **Monday 2026-11-23, 13:00–\~20:00 Ghana time** (7 a.m.–2 p.m. CT). Details on [REMI Sources](page:841cvgtq57).
+**Update 2026-11-21: USGS is back up, and the account registration is submitted ⏳.** Activate it with the link in the confirmation email (check spam) **by 2026-11-26**, when the link expires. Sign-up: https://ers.cr.usgs.gov/register (EarthExplorer: https://earthexplorer.usgs.gov). ⚠️ Planned maintenance **Monday 2026-11-23, 13:00–\~20:00 Ghana time** (7 a.m.–2 p.m. CT). Details on [REMI Sources](page:841cvgtq57).
 
 **USGS is down (checked 2026-10-21).** EarthExplorer, the account sign-up page and the M2M API all return *503 Service Unavailable*. This doesn't block Landsat: the same Collection 2 Level-2 data comes from the **Microsoft Planetary Computer** (Option A in the guide), which is up and is where the current Landsat images came from. Create the USGS account once it's back.
 
