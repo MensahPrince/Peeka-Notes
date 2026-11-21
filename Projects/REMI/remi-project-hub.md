@@ -2,7 +2,7 @@
 id: imqxd436oq
 title: "REMI Project Hub"
 cover: "_assets/85a523a428b93331fdeaf7576d8e39be.jpg"
-cover_position: 50
+cover_position: 37
 sort: 3000
 version: 1
 ---
@@ -42,6 +42,7 @@ version: 1
 - [REMI Software Stack](page:uvhchbwrgv): the tools and Python environment for processing the images
 - [REMI M2 Preprocessing Report](page:8u0jq0qub6): cloud and water masks, and the rest of M2 as it's done
 - [REMI QGIS Walkthrough: Water Mask](page:f4yout9h9z): build the water mask by hand in QGIS and check it against the script
+- [REMI Concession Data Request](page:jnd1xbtqpj): the email asking the Minerals Commission for licence boundaries (draft, not sent)
 - Data sources: below
 
 </column>
