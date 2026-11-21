@@ -72,7 +72,7 @@ The full tracker is [REMI Tasks](page:xuncxrlmu3): a board by status, a table by
 
 <columns>
 
-<column width=0.4835>
+<column width=0.507>
 
 ### Progress
 
@@ -80,7 +80,7 @@ The full tracker is [REMI Tasks](page:xuncxrlmu3): a board by status, a table by
 
 </column>
 
-<column width=0.5165>
+<column width=0.493>
 
 ### Estimated hours per milestone
 
