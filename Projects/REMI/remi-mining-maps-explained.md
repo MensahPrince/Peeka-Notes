@@ -14,7 +14,11 @@ Two research teams each drew, **by hand**, the outline of every mining area they
 - **Tang & Werner (2023)**, shown in **pink**: 170 outlines in our box. Tighter, closer to the actual pits.
 - **Maus et al. (2022)**, shown in **yellow**: 28 outlines in our box, drawn on 2019 images. Wider, with whole river corridors as one shape.
 
-![The pilot box: the satellite image, Tang & Werner's mining map (pink), and Maus's mining map (yellow)](_assets/a8aaa279a508ae06e1fe3cc5660c323f.png)
+<image src="_assets/a8aaa279a508ae06e1fe3cc5660c323f.png" width=1.0>
+
+The pilot box: the satellite image, Tang & Werner's mining map (pink), and Maus's mining map (yellow)
+
+</image>
 
 **What to notice:** both maps mark the same places, the **riverside galamsey** in the west and north-west (the thin, branching light lines in the left image) and the big **Tarkwa mine** at the bottom. They mostly agree; Maus just draws fatter shapes.
 
