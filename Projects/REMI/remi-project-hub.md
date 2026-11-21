@@ -25,7 +25,9 @@ version: 1
 
 M3 steps 1–2: weak labels from WorldCover 2021 and published mining outlines, a ranked list of 639 candidate clearings, and the tile split stratified by mining area ([REMI M3 Labelled Data Report](page:spbr0bdedd)).
 
-**Next up:** review the candidates in QGIS (start with the 179 of 2 ha or more), then gather known galamsey sites. Send the [REMI Concession Data Request](page:jnd1xbtqpj).
+Reported galamsey sites gathered from news, government and research (12 reports; the Himan raid on the Ankobra matches a growing mining field in the images).
+
+**Next up:** review the candidates in QGIS (start with the 179 of 2 ha or more), and place the five reported villages OSM doesn't know. Send the [REMI Concession Data Request](page:jnd1xbtqpj).
 
 **Code:** `github.com/MensahPrince/REMI` (git since 2026-11-21).
 
@@ -45,7 +47,8 @@ M3 steps 1–2: weak labels from WorldCover 2021 and published mining outlines, 
 - [REMI M2 Preprocessing Report](page:8u0jq0qub6): cloud and water masks, and the rest of M2 as it's done
 - [REMI QGIS Walkthrough: Water Mask](page:f4yout9h9z): build the water mask by hand in QGIS and check it against the script
 - [REMI Concession Data Request](page:jnd1xbtqpj): the email asking the Minerals Commission for licence boundaries (draft, not sent)
-- [REMI M3 Labelled Data Report](page:spbr0bdedd): weak labels, the candidate list, and how to label it in QGIS
+- [REMI M3 Labelled Data Report](page:spbr0bdedd): weak labels, the candidate list, how to label it in QGIS, and reported galamsey sites
+- [REMI Sources](page:841cvgtq57): every dataset, method, paper and news report used, where it's used and why (for citing)
 - Data sources: below
 
 </column>
