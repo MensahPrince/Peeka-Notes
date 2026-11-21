@@ -171,6 +171,35 @@ Each tile's **mask** file now has **4 bands**: clear, water change, **land class
 1. In that row's `label` cell, **pick from the dropdown**: mining, farm, road, settlement, quarry, cloud/shadow, other, unsure. Type anything useful in `note` (e.g. "pits with ponds", "cocoa farm", "new since 2024"). The other columns are locked so they can't be changed by mistake.
 1. **Save often:** the **Save Edits** button (disk with pencil), or **Ctrl+S** in the table.
 
+### 🖼️ What things look like: picture guide
+
+Real places from our own 2025 image, exactly as they look in QGIS. Each square is **900 m × 900 m**; the white bar is 200 m.
+
+![What things look like in our 2025 image: galamsey mining, industrial mining, quarry, road, river, settlement, cloud and shadow, and a stream worked by galamsey (each square 900 m across)](_assets/f5fbae0137eac127a5e0575c5714d9dd.png)
+
+|  | What to look for | Label |
+| --- | --- | --- |
+| **Galamsey** (top left) | Cream sand heaps, holes, **green or brown ponds**, ragged shape, on a stream | **mining** |
+| **Industrial mine** (Tarkwa) | **Huge** terraced pit walls like giant steps, wide pale haul roads | **mining** + note "industrial pit" |
+| **Quarry** | **One compact** bright white or grey rock face cut into a hill, **next to a road**. Small next to a mine | **quarry** |
+| **Road** | **Thin line of the same width all along**, smooth curves, runs a long way and **joins places**. Grey (tarmac) or **orange** (dirt) | **road** |
+| **River** | **Winding** band whose width changes, with trees along the banks. ⚠️ In this box the Ankobra is so silted and mined that it often looks like **pale sand**, not water. Tick **Rivers (OSM)** in QGIS to see where it runs | (not a candidate itself; mining *on* it is **mining**) |
+| **Settlement** (Prestea) | Grainy speckle of **tiny bright and grey squares** (roofs) with a grid of streets | **settlement** |
+| **Cloud + shadow** | Bright white **fuzzy** puff; its shadow is a darker patch of the same shape nearby | **cloud/shadow** |
+| **Stream worked by galamsey** | A **thin sandy strip following a valley**, wider in places, with pits. Easy to confuse with a road: a road keeps the **same width** and **goes somewhere**; a mined stream **wiggles with the valley** and has blobs | **mining** |
+
+<callout icon="💡">
+
+**Road or mined stream?** Ask two questions. *Does it keep the same width?* Roads do; mined streams bulge and narrow. *Does it connect two places?* Roads do; mined streams follow the valley bottom and end in blobs of sand. Tick **Roads (OSM)** or **Rivers (OSM)** in QGIS: if an OSM road runs along it, it's a road.
+
+</callout>
+
+<callout icon="🪨">
+
+**Fun fact: OpenStreetMap makes the same mistake.** It tags the whole Gold Fields **Tarkwa mine** as a "quarry", and calls a galamsey-worked stretch of river near Prestea a "quarry" too. That's why REMI defines the labels itself.
+
+</callout>
+
 ### 🔎 How to tell mining from a farm (and the rest)
 
 <callout icon="🎨">
@@ -215,11 +244,11 @@ Each tile's **mask** file now has **4 bands**: clear, water change, **land class
 
 | Label | What it looks like |
 | --- | --- |
-| **mining** | Pits, sand heaps, coloured ponds, ragged shape, along a stream |
+| **mining** | **All gold mining**, illegal galamsey and big legal mines alike (legality comes later, from the concession data). Galamsey: pits, sand heaps, coloured ponds, ragged shape, along a stream. Industrial (e.g. the Tarkwa mine): huge terraced pits, wide haul roads, tailings dams; add "industrial pit" in `note` |
 | **farm** | Neat rectangle, even brown, tan or burnt surface, near a village, no ponds |
 | **road** | Long, thin, steady-width line joining places |
 | **settlement** | Roofs: small bright or grey squares packed together, with streets. Also new building plots at a village edge |
-| **quarry** | One deep, tidy pit with terraced sides, near a road, rock-coloured |
+| **quarry** | Stone, gravel or sand dug **for building**: usually small, by a road or town. ⚠️ **Not** the big terraced gold pits near Tarkwa: those are **mining** (note "industrial pit") |
 | **cloud/shadow** | White puff, or a dark patch beside one |
 | **other** | You know what it is but it fits nothing above: say what in `note` |
 | **unsure** | You can't tell: say why in `note` |
