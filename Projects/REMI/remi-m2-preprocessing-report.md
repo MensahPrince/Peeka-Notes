@@ -26,7 +26,7 @@ Progress report for **M2 (Preprocessing)**: making the before/after images clean
 | 1 · Cloud mask | Mark cloud and shadow pixels so they're never read as land change | ✅ Done 2026-10-21 |
 | 2 · Water mask | MNDWI per date, using the cloud masks; maps of new water between dates | ✅ Done 2026-10-21 |
 | 3 · Match brightness | Remove the Sentinel-2 tile seams, and match each "after" image to its "before" image on unchanged ground | ✅ Done 2026-10-27 |
-| 4 · Tiles | Cut aligned before/after pairs into 256 × 256 patches for the models | ⏳ Next |
+| 4 · Tiles | Cut aligned before/after pairs into 256 × 256 patches for the models | ✅ Done 2026-11-21 |
 
 ---
 
@@ -384,6 +384,15 @@ The Landsat dates already matched closely in the visible bands. The correction i
 
 **The water areas from step 2 shift after matching.** With the same MNDWI > 0 rule (before removing specks), water on the "after" date drops from **471 to 423 ha** for Sentinel-2 and from **450 to 378 ha** for Landsat, because matching changes SWIR. Step 2 ran on the unmatched images, so its change maps should be rebuilt on the matched ones before M5 uses them.
 
+**✅ Rebuilt 2026-11-21.** `water_mask.py` now reads `<before>_sr` and `<after>_sr_matched`. New results (old in brackets):
+
+| Pair | Water before | Water after | Both dates | 🔴 New | 🟡 Lost |
+| --- | --: | --: | --: | --: | --: |
+| Sentinel-2 | 801 ha (813) | 391 ha (432) | 246 (279) | **138** (144) | 502 (480) |
+| Landsat | 370 ha (370) | 282 ha (327) | 152 (168) | **130** (159) | 217 (201) |
+
+The "before" water barely moves: Landsat's isn't matched, and at a cutoff of 0, MNDWI only asks whether green is above SWIR, so converting to reflectance changes nothing. The "after" water shrinks because matching lifted SWIR. New water drops a little on both pairs. The change maps in the Step 2 section above are the old ones.
+
 </callout>
 
 <toggle>
@@ -395,6 +404,67 @@ Remaining caveats
 - **Absolute level isn't checked.** Everything is matched to 30NXM and to the "before" date, which is what change detection needs. Whether 30NXM's own haze correction is right is untested; it only agrees with Landsat best of the four.
 - **Clouds.** Only pixels clear on both dates were used. Cloud pixels in the matched images still carry the date-wide correction and stay flagged by the step 1 masks.
 - **Earth Search metadata is wrong about the offset.** It says to subtract 0.1, but these files already have it removed. Without the correction, the darkest blue pixel is 0.017 and forest matches Landsat; with it, most of the image would go negative. Re-check this if the download source changes.
+
+</toggle>
+
+---
+
+## 🧩 Step 4 · Tiles
+
+**Why.** The models (M4–M6) take fixed-size inputs, and change detection needs the "before" and "after" of exactly the same ground, side by side.
+
+**Method.** `tiles.py` cuts each pair into **256 × 256 pixel patches**: **2.56 km** for Sentinel-2 and **7.68 km** for Landsat. Step 3 already wrote both dates on one grid, so a patch is the same window in every file and nothing is resampled. A check confirmed that every patch's bands are identical to that window of the source image. Each kept patch gets two GeoTIFFs:
+
+- **img**: 10 bands. The "before" image (blue, green, red, NIR, SWIR), then the matched "after" image in the same order, as reflectance × 10000 (0 = no data).
+- **mask**: 2 bands. **clear** (1 = data and cloud-free on both dates) and the rebuilt **water change** from step 2.
+
+Each pair also gets an **index** GeoPackage: one square per patch, with its split, clear share, hectares of new and lost water, and whether it was kept. A patch is kept if at least **half** of its part inside the image is clear on both dates and at least a **quarter** of it lies inside the image. Edge patches are padded with no data. Both pairs took 30 seconds.
+
+<callout icon="📌">
+
+**Decision: split by 7.68 km block, not by patch.** Neighbouring patches share ground (a mining corridor runs across several), so splitting patch by patch would let a model be tested on ground it trained next to. Train / val / test (70 / 15 / 15 %) is assigned per 7.68 km block. The two satellites' grids share their top-left corner, so one block is exactly one Landsat patch and 3 × 3 Sentinel-2 patches, and **a place is in the same split for both satellites** (checked).
+
+</callout>
+
+### Results
+
+| Pair | Patch size | Grid | Kept | Train | Val | Test | New water in kept patches |
+| --- | --: | --: | --: | --: | --: | --: | --: |
+| Sentinel-2 | 2\.56 km | 13 × 14 | **167** of 182 | 116 | 30 | 21 | 137 of 138 ha |
+| Landsat | 7\.68 km | 5 × 5 | **24** of 25 | 17 | 4 | 3 | 130 of 130 ha |
+
+Sentinel-2 dropped 13 slivers (the image is 3,329 px wide, so the last column is 1 px) and two patches less than half clear. Landsat dropped only its bottom-right corner, 84 × 84 px.
+
+<columns>
+
+<column>
+
+![Sentinel-2 pair: 167 patches of 2.56 km kept, coloured by split; white lines are the 7.68 km split blocks; hatched = dropped](_assets/927da9ad111bc1e98d0573c3984d0593.png)
+
+</column>
+
+<column>
+
+![Landsat pair: 24 patches of 7.68 km kept (each patch is one split block); only the bottom-right corner sliver is dropped](_assets/c161acadb00562532b162c0ee6f75828.png)
+
+</column>
+
+</columns>
+
+<callout background="yellow" icon="⚠️">
+
+**With only 25 blocks, a random split is lumpy.** The whole **Tarkwa mine** landed in **val**, so the training set never sees a large industrial mine, and one of the north-west mining corridors is in val too. That's fine for testing the pipeline, but once M3 has labelled galamsey sites, the split should be **stratified**, so that each split gets some mining ground, forest and town. The seed and block size are set at the top of `tiles.py`.
+
+</callout>
+
+<toggle>
+
+Remaining caveats
+
+- **Landsat gives few patches.** 24 patches of 7.68 km, only 17 for training: too few to train a model from Landsat alone in this box. Landsat's role is the longer history (older "before" dates), or training on a larger area.
+- **No overlap between patches.** That's right for the index and for testing. For training, random crops or overlapping windows from the same files add variety without new files.
+- **Cloudy pixels stay in kept patches.** Up to half a patch can be cloud. Models must use the **clear** band to ignore those pixels in the loss.
+- **Sentinel-2 SWIR is 20 m** resampled to 10 m, as in step 2.
 
 </toggle>
 
@@ -419,5 +489,12 @@ All in `~/gitRepo/REMI/` (moved from `~/Downloads/REMI-test-data/`):
 | `data/interim/s2_<date>_tiles.tif`, `s2_<date>_seams.json` | Which tile each pixel came from, and each tile's fitted gain and offset per band |
 | `data/interim/<before>__<after>_nochange.tif` | The unchanged ground used for matching (2 files): 1 unchanged, 0 not, 255 cloud or no data |
 | `previews/*_seams_*.png`, `*_step3_*.png` | The step 3 pictures above |
+| `tiles.py` | Cuts the patches: `python tiles.py` for both pairs, or `python tiles.py <before> <after>`. Rewrites the index and the preview each run |
+| `data/tiles/<before>__<after>/img/r<row>_c<col>.tif` | One per kept patch: 10 bands, before then after (blue, green, red, NIR, SWIR), reflectance × 10000, 0 = no data |
+| `data/tiles/<before>__<after>/mask/r<row>_c<col>.tif` | One per kept patch: band 1 clear (1 = clear on both dates), band 2 water change (codes as in step 2) |
+| `data/tiles/<before>__<after>_index.gpkg` | Every patch on the grid with its footprint, block, split, clear share, new and lost water (ha), and whether it was kept. Open in QGIS and colour by `split` |
+| `previews/<before>__<after>_tiles.png` | The tile-grid pictures above |
+
+**Git:** the code is at `github.com/MensahPrince/REMI`. `data/` and `previews/` are not in git: they're large and the scripts rebuild them.
 
 To see a mask in QGIS, load it on top of its image, set **Symbology → Paletted/Unique values**, and give each value its own colour.

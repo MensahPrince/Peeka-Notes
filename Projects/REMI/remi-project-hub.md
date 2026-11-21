@@ -19,11 +19,13 @@ version: 1
 
 ### 📍 Where it stands
 
-**Phase:** M2 (Preprocessing) in progress; M1 done except the concession data request. *Updated 2026-10-27.*
+**Phase:** M2 (Preprocessing) done; M1 done except the concession data request. *Updated 2026-11-21.*
 
-**Done:** M1 data for the pilot box (Prestea, Western Region): before/after images for both satellites ([REMI Test Imagery](page:epzdv5qm9v)), OSM roads and rivers, and a stream network computed from the elevation map. M2 steps 1–3: cloud and water masks, Sentinel-2 tile seams removed, and dates matched in brightness ([REMI M2 Preprocessing Report](page:8u0jq0qub6)).
+**Done:** M1 data for the pilot box (Prestea, Western Region): before/after images for both satellites ([REMI Test Imagery](page:epzdv5qm9v)), OSM roads and rivers, and a stream network computed from the elevation map. M2 steps 1–4: cloud and water masks, Sentinel-2 tile seams removed, dates matched in brightness, water change rebuilt on the matched images, and aligned 256 × 256 before/after patches with block-based train/val/test splits ([REMI M2 Preprocessing Report](page:8u0jq0qub6)).
 
-**Next up:** M2 step 4, cutting aligned before/after tiles, and rebuilding step 2's water change maps on the matched images. Still open from M1: request the concession data.
+**Next up:** M3 labelled data (known galamsey sites, land classes), which also lets the split be stratified. Still open from M1: request the concession data.
+
+**Code:** `github.com/MensahPrince/REMI` (git since 2026-11-21).
 
 **Stack:** satellite imagery, CNNs (ResNet, Siamese, U-Net), a map and an API.
 
