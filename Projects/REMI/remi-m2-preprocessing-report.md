@@ -455,7 +455,7 @@ Sentinel-2 dropped 13 slivers (the image is 3,329 px wide, so the last column is
 
 **With only 25 blocks, a random split is lumpy.** The whole **Tarkwa mine** landed in **val**, so the training set never sees a large industrial mine, and one of the north-west mining corridors is in val too. That's fine for testing the pipeline, but once M3 has labelled galamsey sites, the split should be **stratified**, so that each split gets some mining ground, forest and town. The seed and block size are set at the top of `tiles.py`.
 
-**✅ Fixed 2026-11-21.** The split is now stratified by mapped mining area (74 / 13 / 13 %), and Tarkwa is in train. The counts in the table above are from the first run; the current ones are Sentinel-2 110 / 33 / 24 and Landsat 15 / 5 / 4. The mask files now have 4 bands (land class and mining added). See [REMI M3 Labelled Data Report](page:spbr0bdedd).
+**✅ Fixed 2026-11-21.** The split is now stratified on land, mapped mining area (both sets of outlines) and candidate clearings, so every split holds riverside galamsey, and Tarkwa is in train. The counts in the table above are from the first run; the current ones are Sentinel-2 115 / 25 / 27 and Landsat 15 / 4 / 5. The mask files now have 4 bands (land class, and mining from both sets of outlines as bit flags). See [REMI M3 Labelled Data Report](page:spbr0bdedd).
 
 </callout>
 

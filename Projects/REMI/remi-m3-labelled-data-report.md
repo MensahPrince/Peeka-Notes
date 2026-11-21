@@ -49,7 +49,7 @@ They **agree well**: 88 % of Tang & Werner's area lies inside Maus (overlap 0.58
 
 <callout icon="📌">
 
-**Decision: Tang & Werner stays as the tiles' mining band; Maus is kept alongside.** Tang & Werner is tighter, so fewer forest pixels are labelled "mining". For a **mining-area** label (Layer 6: is this inside a known mining zone?), use **either set**. For a **scar** mask (M6 segmentation), use *either set AND bare*. Even both together miss **40 %** of today's bare ground, which is why the candidate review (step 3) matters.
+**Decision (updated 2026-11-21): the tiles' mining band uses both sets**, as bit flags: **1** Tang & Werner only, **2** Maus only, **3** both. Anything from 1 to 3 counts as mining, and the source stays recoverable, e.g. "3" for where both agree. For a **mining-area** label (Layer 6: is this inside a known mining zone?), use **either set**. For a **scar** mask (M6 segmentation), use *either set AND bare*. Even both together miss **40 %** of today's bare ground, which is why the candidate review (step 3) matters.
 
 </callout>
 
@@ -112,23 +112,29 @@ Remaining caveats
 
 ## 🧩 Labels in the tiles, and a fairer split
 
-Each tile's **mask** file now has **4 bands**: clear, water change, **land class** and **mining** (inside an outline). The tile index has a `mining_ha` column.
+Each tile's **mask** file now has **4 bands**: clear, water change, **land class** and **mining**. The mining band uses **both sets of outlines** as bit flags (1 Tang & Werner only, 2 Maus only, 3 both, 255 unknown). The tile index has `mining_ha` (either set) and `mining_both_ha` columns.
 
 <callout icon="📌">
 
-**Decision: stratify the split by mining area.** With labels in place, the split could be checked: the random split had put **45 %** of the mapped mining area in val (the whole Tarkwa mine) and only **6 %** in test. `tiles.py` now tries 20,000 seeded block assignments and keeps the one closest to 70 / 15 / 15 % on **both** land and mining area. Splits stay per 7.68 km block and the same for both satellites.
+**Decision: stratify the split on land, mining area and candidate clearings.** The random split had put **45 %** of the mapped mining area in val (the whole Tarkwa mine) and only **6 %** in test. Balancing on mining area alone then went wrong the other way: with both sets of outlines it put **every riverside galamsey corridor in train**, because the big industrial mines alone could fill val and test's share. So `tiles.py` now also balances the **candidate clearing area** (fresh bare ground, mostly riverside). It tries 20,000 seeded block assignments and keeps the one closest to 70 / 15 / 15 % on all three. Splits stay per 7.68 km block and the same for both satellites (checked).
 
 </callout>
 
-| Split | Sentinel-2 patches | Mining area | Share of mining |
-| --- | --: | --: | --: |
-| Train | 110 | 6,905 ha | **74 %** |
-| Val | 33 | 1,195 ha | **13 %** |
-| Test | 24 | 1,232 ha | **13 %** |
+| Split | Sentinel-2 patches | Mining area (either set) | Share of mining | Share of candidate clearings |
+| --- | --: | --: | --: | --: |
+| Train | 115 | 10,368 ha | 73 % | 68 % |
+| Val | 25 | 1,208 ha | 9 % | 16 % |
+| Test | 27 | 2,537 ha | 18 % | 15 % |
 
-![Sentinel-2 patches with the stratified split: Tarkwa mine in train, galamsey corridors in val and test](_assets/00021ca25e93d292ff3d4727005337f6.png)
+![Sentinel-2 patches, split balanced on land, both mining outline sets and candidate clearings: riverside galamsey in every split](_assets/7ba8d95edc923393b173203e03ce6ba8.png)
 
-The Tarkwa mine is now in **train**. **Val** gets two north-west galamsey blocks, and **test** gets the Prestea–Bogoso corridor and town, so both are tested on riverside galamsey.
+**Every split now holds riverside galamsey.** **Val:** a north-west corridor and Bogoso. **Test:** another north-west corridor and the southern strip. **Train:** the Tarkwa mine, the Himan–Prestea stretch of the Ankobra (where the July 2025 raid was), and the rest. Three targets can't all be met exactly with only 25 blocks: mining comes out 73 / 9 / 18 %.
+
+<callout background="yellow" icon="⚠️">
+
+**Redo the split once the candidates are reviewed.** It balances on candidates that aren't confirmed yet. After step 3, balance on the patches labelled **mining** instead. `tiles.py` would need a small change to read the `label` column.
+
+</callout>
 
 ---
 
@@ -192,7 +198,7 @@ All in `~/gitRepo/REMI/`. Code is in git (`github.com/MensahPrince/REMI`); `data
 | `labels.py` | Builds the weak labels. Needs the Tang & Werner shapefile in `data/raw/external/tang2023/` (downloaded 2026-11-21 from Zenodo record 7894216, 320 MB) |
 | `candidates.py` | Builds the candidate list from the Sentinel-2 pair |
 | `data/labels/<grid>_landclass.tif` | WorldCover classes on the `s2` or `landsat` grid: 1 forest, 2 other vegetation, 3 bare, 4 built-up, 5 water, 255 none |
-| `data/labels/<grid>_mining.tif` | 1 = inside a mining outline |
+| `data/labels/<grid>_mining.tif` | 1 = inside a Tang & Werner outline |
 | `data/labels/mining_tang2023.gpkg` | The 170 mining outlines that touch the box, in UTM 30N |
 | `data/labels/mining_maus2022.gpkg`, `<grid>_mining_maus.tif` | The 28 Maus et al. outlines that touch the box, and their mask (1 = inside). Source file: `data/raw/external/maus2022/global_mining_polygons_v2.gpkg` |
 | `data/labels/candidates_s2.gpkg` | The 639 candidates with `area_ha`, `new_since_2024`, `river_m`, `road_m`, `mining_tw2023`, `new_water_ha`, `split`, `rank`, and the empty `label` and `note` |
