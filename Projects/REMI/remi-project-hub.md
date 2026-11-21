@@ -25,6 +25,8 @@ version: 1
 
 M3 steps 1–2: weak labels from WorldCover 2021 and published mining outlines, a ranked list of 914 candidate clearings, and the tile split stratified by mining area ([REMI M3 Labelled Data Report](page:spbr0bdedd)).
 
+**New: a 2015/16 baseline** (five Sentinel-2 dates combined, haze-aware): from 2016 to 2025, **1,820 ha of forest newly cleared** on trustworthy pixels, mostly along rivers, and 880 ha of it outside both published mining maps ([REMI M2 Preprocessing Report](page:8u0jq0qub6), step 5).
+
 Reported galamsey sites gathered from news, government and research (12 reports; the Himan raid on the Ankobra matches a growing mining field in the images).
 
 **Next up:** review the candidates in QGIS: open `~/gitRepo/REMI/remi_labelling.qgz` and start with ranks 1–248 (2 ha or more), and place the five reported villages OSM doesn't know. Send the [REMI Concession Data Request](page:jnd1xbtqpj).

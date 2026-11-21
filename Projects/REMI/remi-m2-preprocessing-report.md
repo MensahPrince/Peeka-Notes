@@ -27,6 +27,7 @@ Progress report for **M2 (Preprocessing)**: making the before/after images clean
 | 2 · Water mask | MNDWI per date, using the cloud masks; maps of new water between dates | ✅ Done 2026-10-21 |
 | 3 · Match brightness | Remove the Sentinel-2 tile seams, and match each "after" image to its "before" image on unchanged ground | ✅ Done 2026-10-27 |
 | 4 · Tiles | Cut aligned before/after pairs into 256 × 256 patches for the models | ✅ Done 2026-11-21 |
+| 5 · 2015/16 baseline | Cloud- and haze-aware composite of five dates, for nine years of change | ✅ Done 2026-11-21 |
 
 ---
 
@@ -472,6 +473,81 @@ Remaining caveats
 
 ---
 
+## 🕰️ Step 5 · A 2015/16 baseline: nine years of change
+
+**Why.** Our "before" images are from 2024, only months before the "after" images. A baseline from about **2015** shows how galamsey grew and moved over **nine years**. *Done 2026-11-21.*
+
+<callout background="yellow" icon="⚠️">
+
+**Two problems with 2015/16 imagery, and how they were handled.**
+
+1. **Cloud.** Every 2015–16 dry-season Sentinel-2 date over the box is cloudy: **34–72 %** once our cloud detector looks (Sentinel-2's own layer missed 24–42 % on each). Fix: combine **five dates**, taking each pixel from a date that is clear there.
+1. **Harmattan haze.** December–January Saharan dust makes some dates look washed out: forest red reflectance 0.075 instead of \~0.055, and forest NDVI 0.58 instead of \~0.70. The brightness matching fixes the forest, but **over-corrects bare ground and water** on hazy dates. On 2015-12-24, bare ground swung from 5,519 ha (as delivered) to 2,544 ha (matched), while 2025 had 4,905 ha. Fix: rank the dates by haze, take the **least hazy first**, and record each pixel's source, so **measurements use only low-haze pixels**.
+
+</callout>
+
+**Method.**
+
+1. `s2_planetary.py` downloads Sentinel-2 L2A from the **Microsoft Planetary Computer**, which goes back to 2015. Earth Search starts in 2017 here. Same bands and grid as our other images (checked).
+1. `cloud_mask.py` (omnicloudmask), as in step 1.
+1. `normalise.py --to s2_2025-02-04 <date>` removes each date's tile seams and matches it to the **matched 2025 image**. Since that image is on the 2024-03-31 scale, **all dates share one brightness scale**, and no existing file changes.
+1. `composite.py` combines the dates, least hazy first, and writes a **source map** of which date each pixel came from.
+
+| Date | Cloud (masked) | Forest red / NDVI | Haze | Share of the baseline |
+| --- | --: | --- | --- | --: |
+| 2016-01-23 | 45 % | 0\.055 / 0.70 | **low** | 54\.7 % |
+| 2015-11-24 | 72 % | 0\.060 / 0.71 | **low** | 12\.7 % |
+| 2016-01-03 | 51 % | 0\.067 / 0.64 | moderate | 15\.1 % |
+| 2015-12-24 | 34 % | 0\.076 / 0.60 | high | 11\.1 % |
+| 2016-01-13 | 55 % | 0\.075 / 0.58 | high | 2\.5 % |
+| *2025-02-04, for comparison* | *11 %* | *0.054 / 0.69* |  |  |
+
+**Result: 96 % of the box is clear in the baseline, 67 % from low-haze dates.** The Landsat image of 2015-12-29 was tried first and **dropped**: it was too hazy for any believable bare-ground or water figures, raw or matched.
+
+![2015/16 baseline (top left) and 2025 (top right); change 2016→2025 (bottom left: red new clearing, green regrowth); which date each baseline pixel came from (bottom right)](_assets/4a12699040508418d31952ecf630ad3f.png)
+
+### Nine years of change (2016 → 2025)
+
+Measured on **low-haze pixels only**: 66,967 ha, clear on both dates, 61 % of the box. Bare = NDVI \< 0.35; green = NDVI ≥ 0.6.
+
+|  | Low-haze pixels (trustworthy) | All clear pixels (86 % of box) |
+| --- | --: | --: |
+| Bare ground 2016 → 2025 | 4,134 → **4,944 ha (+20 %)** | 5,273 → 6,748 ha (+28 %) |
+| **New clearing** (green in 2016, bare in 2025) | **1,820 ha** | 2,509 ha |
+| … within 150 m of a river | 57 % | 56 % |
+| … **outside** both published mining maps | **880 ha** | 1,262 ha |
+| **Regrowth** (bare in 2016, green in 2025) | 639 ha | 778 ha |
+| … inside the mining maps | 76 % | 78 % |
+
+<columns>
+
+<column>
+
+#### What it shows
+
+- **Galamsey was already widespread in 2016.** Bare ground grew only 20 % in nine years, but **1,820 ha of forest was newly cleared**, partly offset by 639 ha growing back. Mining **moved** more than it grew. That fits the history: the boom peaked around 2016–17, before the 2017 ban.
+- **New clearing runs along the river corridors** in the north-west, and around the edge of the Tarkwa mine.
+- **Almost half the new clearing (880 ha) is outside both published mining maps**: new ground the maps don't know about.
+- **Most regrowth is inside old mining areas.** The big open pit in the north-centre was bare in 2016 and is green in 2025; it looks closed and grown over (not checked against records).
+
+</column>
+
+<column>
+
+#### Caveats
+
+- **Not yet "mining".** These are greenness changes: new clearing also includes farms, roads and building. The candidate labels (M3) will show what share is mining.
+- **Season.** The baseline is Nov–Jan, the comparison February. Both are dry season, but farms differ year to year.
+- **One-third of the box** (cloudy or hazy in 2015/16) isn't in the trustworthy numbers. It's mostly the east, which has little mining.
+- **Water** changes a lot (only 77 ha is water on both dates), partly because hazy dates detect water badly. Don't use the 2016 water figures yet.
+- **Different sensors over time:** Sentinel-2A only in 2015/16; 2A and 2B since. Matched, but small residuals remain.
+
+</column>
+
+</columns>
+
+---
+
 ## 📁 Files
 
 All in `~/gitRepo/REMI/` (moved from `~/Downloads/REMI-test-data/`):
@@ -491,6 +567,12 @@ All in `~/gitRepo/REMI/` (moved from `~/Downloads/REMI-test-data/`):
 | `data/interim/s2_<date>_tiles.tif`, `s2_<date>_seams.json` | Which tile each pixel came from, and each tile's fitted gain and offset per band |
 | `data/interim/<before>__<after>_nochange.tif` | The unchanged ground used for matching (2 files): 1 unchanged, 0 not, 255 cloud or no data |
 | `previews/*_seams_*.png`, `*_step3_*.png` | The step 3 pictures above |
+| `s2_planetary.py` | Downloads a Sentinel-2 date from the Planetary Computer: `python s2_planetary.py 2016-01-23` |
+| `composite.py` | Builds the 2015/16 baseline from the matched dates |
+| `data/interim/s2_2016-composite_sr_matched.tif` | The 2015/16 baseline (5 bands, same scale as all other images) |
+| `data/interim/s2_2016-composite_source.tif`, `_source.json` | Which date each pixel came from (1–2 low haze, 3 moderate, 4–5 high, 0 none) |
+| `data/interim/s2_2016-composite__s2_2025-02-04_waterchange.tif`, `data/tiles/s2_2016-composite__s2_2025-02-04/` | Water change and tiles for the 2016 → 2025 pair |
+| `data/interim/landsat_2015-12-29_*` | The hazy Landsat 2015 attempt: kept, **not** used for measurements |
 | `tiles.py` | Cuts the patches: `python tiles.py` for both pairs, or `python tiles.py <before> <after>`. Rewrites the index and the preview each run |
 | `data/tiles/<before>__<after>/img/r<row>_c<col>.tif` | One per kept patch: 10 bands, before then after (blue, green, red, NIR, SWIR), reflectance × 10000, 0 = no data |
 | `data/tiles/<before>__<after>/mask/r<row>_c<col>.tif` | One per kept patch: band 1 clear (1 = clear on both dates), band 2 water change (codes as in step 2) |

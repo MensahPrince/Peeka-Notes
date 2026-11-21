@@ -160,7 +160,7 @@ Each tile's **mask** file now has **4 bands**: clear, water change, **land class
 | Mining maps | **Tang & Werner 2023** (pink) | ✅ |
 |  | **Maus et al. 2022** (yellow) |  |
 | Context | Rivers (OSM, blue) ✅; roads; streams from elevation; water change 2024→2025; tiles by split | Rivers only |
-| Imagery | **2025-02-04 true colour** (the "after" image) ✅; **2024-03-31 true colour** (before: tick it to flip between dates); 2025 false colour (plants show red, bare ground blue-grey); **Esri World Imagery** (much sharper, needs internet, date varies, so use it to *see detail*, not to judge *when*) | 2025 only |
+| Imagery | **2025-02-04 true colour** (the "after" image) ✅; **2024-03-31 true colour** (before: tick it to flip between dates); **2015/16 true colour** (the nine-year baseline: bare in both = old mining, green in 2016 = new clearing), with **"which date each pixel came from"** (red areas were hazy: don't trust their colours); 2025 false colour (plants show red, bare ground blue-grey); **Esri World Imagery** (much sharper, needs internet, date varies, so use it to *see detail*, not to judge *when*) | 2025 only |
 
 **How to label:**
 
