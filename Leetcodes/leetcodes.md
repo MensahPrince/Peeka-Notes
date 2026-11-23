@@ -5,6 +5,8 @@ cover: "_assets/686b0ed43ffc788743c8609b91c56b5b.jpg"
 cover_position: 50
 sort: 1000
 version: 1
+Collection: Leetcodes
+Problem: Two Set Problem
 ---
 
 ## Problem solving
@@ -35,4 +37,7 @@ Where
 Given this explanation we can also substitute out to be
 
 ```math
+a = b - T
 ```
+
+This means that when we take a number in the set as a first number (a) and subtract it from the Target, we get the second number (b).
