@@ -7,71 +7,123 @@ sort: 1000
 version: 1
 ---
 
-## Installing Rust
+<callout background="green" icon="🌐">
 
-If you don't have Rust yet, we recommend you use `rustup` to manage your Rust installation. The [official rust guide](https://doc.rust-lang.org/book/ch01-01-installation.html) has a wonderful section on getting started.
+**Build a real JSON web API in Rust with Actix Web, one hands-on step at a time.** Every lesson adds a piece to the **same project**: a bank API with accounts, deposits and withdrawals, the web version of the bank you built in plain Rust.
 
-Actix Web currently has a minimum supported Rust version (MSRV) of 1.89. Running `rustup update` will ensure you have the latest and greatest Rust version available. As such, this guide assumes you are running Rust 1.89 or later.
+</callout>
 
-## Hello, World!
+**Level:** 🟢 → 🟡 · **Time:** about 1–2 evenings per lesson · **Version:** `actix-web 4`, Rust 1.89+
 
-Start by creating a new binary-based Cargo project and changing into the new directory:
+## How each lesson works
 
-```bash
-cargo new hello-world
-cd hello-world
+<columns>
+
+<column>
+
+### 🔨 Build
+
+Numbered steps. Type the code yourself and run `cargo run` after each one.
+
+</column>
+
+<column>
+
+### 💥 Break it
+
+Toggles that make the common mistake on purpose, so you recognise the error message later.
+
+</column>
+
+<column>
+
+### 🏋️ Exercise
+
+A small task that pushes the bank further, plus a checklist to tick off.
+
+</column>
+
+</columns>
+
+## The path
+
+```mermaid
+flowchart LR
+  L1["01 Hello"] --> L2["02 Routes"] --> L3["03 Extractors"] --> L4["04 State"]
+  L4 --> L5["05 Errors"] --> L6["06 Modules"] --> L7["07 Middleware + Tests"] --> L8["08 Capstone"]
 ```
 
-Add `actix-web` as a dependency from your project directory:
+| \# | Lesson | You'll learn | The bank gets… |
+| --- | --- | --- | --- |
+| 01 | [Actix 01 Hello, Server](page:gvpkmmg2hn) | project setup, the app factory, `curl` | a running server |
+| 02 | [Actix 02 Routes and Handlers](page:xa3snk8iq3) | macros vs `.route()`, methods, `web::scope`, 404/405 | the `/accounts` route map |
+| 03 | [Actix 03 Extractors: Path, Query, Json](page:caj66ugnge) | `Path`, `Query`, `Json`, serde | reads ids and JSON bodies |
+| 04 | [Actix 04 App State](page:o0yhl6fhvd) | `web::Data`, `Mutex`, worker threads | stores accounts in memory |
+| 05 | [Actix 05 Errors and Status Codes](page:8uyl4dfwco) | `ResponseError`, `Result` handlers, `?` | deposit, withdraw, proper 4xx errors |
+| 06 | [Actix 06 Project Layout with Modules](page:2o447fwgl4) | splitting into `lib.rs` + modules, `ServiceConfig` | a clean project structure |
+| 07 | [Actix 07 Middleware and Testing](page:uv1mhmaebb) | `Logger`, `wrap_fn`, `actix_web::test` | request logs and automated tests |
+| 08 | [Actix 08 Capstone: Bank API](page:j1fe8ewx0p) | everything together | the full reference code + challenges |
 
-Or add the following to your `Cargo.toml` file:
+## My progress
 
-```toml
-[dependencies]
-actix-web = "4"
-```
+- [ ] 01 Hello, Server
+- [ ] 02 Routes and Handlers
+- [ ] 03 Extractors: Path, Query, Json
+- [ ] 04 App State
+- [ ] 05 Errors and Status Codes
+- [ ] 06 Project Layout with Modules
+- [ ] 07 Middleware and Testing
+- [ ] 08 Capstone: Bank API
 
-Request handlers use async functions that accept zero or more parameters. These parameters can be extracted from a request (see `FromRequest` trait), and the function returns a type that can be converted into an `HttpResponse` (see `Responder` trait):
+## Before you start
 
-Replace the contents of `src/main.rs` with the following:
+<callout background="yellow" icon="📌">
 
-```rust
-use actix_web::{get, post, web, App, HttpResponse, HttpServer, Responder};
+**Rust you should be comfortable with first.** Structs and enums ([04 Structs, Enums and Pattern Matching](page:fn56do8fw7)), `Result` and `?` ([05 Collections, Strings and Errors](page:ubfingfdn1)), and especially `mod`, `use` and `crate::` ([06 Modules, Crates and Cargo](page:x4l9tlfa1i)), which lesson 06 relies on. You **don't** need to know async in depth: [11 Async Rust](page:m5cbwfmofv) explains it properly, but here you only write `async fn` and `.await`.
 
-#[get("/")]
-async fn hello() -> impl Responder {
-    HttpResponse::Ok().body("Hello world!")
-}
+</callout>
 
-#[post("/echo")]
-async fn echo(req_body: String) -> impl Responder {
-    HttpResponse::Ok().body(req_body)
-}
+**Your setup:** two terminals, one for `cargo run` (the server) and one for `curl` (requests). Every lesson's examples use `curl`. Add `-i` to see status codes.
 
-async fn manual_hello() -> impl Responder {
-    HttpResponse::Ok().body("Hey there!")
-}
-```
+## curl cheat sheet
 
-Notice that some of these handlers have routing information attached directly using the built-in macros. These allow you to specify the method and path that the handler should respond to. You will see below how to register `manual_hello` (i.e. routes that do not use a routing macro).
+| What | Command |
+| --- | --- |
+| GET | `curl localhost:8080/accounts` |
+| see status + headers | `curl -i localhost:8080/accounts/1` |
+| POST JSON | `curl -X POST localhost:8080/accounts -H 'content-type: application/json' -d '{"name":"Ama","age":25}'` |
+| POST plain text | `curl -X POST localhost:8080/echo -d 'ping'` |
+| other methods | `-X PUT`, `-X DELETE`, `-X PATCH` |
+| query string | `curl 'localhost:8080/accounts?min_balance=50'` (quote it) |
 
-Next, create an `App` instance and register the request handlers. Use `App::service` for the handlers using routing macros and `App::route` for manually routed handlers, declaring the path and method. Finally, the app is started inside an `HttpServer` which will serve incoming requests using your `App` as an "application factory".
+## When something goes wrong
 
-Further append the following `main` function to `src/main.rs`:
+| Symptom | Usual cause | Lesson |
+| --- | --- | --- |
+| `404` for a route you wrote | forgot `.service(handler)`, or a trailing `/` | 01, 02 |
+| `405 Method Not Allowed` | right path, wrong method (`GET` vs `POST`) | 02 |
+| `400 Content type error` | missing `-H 'content-type: application/json'` | 03 |
+| `400 Json deserialize error…` | the body doesn't match your struct | 03 |
+| `500 Requested application data is not configured correctly` | state not registered with `.app_data`, or a type mismatch (watch for `mod` in `main.rs`) | 04, 06 |
+| Counter or accounts behave differently on each request | state created **inside** `HttpServer::new` | 04 |
+| `Address already in use` | the server is already running in another terminal | 01 |
+| `curl: (52) Empty reply from server` | the handler panicked (overflow, `unwrap`) | 05 |
 
-```rust
-#[actix_web::main]
-async fn main() -> std::io::Result<()> {
-    HttpServer::new(|| {
-        App::new()
-            .service(hello)
-            .service(echo)
-            .route("/hey", web::get().to(manual_hello))
-    })
-    .bind(("127.0.0.1", 8080))?
-    .run()
-    .await
-}
-```
+## Resources
 
-That's it! Compile and run the program with `cargo run`. The `#[actix_web::main]` macro executes the async main function within the actix runtime. Now you can go to `http://127.0.0.1:8080/` or any of the other routes you defined to see the results.
+- [Actix Web docs](https://actix.rs/docs/): the official guide
+- [API reference on docs.rs](https://docs.rs/actix-web/latest/actix_web/): every type and trait
+- [actix/examples](https://github.com/actix/examples): official example projects (databases, auth, websockets)
+- [serde.rs](https://serde.rs): everything about `Serialize` and `Deserialize`
+
+<toggle>
+
+Where did the old "Getting started" content go?
+
+The original installation and Hello World guide that used to be on this page is now [Actix 01 Hello, Server](page:gvpkmmg2hn), expanded with explanations of every line and a "break it" section.
+
+</toggle>
+
+---
+
+↑ [Rust Learning Hub](page:7jlv8afgwm)
