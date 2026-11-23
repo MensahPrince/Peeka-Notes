@@ -12,4 +12,12 @@ version: 1
 ### Two Sum Problem.
 
 
-The two set problem follows a set of numbers, and a target number
+The two set problem follows a set of numbers, and a target number, The idea is to find out what two numbers in the given set of numbers sums up to the target number.
+
+
+<callout>
+
+Example.\
+Assuming we
+
+</callout>
