@@ -20,7 +20,7 @@ The two set problem follows a set of numbers, and a target number, The idea is t
 <callout>
 
 Example.\
-Assuming we are given a set of numbers x =  \[2,7,5,14\], and  a target number T = 9.\
+Assuming we are given a set of numbers **x =  \[2,7,5,14\],** and  a target number **T = 9.**\
 then it is right to assume that:
 
 </callout>
@@ -29,7 +29,7 @@ then it is right to assume that:
 T = a +b
 ```
 
-Where
+Where:
 
 - a = first number in the list.
 - b =  second number.
@@ -40,4 +40,7 @@ Given this explanation we can also substitute out to be
 a = b - T
 ```
 
-This means that when we take a number in the set as a first number (a) and subtract it from the Target, we get the second number (b).
+This means that when we take a number in the set as a first number **(a)** and subtract it from the Target, we get the second number **(b)**. Then we check if b exists in the list, if it does then we have  the two numbers : <b>a </b>and **b.**
+
+
+So to solve this in  rust  we must get the group of numbers and iterate through them taking the first and performing the operation we discussed era
