@@ -7,7 +7,7 @@ version: 1
 
 <callout icon="📌">
 
-**As of 23 Nov 2026, checked against AppFlowy v0.15.1 (15 Nov 2026).** AppFlowy has caught up on calendar views. Peeka still leads on repeating reminders, automations and AI access. The gaps are tracked as **R14–R20** in [Peeka Roadmap](page:q31hpcweeb).
+**As of 23 Nov 2026, checked against AppFlowy v0.15.1 (15 Nov 2026).** AppFlowy has caught up on calendar views. Peeka still leads on repeating reminders, automations and AI access. The gaps are tracked as **R14–R21** in [Peeka Roadmap](page:q31hpcweeb).
 
 </callout>
 
@@ -32,8 +32,8 @@ version: 1
 - [ ] **Setting for the first day of the week.** 0.10.x → R18
 - [ ] **Timeline view.** 0.14.4 → R19
 - [ ] **Mobile push notifications.** 0.10.3. Peeka has no mobile app, and reminders fire only while Peeka is running. → R13
-- [ ] **AI built into the app** (chat, writer, local Ollama, meeting transcripts). 0.8–0.14 → R20
-- [ ] **Relative date filters** (today, this week, last 30 days). 0.11.9. TBD: check whether Blockwright's filters already do this
+- [ ] **AI built into the app** (chat, writer, local Ollama, meeting transcripts). 0.8–0.14 → R20. **Decided: it will be built in, later, not now.** MCP stays the way in until then
+- [ ] **Relative date filters** (today, this week, last 30 days). 0.11.9. Checked: Blockwright's filters only compare against fixed values (`Is`, `Greater`, `Less`…), so this is a real gap. Until then, a formula column with `TODAY()` can stand in → R21
 - [ ] **Forms feeding a database.** 0.14.2. Not a scheduling feature
 
 ## Peeka has, AppFlowy doesn't
@@ -87,7 +87,9 @@ flowchart LR
   R14[R14 MCP reminder + agenda tools] --> R15[R15 End dates]
   R15 --> R16[R16 Week view + time drag]
   R16 --> R17[R17 Reminders in text]
+  R15 --> R21[R21 Relative date filters]
   R17 --> R18[R18 First day of the week]
+  R18 -.later.-> R20[R20 Built-in AI]
 ```
 
 <toggle collapsed=true>
