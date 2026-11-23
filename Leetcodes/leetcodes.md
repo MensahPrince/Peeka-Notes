@@ -12,4 +12,4 @@ version: 1
 ### Two Sum Problem.
 
 
-The two set problem follows a set of numbers.
+The two set problem follows a set of numbers, and a target number
