@@ -12,4 +12,4 @@ version: 1
 ### Two Sum Problem.
 
 
-Lets
+The two set problem follows a set of numbers.
