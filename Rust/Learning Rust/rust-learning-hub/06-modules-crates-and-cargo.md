@@ -13,7 +13,272 @@ version: 1
 
 **Level:** 🟢 Basics · **Needs:** [05 Collections, Strings and Errors](page:ubfingfdn1)
 
-## The vocabulary
+<callout background="yellow" icon="📌">
+
+**The four rules that clear up most of the confusion**
+
+1. **`mod x;` creates a module, once.** It tells Rust "the file `x.rs` exists, compile it". Write it **one time only**, in `lib.rs`. A file with no `mod` line is silently ignored.
+1. **`use` is only a shortcut.** It never loads a file. It just lets you write `Item` instead of `crate::items::Item`.
+1. **Inside the library it's `crate::`, outside it's the package name.** `lib.rs` and every module file say `crate::items::Item`. `main.rs` is *outside* the library and says `shop::items::Item`.
+1. **`pub` goes on every single thing you want others to see.** `pub struct` makes the *name* public, but each field needs its own `pub`. The same goes for functions and methods.
+
+</callout>
+
+## Hands-on: build a tiny shop library
+
+You'll make a small project step by step and **deliberately hit the common errors**, so you recognise them later. Type everything yourself and run `cargo build` after every step.
+
+The finished layout:
+
+```text
+shop/
+├── Cargo.toml        name = "shop"
+└── src/
+    ├── lib.rs        the library crate, called `shop`
+    ├── items.rs      mod items   (struct Item)
+    ├── checks.rs     mod checks  (fn is_cheap)
+    └── main.rs       the program: uses shop::...
+```
+
+How the pieces connect:
+
+```mermaid
+flowchart TD
+  main["main.rs<br/>(binary crate)"] -- "use shop::..." --> lib["lib.rs<br/>(library crate = shop)"]
+  lib -- "pub mod items;" --> items["items.rs"]
+  lib -- "pub mod checks;" --> checks["checks.rs"]
+  checks -- "use crate::items::Item" --> items
+```
+
+`main.rs` only talks to the library through its name. Files inside the library talk to each other through `crate::`.
+
+### Step 1: one package, two crates
+
+```bash
+cargo new shop
+cd shop
+touch src/lib.rs
+```
+
+You now have **two crates in one package**. `src/lib.rs` is a library called `shop`, the package name with `-` turned into `_`. `src/main.rs` is a program that can use that library. Cargo builds the library first, then the program.
+
+- [ ] `cargo build` works with an empty `lib.rs`
+
+### Step 2: add a module file, and see it ignored
+
+Create `src/items.rs`:
+
+```rust
+// src/items.rs
+pub struct Item {
+    pub name: String,
+    pub price: u32,
+}
+```
+
+Run `cargo build`. It succeeds, but **this file is not compiled at all**. Put a typo in it and it still builds. Rust only compiles files that a `mod` line points to.
+
+Now declare it in `lib.rs`:
+
+```rust
+// src/lib.rs
+pub mod items;     // "compile src/items.rs as the module `items`"
+```
+
+Add the typo again and this time `cargo build` complains, which proves the file is part of the library now. Remove the typo.
+
+- [ ] I added `pub mod items;` to `lib.rs` and saw the file get compiled
+
+### Step 3: one module uses another (`crate::`)
+
+Create `src/checks.rs`. First, the **wrong** version, which is the most common mistake:
+
+```rust
+// src/checks.rs  ❌
+use shop::items::Item;
+
+pub fn is_cheap(item: &Item) -> bool {
+    item.price < 10
+}
+```
+
+Add `pub mod checks;` to `lib.rs` and build:
+
+```text
+error[E0433]: cannot find module or crate `shop` in this scope
+```
+
+`checks.rs` is **part of** `shop`, and a crate can't refer to itself by its own name. From inside, the top of your own library is called `crate`:
+
+```rust
+// src/checks.rs  ✅
+use crate::items::Item;
+```
+
+- [ ] I saw E0433, then fixed it with `crate::`
+
+### Step 4: use the library from `main.rs`
+
+```rust
+// src/main.rs
+use shop::checks::is_cheap;
+use shop::items::Item;
+
+fn main() {
+    let pen = Item { name: String::from("pen"), price: 2 };
+    println!("{} cheap? {}", pen.name, is_cheap(&pen));
+}
+```
+
+Run `cargo run`. Here it **is** `shop::`, because `main.rs` is a separate crate using the library from outside.
+
+- [ ] `cargo run` prints `pen cheap? true`
+
+### Step 5: the double `mod` trap
+
+Add this line at the top of `main.rs`, as if `main.rs` also needed to "know about" items:
+
+```rust
+// src/main.rs  ❌
+mod items;
+```
+
+Then change `Item { ... }` to `items::Item { ... }` and build:
+
+```text
+error[E0308]: mismatched types
+expected `shop::items::Item`, found `items::Item`
+```
+
+Rust now compiled `items.rs` **twice**: once inside the library (`shop::items::Item`) and once inside the program (`items::Item`). They look identical but are **two different types**, so they don't fit together.
+
+✅ Fix: delete `mod items;` from `main.rs`. **`mod` lines live in `lib.rs` only**, and `main.rs` gets everything through `use shop::...`.
+
+- [ ] I saw the "two different Items" error and know why
+
+### Step 6: private fields
+
+In `items.rs`, remove `pub` from `price`:
+
+```rust
+pub struct Item {
+    pub name: String,
+    price: u32,          // private now
+}
+```
+
+Build:
+
+```text
+error[E0616]: field `price` of struct `Item` is private
+```
+
+`pub struct` only made the **name** `Item` public. Each field has its own visibility, and a private field can only be touched inside `items.rs`. That breaks `checks.rs` (it reads `item.price`) and `main.rs` (it builds `Item { price: 2 }`).
+
+You can fix it in two ways:
+
+<columns>
+
+<column>
+
+**A. Make the field `pub`**
+
+```rust
+pub price: u32,
+```
+
+Good for plain data with no rules.
+
+</column>
+
+<column>
+
+**B. Keep it private and add methods**
+
+```rust
+impl Item {
+    pub fn new(name: &str, price: u32) -> Self {
+        Item { name: name.to_string(), price }
+    }
+    pub fn price(&self) -> u32 {
+        self.price
+    }
+}
+```
+
+Good when there are rules to protect, such as "price can't be 0". Nobody can get around `new`.
+
+</column>
+
+</columns>
+
+Try **B**: use `Item::new("pen", 2)` in `main.rs` and `item.price()` in `checks.rs`.
+
+- [ ] I used a constructor so `price` stays private
+
+### Step 7: a tidy public API with `pub use`
+
+Users of your library currently write `shop::items::Item`. Re-export it from `lib.rs` so they can write `shop::Item`:
+
+```rust
+// src/lib.rs
+pub mod checks;
+pub mod items;
+
+pub use items::Item;          // shop::Item now works
+pub use checks::is_cheap;     // shop::is_cheap now works
+```
+
+```rust
+// src/main.rs
+use shop::{is_cheap, Item};
+```
+
+Run `cargo doc --open` to see exactly what an outside user can reach. Only `pub` items appear.
+
+- [ ] I re-exported with `pub use` and checked `cargo doc --open`
+
+## `mod` vs `use` at a glance
+
+|  | `mod items;` | `use crate::items::Item;` |
+| --- | --- | --- |
+| What it does | **creates** the module from `items.rs` | **shortens** a path you can already reach |
+| How many times | once, in its parent (usually `lib.rs`) | as often as you like, in any file |
+| Loads a file? | yes | never |
+| Leave it out and… | the file is ignored | you write the full path instead |
+
+## Reading the errors
+
+| You see | It means | Fix |
+| --- | --- | --- |
+| `cannot find module or crate 'shop'` (E0432 / E0433) inside a library file | the library used its own name | `use crate::...` |
+| `expected 'shop::items::Item', found 'items::Item'` | the same file was compiled twice by a `mod` in `main.rs` | delete `mod` lines from `main.rs`, use `shop::...` |
+| `field 'x' of struct 'Y' is private` (E0616) | the field has no `pub` | `pub` on the field, or a getter method |
+| `function 'f' is private` / `struct 'Y' is private` (E0603) | the item has no `pub` | add `pub` |
+| `file not found for module 'x'` (E0583) | `mod x;` has no `x.rs` or `x/mod.rs` next to it | create the file or fix the name |
+| `unused import` warning | a `use` you never use | delete it |
+
+<toggle>
+
+Folders: modules inside modules
+
+To make `shop::items::food`, create a folder named after the parent module:
+
+```text
+src/
+├── lib.rs          pub mod items;
+├── items.rs        pub mod food;      ← declared in the PARENT file
+└── items/
+    └── food.rs
+```
+
+The rule is the same at every level: **the parent file declares the child with `mod`**. From `food.rs`, `super::Item` means "the `Item` in my parent module", and `crate::checks` still means "from the top of the library".
+
+</toggle>
+
+## Reference
+
+### The vocabulary
 
 | Term | Meaning |
 | --- | --- |
@@ -23,32 +288,7 @@ version: 1
 | **Path** | how you name an item: `crate::network::connect` |
 | **Workspace** | several packages sharing one `Cargo.lock` and `target/` |
 
-## Modules and visibility
-
-```rust
-// src/lib.rs
-pub mod shapes;                 // loads src/shapes.rs (or src/shapes/mod.rs)
-
-// src/shapes.rs
-pub mod circle;                 // loads src/shapes/circle.rs
-
-pub struct Square {
-    pub side: f64,              // fields are private unless marked pub
-    id: u32,
-}
-
-// src/shapes/circle.rs
-pub fn area(r: f64) -> f64 { std::f64::consts::PI * r * r }
-```
-
-```text
-src/
-├── lib.rs
-├── main.rs
-├── shapes.rs
-└── shapes/
-    └── circle.rs
-```
+### Visibility levels
 
 **Everything is private by default** (visible to its own module and children).
 
@@ -75,7 +315,7 @@ Convention: bring **functions** in by their module (`circle::area(2.0)`), and **
 
 ### Building up to 6.1
 
-**The goal in plain words:** right now your config parser from 5.2 is all in `main.rs`. You'll move the real work into a **library** (code other programs could use) and leave `main.rs` as a thin program that just calls it. The code itself barely changes. What changes is *which file it lives in* and *who is allowed to see it*.
+**The goal in plain words:** right now your config parser from 5.2 is all in `main.rs`. You'll move the real work into a **library** (code other programs could use) and leave `main.rs` as a thin program that just calls it. The code itself barely changes. What changes is *which file it lives in* and *who is allowed to see it*. It's the same pattern as the shop tutorial above.
 
 **Step 1: one package can hold a library and a program.** If `src/lib.rs` and `src/main.rs` both exist, Cargo builds two crates from one package. Both have the package's name, with `-` turned into `_`:
 
@@ -365,8 +605,10 @@ For stdin vs file, take a `Box<dyn BufRead>`: `Box::new(io::stdin().lock())` or 
 
 ## Checklist
 
+- [ ] I know `mod` creates a module once (in `lib.rs`) and `use` only shortens paths
+- [ ] I use `crate::` inside the library and the package name in `main.rs`
 - [ ] I can lay out a crate across files and folders
-- [ ] I know the visibility levels and use `pub use` for a clean API
+- [ ] I know the visibility levels, that fields need their own `pub`, and use `pub use` for a clean API
 - [ ] I can add dependencies, features and dev-dependencies
 - [ ] I can set up a workspace
 
