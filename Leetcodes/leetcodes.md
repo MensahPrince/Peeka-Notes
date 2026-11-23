@@ -18,6 +18,21 @@ The two set problem follows a set of numbers, and a target number, The idea is t
 <callout>
 
 Example.\
-Assuming we
+Assuming we are given a set of numbers x =  \[2,7,5,14\], and  a target number T = 9.\
+then it is right to assume that:
 
 </callout>
+
+```math
+T = a +b
+```
+
+Where
+
+- a = first number in the list.
+- b =  second number.
+
+Given this explanation we can also substitute out to be
+
+```math
+```
