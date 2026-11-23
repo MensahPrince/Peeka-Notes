@@ -43,4 +43,4 @@ a = b - T
 This means that when we take a number in the set as a first number **(a)** and subtract it from the Target, we get the second number **(b)**. Then we check if b exists in the list, if it does then we have  the two numbers : <b>a </b>and **b.**
 
 
-So to solve this in  rust  we must get the group of numbers and iterate through them taking the first and performing the operation we discussed earlier. we move to the next and
+So to solve this in  rust  we must get the group of numbers and iterate through them taking the first and performing the operation we discussed earlier
