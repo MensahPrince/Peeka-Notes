@@ -70,7 +70,7 @@ version: 1
 
 <columns>
 
-<column>
+<column width=0.562>
 
 ### Days by status
 
@@ -78,7 +78,7 @@ version: 1
 
 </column>
 
-<column>
+<column width=0.438>
 
 ### Mood and energy
 

@@ -17,6 +17,13 @@
     ]
   },
   "hidden": [],
-  "widths": [],
+  "widths": [
+    {
+      "field": {
+        "column": "fmjty1shpb"
+      },
+      "width": 196.20703125
+    }
+  ],
   "cover": null
 }
