@@ -52,7 +52,7 @@ version: 1
 
 ## Today
 
-<database-view db="c5x394veib"/>
+<database-view db="c5x394veib" view="hcxnr4y95h"/>
 
 ## Overall growth
 
