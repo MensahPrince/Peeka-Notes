@@ -1,0 +1,9 @@
+{
+  "id": "b3vb32rhb2",
+  "order": "aA",
+  "name": "% of balance",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

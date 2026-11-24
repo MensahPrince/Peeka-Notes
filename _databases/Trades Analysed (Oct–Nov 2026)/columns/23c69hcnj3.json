@@ -1,0 +1,9 @@
+{
+  "id": "23c69hcnj3",
+  "order": "aD",
+  "name": "Trade of the day",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

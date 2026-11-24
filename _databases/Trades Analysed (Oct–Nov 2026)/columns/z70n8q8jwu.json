@@ -1,0 +1,9 @@
+{
+  "id": "z70n8q8jwu",
+  "order": "a5",
+  "name": "Points",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

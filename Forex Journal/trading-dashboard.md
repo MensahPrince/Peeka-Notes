@@ -5,17 +5,80 @@ sort: 2000
 version: 1
 ---
 
-The live view of the journal: how the account is doing, where the edge is (or isn't), and the rules every trade is checked against. For a written read of a period, see [Trading Review: Jun–Jul 2026](page:fslq6pq8ew).
+The live view of the journal: how the account is doing, where the edge is (or isn't), and the rules every trade is checked against. For a written read of each period, see the reviews below.
 
-<callout background="yellow" icon="⚠️">
+## 📚 Reviews
 
-**Dummy data for now.** Every chart and view below reads from [forex trading journal](page:p6h3o0i29k) (T01–T21, XAUUSD). When the new Excel is imported, the blocks get pointed at the new database and the numbers update by themselves.
+| Period | Trades | Win rate | Net P&L | Profit factor | Max drawdown | Read |
+| --- | --: | --: | --: | --: | --: | --- |
+| Oct–Nov 2026 (latest) | 21 | 42\.9% | \+$833.79 (+83.4%) | 1\.96 | −$448.28 (−38.5%) | [Trading Review: Oct–Nov 2026](page:i75b72gcry) |
+| Jun–Jul 2026 | 21 | 52\.4% | \+$644.51 (+64.5%) | 2\.96 | −$184.36 | [Trading Review: Jun–Jul 2026](page:fslq6pq8ew) |
+
+<callout icon="📌">
+
+**Where things stand (24 Nov 2026):** the edge now holds up **without lot size** (+78 points, winners 2.9× the size of losers), unlike Jun–Jul (−0.83R). The two things to fix next: **lot size is still too big** (losses of 5–14% of the balance), and **one trade (T21) is 54% of the profit**. Next review at 50 trades.
+
+</callout>
+
+---
+
+## 🆕 Latest period: Oct–Nov 2026
+
+From [XAUUSD\_Trading\_Journal\_Oct-Nov\_2026](page:2zt8nsi3ou), 19 Oct to 18 Nov, balance **$1,000 → $1,833.79**.
+
+<columns>
+
+<column width=0.35>
+
+### 🎯 Win / loss
+
+<database-chart by="u5y24f1ciz" chart="donut" colors="color" db="dpibq1upm0"/>
+
+</column>
+
+<column width=0.65>
+
+### 📈 Equity curve
+
+<database-chart by="title" chart="area" db="dpibq1upm0" measure="sum" show="running" value="4813xy313n"/>
+
+</column>
+
+</columns>
+
+<columns>
+
+<column>
+
+### Points per trade (lot size taken out)
+
+<database-chart by="title" chart="bar" db="dpibq1upm0" measure="sum" value="z70n8q8jwu"/>
+
+</column>
+
+<column>
+
+### Result as % of balance
+
+<database-chart by="title" chart="bar" db="dpibq1upm0" measure="sum" value="b3vb32rhb2"/>
+
+</column>
+
+</columns>
+
+---
+
+## 🗂️ Jun–Jul 2026 in detail
+
+<callout background="gray" icon="ℹ️">
+
+The charts and trade log from here down read the Jun–Jul trades (T01–T21) in [forex trading journal](page:p6h3o0i29k). They stay on that data because the Oct–Nov export has **no stop loss, planned R:R, setup or emotion columns**, so the risk and psychology charts would be empty. Add those columns to the next export and these blocks can be pointed at it.
 
 </callout>
 
 <columns>
 
-<column width=0.4025>
+<column width=0.442>
 
 ### 🎯 Win / loss
 
@@ -23,7 +86,7 @@ The live view of the journal: how the account is doing, where the edge is (or is
 
 </column>
 
-<column width=0.2641>
+<column width=0.2584>
 
 ### 💰 P&L by outcome
 
@@ -31,7 +94,7 @@ The live view of the journal: how the account is doing, where the edge is (or is
 
 </column>
 
-<column width=0.3333>
+<column width=0.2996>
 
 ### ⚖️ Avg P&L per trade
 
@@ -245,3 +308,10 @@ Week of TBD
 - [ ] Fill **Setup / Pattern** and **Emotion** for every trade
 - [ ] Import once only (the last import made three copies of the side sheets)
 - [ ] Point this page's charts and trade log at the new database
+
+**Learned from the Oct–Nov import:**
+
+- [x] Oct–Nov journal imported once (Trade Log, Summary, Weekly) and reviewed
+- [ ] Add **Stop loss**, **Take profit** and **Open time** columns to the MT5 export, so R, planned R:R and hold time can be worked out
+- [ ] Keep explanation notes **outside** the data range (they came in as rows of Trade Log, Weekly and Summary)
+- [ ] Fill **Setup / reason**, **Followed plan?** and **Notes** before importing

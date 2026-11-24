@@ -1,0 +1,20 @@
+{
+  "id": "p9bhxkimim",
+  "order": "a2",
+  "name": "Side",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "q9nelwh1w7",
+        "name": "Sell",
+        "color": "gray"
+      },
+      {
+        "id": "0q15n3rv4w",
+        "name": "Buy",
+        "color": "brown"
+      }
+    ]
+  }
+}

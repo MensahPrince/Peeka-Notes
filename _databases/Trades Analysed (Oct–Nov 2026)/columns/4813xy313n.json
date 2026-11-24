@@ -1,0 +1,9 @@
+{
+  "id": "4813xy313n",
+  "order": "a6",
+  "name": "P/L ($)",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

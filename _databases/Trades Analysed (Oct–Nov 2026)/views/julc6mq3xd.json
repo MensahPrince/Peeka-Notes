@@ -1,0 +1,20 @@
+{
+  "id": "julc6mq3xd",
+  "order": "a0",
+  "name": "All trades",
+  "layout": "table",
+  "query": {
+    "filter": null,
+    "group_by": null,
+    "search": "",
+    "sorts": [
+      {
+        "descending": false,
+        "field": "title"
+      }
+    ]
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

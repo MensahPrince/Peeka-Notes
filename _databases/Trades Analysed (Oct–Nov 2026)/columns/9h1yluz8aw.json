@@ -1,0 +1,20 @@
+{
+  "id": "9h1yluz8aw",
+  "order": "a4",
+  "name": "Lot size",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "lf0t743rgn",
+        "name": "0.10 lots",
+        "color": "gray"
+      },
+      {
+        "id": "aaaaif314u",
+        "name": "0.15 lots",
+        "color": "brown"
+      }
+    ]
+  }
+}

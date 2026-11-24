@@ -1,0 +1,25 @@
+{
+  "id": "5717pq1qq4",
+  "order": "aE",
+  "name": "Came after",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "une94c84ef",
+        "name": "First trade",
+        "color": "gray"
+      },
+      {
+        "id": "iqwkiws98c",
+        "name": "After a win",
+        "color": "brown"
+      },
+      {
+        "id": "1if4413ocm",
+        "name": "After a loss",
+        "color": "orange"
+      }
+    ]
+  }
+}

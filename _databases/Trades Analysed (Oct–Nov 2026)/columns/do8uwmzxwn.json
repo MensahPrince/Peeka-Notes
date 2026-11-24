@@ -1,0 +1,35 @@
+{
+  "id": "do8uwmzxwn",
+  "order": "aC",
+  "name": "Weekday",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "ntr0wsp65b",
+        "name": "Mon",
+        "color": "gray"
+      },
+      {
+        "id": "wc5p69hnba",
+        "name": "Tue",
+        "color": "brown"
+      },
+      {
+        "id": "p9sr55snkc",
+        "name": "Wed",
+        "color": "orange"
+      },
+      {
+        "id": "ihj51kuild",
+        "name": "Thu",
+        "color": "yellow"
+      },
+      {
+        "id": "ix5hfoxckb",
+        "name": "Fri",
+        "color": "green"
+      }
+    ]
+  }
+}

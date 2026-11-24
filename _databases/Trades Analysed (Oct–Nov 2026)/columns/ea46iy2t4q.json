@@ -1,0 +1,9 @@
+{
+  "id": "ea46iy2t4q",
+  "order": "a9",
+  "name": "Drawdown %",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

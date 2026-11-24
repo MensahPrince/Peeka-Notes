@@ -1,0 +1,30 @@
+{
+  "id": "fqkyvzt2x3",
+  "order": "aB",
+  "name": "Session (est.)",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "ricmagm2uz",
+        "name": "Asia",
+        "color": "gray"
+      },
+      {
+        "id": "8gmw71wnpm",
+        "name": "London",
+        "color": "brown"
+      },
+      {
+        "id": "wj5gv6r2w5",
+        "name": "London/NY overlap",
+        "color": "orange"
+      },
+      {
+        "id": "emg6hmw1j8",
+        "name": "New York",
+        "color": "yellow"
+      }
+    ]
+  }
+}
