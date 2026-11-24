@@ -28,7 +28,7 @@ From [XAUUSD\_Trading\_Journal\_Oct-Nov\_2026](page:2zt8nsi3ou), 19 Oct to 18 No
 
 <columns>
 
-<column width=0.35>
+<column width=0.4154>
 
 ### 🎯 Win / loss
 
@@ -36,7 +36,7 @@ From [XAUUSD\_Trading\_Journal\_Oct-Nov\_2026](page:2zt8nsi3ou), 19 Oct to 18 No
 
 </column>
 
-<column width=0.65>
+<column width=0.5846>
 
 ### 📈 Equity curve
 
