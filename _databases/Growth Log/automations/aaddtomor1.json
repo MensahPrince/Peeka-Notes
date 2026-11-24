@@ -1,0 +1,22 @@
+{
+  "id": "aaddtomor1",
+  "order": "a9",
+  "name": "Add tomorrow's row",
+  "condition": "{Score} >= 9",
+  "actions": [
+    {
+      "type": "add_row",
+      "cells": [
+        {
+          "column": "x6s7mffoqy",
+          "formula": "DATEADD({Date}, 1, \"days\")"
+        },
+        {
+          "column": "imo6gzbfp7",
+          "formula": "\"Not started\""
+        }
+      ],
+      "title": "FORMAT(DATEADD({Date}, 1, \"days\"), \"long\")"
+    }
+  ]
+}

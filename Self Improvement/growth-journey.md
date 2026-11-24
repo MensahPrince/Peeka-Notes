@@ -46,7 +46,7 @@ version: 1
 
 <callout background="yellow" icon="⚠️">
 
-**New days:** Peeka's `do` actions can only set cells, notify and alert. They can't create rows yet. The log is pre-filled to Mon 30 Nov. Before then, add the next week's rows yourself (or ask Claude), so there's always a row waiting for tomorrow.
+**New days add themselves:** when a day reaches **9/9**, the *Add tomorrow's row* automation adds the next day, dated and set to *Not started*. This needs a Peeka built on Blockwright `e1a1e7b` or later. The log is pre-filled to November 30, so the chain starts on its own from there. If you miss a day, add the next row by hand (the **+** under the table): give it the date as its title, like *December 3, 2026*, and set its Date.
 
 </callout>
 
