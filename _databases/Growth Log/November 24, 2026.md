@@ -3,7 +3,7 @@ id: wffixyft83
 title: "November 24, 2026"
 order: "a0V"
 created: 2026-11-24T07:35:22Z
-updated: 2026-11-24T11:42:37Z
+updated: 2026-11-24T11:42:48Z
 version: 1
 Date: 2026-11-24
 Status: "In progress"
@@ -34,4 +34,4 @@ John replied, I only baptize with water.  But there exists one amongst you of wh
 
 # John Testifies About Jesus
 
-Then the nextday, Jesus shows up to
+Then the nextday, Jesus shows up to where John worked.
