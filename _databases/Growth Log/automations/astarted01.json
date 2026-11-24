@@ -2,7 +2,7 @@
   "id": "astarted01",
   "order": "a4",
   "name": "Day started",
-  "condition": "AND({Score} >= 1, {Score} < 9)",
+  "condition": "AND({Score} >= 1, {Score} < 8)",
   "actions": [
     {
       "type": "set",

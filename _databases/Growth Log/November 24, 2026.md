@@ -19,7 +19,6 @@ Dev hours: 3
 Project: "Peeka"
 SR: true
 SR streak: 1
-Meditate: false
 Sugar g: 0
 Sugary drinks: 0
 Sugar sources: ["Cereal"]

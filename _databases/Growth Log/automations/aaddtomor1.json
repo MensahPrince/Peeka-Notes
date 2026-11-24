@@ -2,7 +2,7 @@
   "id": "aaddtomor1",
   "order": "a9",
   "name": "Add tomorrow's row",
-  "condition": "{Score} >= 9",
+  "condition": "{Score} >= 8",
   "actions": [
     {
       "type": "add_row",

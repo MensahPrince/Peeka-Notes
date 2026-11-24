@@ -7,7 +7,7 @@ version: 1
 
 <callout background="blue" icon="📌">
 
-<b>One row a day in the </b>[**Growth Log**](page:o9mr418pfx)**.** Fill it in through the day. Automations tick habits, update the Status and tell you when the day is done. A perfect day is **9/9**.
+<b>One row a day in the </b>[**Growth Log**](page:o9mr418pfx)**.** Fill it in through the day. Automations tick habits, update the Status and tell you when the day is done. A perfect day is **8/8**.
 
 </callout>
 
@@ -15,14 +15,13 @@ version: 1
 
 <column>
 
-### The 9 daily wins
+### The 8 daily wins
 
 - [ ] 🏋️ **Gym**: 30+ min (auto-ticks from *Gym min*)
 - [ ] 📖 **Reading**: 10+ pages (auto from *Pages*)
 - [ ] ✍️ **Writing**: 300+ words. Click the day's title to open its page and write there; *Words* counts them as you type and ticks Writing at 300.
 - [ ] 💻 **Project Dev**: 1+ hour (auto from *Dev hours*)
 - [ ] 🛡️ **SR**: held today
-- [ ] 🧘 **Meditate**
 - [ ] 🍬 **Sugar ≤ 36 g** (counts only once you log *Sugar g*)
 - [ ] 😴 **Sleep ≥ 7 h**
 - [ ] 💧 **Water ≥ 2.5 L**
@@ -35,7 +34,7 @@ version: 1
 
 - **Numbers tick the box**: log 45 *Gym min* and *Gym* ticks itself. The same goes for Pages, Words and Dev hours.
 - **Day started**: the first win moves Status to *In progress*.
-- **Day complete**: 9/9 sets Status to *Complete* and notifies you, with your *Tomorrow's focus*.
+- **Day complete**: 8/8 sets Status to *Complete* and notifies you, with your *Tomorrow's focus*.
 - **Sugar over limit**: more than 36 g raises an alert.
 - **SR milestone**: a notification every 7 days of *SR streak*.
 - **Low sleep**: under 6 h sends a warning.
@@ -46,7 +45,7 @@ version: 1
 
 <callout background="yellow" icon="⚠️">
 
-**New days add themselves:** when a day reaches **9/9**, the *Add tomorrow's row* automation adds the next day, dated and set to *Not started*. This needs a Peeka built on Blockwright `e1a1e7b` or later. The log is pre-filled to November 30, so the chain starts on its own from there. If you miss a day, add the next row by hand (the **+** under the table): give it the date as its title, like *December 3, 2026*, and set its Date.
+**New days add themselves:** when a day reaches **8/8**, the *Add tomorrow's row* automation adds the next day, dated and set to *Not started*. This needs a Peeka built on Blockwright `e1a1e7b` or later. The log is pre-filled to November 30, so the chain starts on its own from there. If you miss a day, add the next row by hand (the **+** under the table): give it the date as its title, like *December 3, 2026*, and set its Date.
 
 </callout>
 
@@ -66,7 +65,7 @@ version: 1
 
 ### Habits hit per week
 
-<database-chart by="x6s7mffoqy" chart="grouped" colors="color" db="c5x394veib" measure="sum" unit="week" values="xh5uk5hx87,o2c28427uq,x3nacw9d3u,yam9yzfeic,1llx71vinb,jgk98dy463"/>
+<database-chart by="x6s7mffoqy" chart="grouped" colors="color" db="c5x394veib" measure="sum" unit="week" values="xh5uk5hx87,o2c28427uq,x3nacw9d3u,yam9yzfeic,1llx71vinb"/>
 
 <columns>
 

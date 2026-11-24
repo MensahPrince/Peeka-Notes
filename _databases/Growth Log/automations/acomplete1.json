@@ -2,7 +2,7 @@
   "id": "acomplete1",
   "order": "a5",
   "name": "Day complete",
-  "condition": "{Score} >= 9",
+  "condition": "{Score} >= 8",
   "actions": [
     {
       "type": "set",
@@ -11,7 +11,7 @@
     },
     {
       "type": "notify",
-      "title": "🔥 {Day} complete: 9/9",
+      "title": "🔥 {Day} complete: 8/8",
       "body": "Day closed. Open the next row. Tomorrow's focus: {Tomorrow's focus}"
     }
   ]

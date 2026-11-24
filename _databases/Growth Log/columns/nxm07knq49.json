@@ -4,7 +4,7 @@
   "name": "Score %",
   "kind": {
     "type": "formula",
-    "expression": "ROUND({Score}/9*100,0)",
+    "expression": "ROUND({Score}/8*100,0)",
     "format": "plain"
   }
 }

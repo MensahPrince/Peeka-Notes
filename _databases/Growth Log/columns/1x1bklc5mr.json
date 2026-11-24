@@ -4,7 +4,7 @@
   "name": "Score",
   "kind": {
     "type": "formula",
-    "expression": "IF({Gym},1,0)+IF({Reading},1,0)+IF({Writing},1,0)+IF({Project Dev},1,0)+IF({SR},1,0)+IF({Meditate},1,0)+IF(AND(NOT(EMPTY({Sugar g})),{Sugar g}<=36),1,0)+IF({Sleep h}>=7,1,0)+IF({Water L}>=2.5,1,0)",
+    "expression": "IF({Gym},1,0)+IF({Reading},1,0)+IF({Writing},1,0)+IF({Project Dev},1,0)+IF({SR},1,0)+IF(AND(NOT(EMPTY({Sugar g})),{Sugar g}<=36),1,0)+IF({Sleep h}>=7,1,0)+IF({Water L}>=2.5,1,0)",
     "format": "plain"
   }
 }
