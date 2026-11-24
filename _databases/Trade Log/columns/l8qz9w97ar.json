@@ -1,0 +1,9 @@
+{
+  "id": "l8qz9w97ar",
+  "order": "a8",
+  "name": "Balance ($)",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

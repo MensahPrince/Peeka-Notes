@@ -1,0 +1,8 @@
+{
+  "id": "p2id5i4oli",
+  "order": "a1",
+  "name": "Input: deposit shown in MT5 history",
+  "kind": {
+    "type": "string"
+  }
+}

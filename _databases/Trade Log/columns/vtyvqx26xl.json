@@ -1,0 +1,8 @@
+{
+  "id": "vtyvqx26xl",
+  "order": "a0",
+  "name": "Closed (broker time)",
+  "kind": {
+    "type": "datetime"
+  }
+}

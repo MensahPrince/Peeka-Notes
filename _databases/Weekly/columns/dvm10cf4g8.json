@@ -1,0 +1,9 @@
+{
+  "id": "dvm10cf4g8",
+  "order": "a4",
+  "name": "Losses",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

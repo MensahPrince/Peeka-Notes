@@ -1,0 +1,9 @@
+{
+  "id": "flgln5lmr7",
+  "order": "aA",
+  "name": "Drawdown ($)",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "wvon3r27ub",
+  "order": "a3",
+  "name": "Entry",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

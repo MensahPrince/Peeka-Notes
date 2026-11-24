@@ -1,0 +1,9 @@
+{
+  "id": "2h0197vzjd",
+  "order": "a4",
+  "name": "Exit",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "ibs6pxjuus",
+  "order": "a9",
+  "name": "Peak ($)",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

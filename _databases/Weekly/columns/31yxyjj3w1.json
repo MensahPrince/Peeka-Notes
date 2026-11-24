@@ -1,0 +1,9 @@
+{
+  "id": "31yxyjj3w1",
+  "order": "a3",
+  "name": "Wins",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

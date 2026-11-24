@@ -1,0 +1,9 @@
+{
+  "id": "74j4ncjrfk",
+  "order": "a6",
+  "name": "Balance at end ($)",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

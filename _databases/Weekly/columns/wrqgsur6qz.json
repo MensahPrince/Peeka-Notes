@@ -1,0 +1,9 @@
+{
+  "id": "wrqgsur6qz",
+  "order": "a5",
+  "name": "Net P/L ($)",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

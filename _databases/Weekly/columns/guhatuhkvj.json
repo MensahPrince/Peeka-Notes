@@ -1,0 +1,9 @@
+{
+  "id": "guhatuhkvj",
+  "order": "a2",
+  "name": "Trades",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

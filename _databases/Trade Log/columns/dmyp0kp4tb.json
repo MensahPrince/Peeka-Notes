@@ -1,0 +1,9 @@
+{
+  "id": "dmyp0kp4tb",
+  "order": "aB",
+  "name": "Drawdown %",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}
