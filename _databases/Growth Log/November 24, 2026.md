@@ -18,7 +18,7 @@ Project: "Other"
 Sugar g: 0
 Sugary drinks: 0
 Sugar sources: ["Cereal"]
-fired: ["agymauto01", "astarted01"]
+fired: ["agymauto01", "astarted01", "awriteaut1"]
 ---
 
 # Reading Session

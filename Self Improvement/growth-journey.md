@@ -19,7 +19,7 @@ version: 1
 
 - [ ] 🏋️ **Gym**: 30+ min (auto-ticks from *Gym min*)
 - [ ] 📖 **Reading**: 10+ pages (auto from *Pages*)
-- [ ] ✍️ **Writing**: 300+ words (auto from *Words*)
+- [ ] ✍️ **Writing**: 300+ words. Click the day's title to open its page and write there; *Words* counts them as you type and ticks Writing at 300.
 - [ ] 💻 **Project Dev**: 1+ hour (auto from *Dev hours*)
 - [ ] 🛡️ **SR**: held today
 - [ ] 🧘 **Meditate**

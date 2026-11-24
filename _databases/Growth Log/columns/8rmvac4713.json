@@ -3,7 +3,6 @@
   "order": "aB",
   "name": "Words",
   "kind": {
-    "type": "number",
-    "format": "plain"
+    "type": "page_words"
   }
 }
