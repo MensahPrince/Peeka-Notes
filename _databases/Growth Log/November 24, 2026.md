@@ -3,7 +3,7 @@ id: wffixyft83
 title: "November 24, 2026"
 order: "a0V"
 created: 2026-11-24T07:35:22Z
-updated: 2026-11-24T12:26:10Z
+updated: 2026-11-24T16:04:26Z
 version: 1
 Date: 2026-11-24
 Status: "In progress"
@@ -14,11 +14,17 @@ Reading: true
 Pages: 2
 Book: "Bible: 1st John c1&2"
 Writing: true
-Project: "Other"
+Project Dev: true
+Dev hours: 3
+Project: "Peeka"
+SR: true
+SR streak: 1
 Sugar g: 0
 Sugary drinks: 0
 Sugar sources: ["Cereal"]
-fired: ["agymauto01", "astarted01", "awriteaut1"]
+Sleep h: 8
+Water L: 0.5
+fired: ["adevauto01", "agymauto01", "astarted01", "awriteaut1"]
 ---
 
 # Reading Session
