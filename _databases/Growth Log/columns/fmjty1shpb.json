@@ -3,7 +3,7 @@
   "order": "a5",
   "name": "Workout",
   "kind": {
-    "type": "select",
+    "type": "multi_select",
     "options": [
       {
         "id": "rx8rvp3uig",
