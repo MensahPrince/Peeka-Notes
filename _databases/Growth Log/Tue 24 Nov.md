@@ -1,6 +1,6 @@
 ---
-id: wffixyft83
-title: "Tue 24 Nov"
+id: p9d2cha4x9gql
+title: "Tue 24 Nov (copy)"
 order: "a0"
 created: 2026-11-24T07:35:22Z
 updated: 2026-11-24T07:35:22Z

@@ -1,6 +1,6 @@
 ---
-id: wvlzpmz3ls
-title: "Thu 26 Nov"
+id: psjw8ye8k8tt6
+title: "Thu 26 Nov (copy)"
 order: "a2"
 created: 2026-11-24T07:35:22Z
 updated: 2026-11-24T07:35:22Z
