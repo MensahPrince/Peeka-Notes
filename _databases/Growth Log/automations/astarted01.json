@@ -1,0 +1,13 @@
+{
+  "id": "astarted01",
+  "order": "a4",
+  "name": "Day started",
+  "condition": "AND({Score} >= 1, {Score} < 9)",
+  "actions": [
+    {
+      "type": "set",
+      "column": "imo6gzbfp7",
+      "text": "In progress"
+    }
+  ]
+}

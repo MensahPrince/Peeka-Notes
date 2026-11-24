@@ -1,0 +1,13 @@
+{
+  "id": "asugarhi01",
+  "order": "a6",
+  "name": "Sugar over limit",
+  "condition": "{Sugar g} > 36",
+  "actions": [
+    {
+      "type": "alert",
+      "title": "🍬 Sugar over limit: {Sugar g} g",
+      "body": "{Day}: over the 36 g daily limit. Sources: {Sugar sources}"
+    }
+  ]
+}

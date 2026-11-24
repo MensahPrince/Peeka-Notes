@@ -1,0 +1,9 @@
+{
+  "id": "ykqa3yjfsy",
+  "order": "aQ",
+  "name": "Weight kg",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

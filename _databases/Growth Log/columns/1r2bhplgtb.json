@@ -1,0 +1,9 @@
+{
+  "id": "1r2bhplgtb",
+  "order": "aK",
+  "name": "Sugary drinks",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

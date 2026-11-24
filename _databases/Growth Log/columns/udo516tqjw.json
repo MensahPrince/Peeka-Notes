@@ -1,0 +1,9 @@
+{
+  "id": "udo516tqjw",
+  "order": "aD",
+  "name": "Dev hours",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "nxm07knq49",
+  "order": "a3",
+  "name": "Score %",
+  "kind": {
+    "type": "formula",
+    "expression": "ROUND({Score}/9*100,0)",
+    "format": "plain"
+  }
+}

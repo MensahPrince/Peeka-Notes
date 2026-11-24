@@ -1,0 +1,13 @@
+{
+  "id": "adevauto01",
+  "order": "a3",
+  "name": "Dev: 1+ hour ticks Project Dev",
+  "condition": "{Dev hours} >= 1",
+  "actions": [
+    {
+      "type": "set",
+      "column": "yam9yzfeic",
+      "text": "yes"
+    }
+  ]
+}

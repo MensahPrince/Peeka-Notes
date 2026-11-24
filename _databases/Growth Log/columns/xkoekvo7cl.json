@@ -1,0 +1,9 @@
+{
+  "id": "xkoekvo7cl",
+  "order": "aR",
+  "name": "Mood",
+  "kind": {
+    "type": "rating",
+    "max": 5
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "agymauto01",
+  "order": "a0",
+  "name": "Gym: 30+ min ticks Gym",
+  "condition": "{Gym min} >= 30",
+  "actions": [
+    {
+      "type": "set",
+      "column": "xh5uk5hx87",
+      "text": "yes"
+    }
+  ]
+}

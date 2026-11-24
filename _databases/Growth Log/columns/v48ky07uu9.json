@@ -1,0 +1,9 @@
+{
+  "id": "v48ky07uu9",
+  "order": "aS",
+  "name": "Energy",
+  "kind": {
+    "type": "rating",
+    "max": 5
+  }
+}

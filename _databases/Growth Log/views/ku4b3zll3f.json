@@ -1,0 +1,22 @@
+{
+  "id": "ku4b3zll3f",
+  "order": "a0",
+  "name": "Log",
+  "layout": "table",
+  "query": {
+    "filter": null,
+    "group_by": null,
+    "search": "",
+    "sorts": [
+      {
+        "descending": true,
+        "field": {
+          "column": "x6s7mffoqy"
+        }
+      }
+    ]
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

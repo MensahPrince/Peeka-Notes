@@ -1,0 +1,10 @@
+{
+  "id": "sma2v7br0b",
+  "order": "aJ",
+  "name": "Sugar OK",
+  "kind": {
+    "type": "formula",
+    "expression": "AND(NOT(EMPTY({Sugar g})),{Sugar g}<=36)",
+    "format": "plain"
+  }
+}

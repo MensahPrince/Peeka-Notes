@@ -1,0 +1,13 @@
+{
+  "id": "awriteaut1",
+  "order": "a2",
+  "name": "Writing: 300+ words ticks Writing",
+  "condition": "{Words} >= 300",
+  "actions": [
+    {
+      "type": "set",
+      "column": "x3nacw9d3u",
+      "text": "yes"
+    }
+  ]
+}

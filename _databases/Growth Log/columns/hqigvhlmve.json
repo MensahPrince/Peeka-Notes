@@ -1,0 +1,9 @@
+{
+  "id": "hqigvhlmve",
+  "order": "a6",
+  "name": "Gym min",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

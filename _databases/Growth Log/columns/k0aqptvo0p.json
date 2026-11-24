@@ -1,0 +1,9 @@
+{
+  "id": "k0aqptvo0p",
+  "order": "aO",
+  "name": "Steps",
+  "kind": {
+    "type": "number",
+    "format": "plain"
+  }
+}

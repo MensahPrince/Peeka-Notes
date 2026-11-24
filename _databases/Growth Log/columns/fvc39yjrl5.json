@@ -1,0 +1,55 @@
+{
+  "id": "fvc39yjrl5",
+  "order": "aL",
+  "name": "Sugar sources",
+  "kind": {
+    "type": "multi_select",
+    "options": [
+      {
+        "id": "yq47ufqd6o",
+        "name": "Soda",
+        "color": "gray"
+      },
+      {
+        "id": "t4hbnxupch",
+        "name": "Juice",
+        "color": "brown"
+      },
+      {
+        "id": "5o3viz4ggt",
+        "name": "Sweets",
+        "color": "orange"
+      },
+      {
+        "id": "98ku1nacw8",
+        "name": "Pastry",
+        "color": "yellow"
+      },
+      {
+        "id": "pcrzph4vmy",
+        "name": "Tea/Coffee sugar",
+        "color": "green"
+      },
+      {
+        "id": "3s11hvho2y",
+        "name": "Sauces",
+        "color": "blue"
+      },
+      {
+        "id": "1t8pwtbytr",
+        "name": "Cereal",
+        "color": "purple"
+      },
+      {
+        "id": "j16pcotu10",
+        "name": "Fruit",
+        "color": "pink"
+      },
+      {
+        "id": "gvecuggirf",
+        "name": "Other",
+        "color": "red"
+      }
+    ]
+  }
+}

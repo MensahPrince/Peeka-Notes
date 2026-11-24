@@ -1,0 +1,13 @@
+{
+  "id": "areadauto1",
+  "order": "a1",
+  "name": "Reading: 10+ pages ticks Reading",
+  "condition": "{Pages} >= 10",
+  "actions": [
+    {
+      "type": "set",
+      "column": "o2c28427uq",
+      "text": "yes"
+    }
+  ]
+}

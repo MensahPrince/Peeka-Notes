@@ -1,0 +1,45 @@
+{
+  "id": "mime9ngyoa",
+  "order": "aE",
+  "name": "Project",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "99vjbqz9fp",
+        "name": "Peeka",
+        "color": "gray"
+      },
+      {
+        "id": "q25q6vcjpy",
+        "name": "Blockwright",
+        "color": "brown"
+      },
+      {
+        "id": "jmsz2sych5",
+        "name": "REMI",
+        "color": "orange"
+      },
+      {
+        "id": "otq0lnzuyw",
+        "name": "Vellum Engine",
+        "color": "yellow"
+      },
+      {
+        "id": "y1mmxt87w9",
+        "name": "Persephone",
+        "color": "green"
+      },
+      {
+        "id": "yh3ksxqmvg",
+        "name": "Diffeomorphic",
+        "color": "blue"
+      },
+      {
+        "id": "uiio0bbv4f",
+        "name": "Other",
+        "color": "purple"
+      }
+    ]
+  }
+}

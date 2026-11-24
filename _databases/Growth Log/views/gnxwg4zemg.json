@@ -1,0 +1,17 @@
+{
+  "id": "gnxwg4zemg",
+  "order": "a1",
+  "name": "Status board",
+  "layout": "board",
+  "query": {
+    "filter": null,
+    "group_by": {
+      "column": "imo6gzbfp7"
+    },
+    "search": "",
+    "sorts": []
+  },
+  "hidden": [],
+  "widths": [],
+  "cover": null
+}

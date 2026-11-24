@@ -1,0 +1,13 @@
+{
+  "id": "alowsleep1",
+  "order": "a8",
+  "name": "Low sleep",
+  "condition": "AND(NOT(EMPTY({Sleep h})), {Sleep h} < 6)",
+  "actions": [
+    {
+      "type": "notify",
+      "title": "😴 Only {Sleep h} h of sleep",
+      "body": "Go to bed early tonight: sleep drives gym, focus and sugar cravings."
+    }
+  ]
+}

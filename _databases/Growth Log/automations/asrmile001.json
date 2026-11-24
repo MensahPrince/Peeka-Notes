@@ -1,0 +1,13 @@
+{
+  "id": "asrmile001",
+  "order": "a7",
+  "name": "SR milestone",
+  "condition": "AND({SR streak} > 0, MOD({SR streak}, 7) == 0)",
+  "actions": [
+    {
+      "type": "notify",
+      "title": "💪 SR: {SR streak} days",
+      "body": "Another week held. Keep going."
+    }
+  ]
+}

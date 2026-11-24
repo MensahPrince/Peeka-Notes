@@ -1,0 +1,55 @@
+{
+  "id": "fmjty1shpb",
+  "order": "a5",
+  "name": "Workout",
+  "kind": {
+    "type": "select",
+    "options": [
+      {
+        "id": "rx8rvp3uig",
+        "name": "Push",
+        "color": "gray"
+      },
+      {
+        "id": "dp047h4dfg",
+        "name": "Pull",
+        "color": "brown"
+      },
+      {
+        "id": "ko2ttg6ete",
+        "name": "Legs",
+        "color": "orange"
+      },
+      {
+        "id": "qco0cswom1",
+        "name": "Upper",
+        "color": "yellow"
+      },
+      {
+        "id": "dbixdpi7fm",
+        "name": "Lower",
+        "color": "green"
+      },
+      {
+        "id": "59ern94x30",
+        "name": "Full body",
+        "color": "blue"
+      },
+      {
+        "id": "fv2qqdntz8",
+        "name": "Cardio",
+        "color": "purple"
+      },
+      {
+        "id": "0z1ai65pjv",
+        "name": "Mobility",
+        "color": "pink"
+      },
+      {
+        "id": "mtwscpq4vg",
+        "name": "Rest",
+        "color": "red"
+      }
+    ]
+  }
+}
