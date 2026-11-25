@@ -3,7 +3,7 @@ id: h8q1jccqc0
 title: "November 25, 2026"
 order: "a1"
 created: 2026-11-24T07:35:22Z
-updated: 2026-11-25T20:38:55Z
+updated: 2026-11-25T20:44:10Z
 version: 1
 Date: 2026-11-25
 Status: "In progress"
@@ -33,4 +33,13 @@ And on the third day there was a wedding. Jesus' mother had been invited, as wel
 After this he went to Capernaum with his mother and his brothers and his disciples, There they stayed for a few days.
 
 
-My observation after this is that when the servants were tasked to fill the six stone jars with water, the bible never said or indicated when exactly it turned to wine. how ever, it had already been turned to wine before the master of the banquet had taken a sip. Id like to use this to illustrate that we do not know when miracles are bound to happen, they just do. when the time and timing is just right. in this case it was between the moment after it was filled to the brim and before the master of the banquet had taken a sip. And it is often instigated by a greater someone. either by me in faith, or by God, the son and holy spirit. But actually
+My observation after this is that when the servants were tasked to fill the six stone jars with water, the bible never said or indicated when exactly it turned to wine. how ever, it had already been turned to wine before the master of the banquet had taken a sip. Id like to use this to illustrate that we do not know when miracles are bound to happen, they just do. when the time and timing is just right. in this case it was between the moment after it was filled to the brim and before the master of the banquet had taken a sip. And it is often instigated by a greater someone. either by me in faith, or by God, the son and holy spirit. But actually, it I find that Jesus' mother had show the greatest faith, when she directed the servants to do what Jesus said. Knowing his directives would manifest into something great.
+
+
+It shows,
+
+- Trust
+- Faith
+
+
+So today as a Christian I emplore myself and anyone reading this that for change to happen as we want , we must have the faith, trust, and courage to invoke change through our LORD the Father, the Son and the Holy Spirit. And it would happen. A
