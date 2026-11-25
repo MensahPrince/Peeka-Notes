@@ -3,7 +3,7 @@ id: wffixyft83
 title: "November 24, 2026"
 order: "a0V"
 created: 2026-11-24T07:35:22Z
-updated: 2026-11-24T22:31:12Z
+updated: 2026-11-25T00:33:50Z
 version: 1
 Date: 2026-11-24
 Status: "Complete"
@@ -23,7 +23,7 @@ Sugar g: 0
 Sugary drinks: 0
 Sugar sources: ["Cereal"]
 Sleep h: 8
-Water L: 0.5
+Water L: 3
 Steps: 500
 Screen h: 68
 Weight kg: 84
@@ -32,7 +32,7 @@ Energy: 3
 Win: "Yes"
 Lesson: "Trading (Oct–Nov review): size lots from the stop (1–2% risk, ~0.03–0.06 lots now), not by habit; never stack two positions after a loss; stop for the day after 2 losses or −3%; no flipping direction within 15 min of a loss; let winners run (the 3 longest runs made all the profit); go easy on Fridays; log setup, plan and notes on every trade."
 "Tomorrow's focus": "re"
-fired: ["adevauto01", "agymauto01", "areadauto1", "astarted01", "awriteaut1"]
+fired: ["aaddtomor1", "acomplete1", "adevauto01", "agymauto01", "areadauto1", "awriteaut1"]
 ---
 
 # Reading Session

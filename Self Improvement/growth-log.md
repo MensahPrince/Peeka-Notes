@@ -6,4 +6,4 @@ sort: 1000
 version: 1
 ---
 
-<database-view db="c5x394veib" full=true view="gnxwg4zemg"/>
+<database-view db="c5x394veib" full=true view="ku4b3zll3f"/>
