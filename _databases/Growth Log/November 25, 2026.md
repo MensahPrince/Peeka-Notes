@@ -3,13 +3,16 @@ id: h8q1jccqc0
 title: "November 25, 2026"
 order: "a1"
 created: 2026-11-24T07:35:22Z
-updated: 2026-11-25T20:44:10Z
+updated: 2026-11-25T20:46:19Z
 version: 1
 Date: 2026-11-25
 Status: "In progress"
 Gym: true
 Workout: ["Full body", "Push", "Lower"]
 Gym min: 90
+Reading: true
+Pages: 1
+Book: "Bible: 1st John c2"
 Writing: true
 Project Dev: true
 Dev hours: 5
@@ -19,7 +22,7 @@ SR streak: 2
 Sugar g: 0
 Sugary drinks: 0
 Sleep h: 4
-Water L: 2
+Water L: 2.5
 Mood: 3
 Energy: 4
 fired: ["adevauto01", "agymauto01", "alowsleep1", "astarted01", "awriteaut1"]
@@ -42,4 +45,4 @@ It shows,
 - Faith
 
 
-So today as a Christian I emplore myself and anyone reading this that for change to happen as we want , we must have the faith, trust, and courage to invoke change through our LORD the Father, the Son and the Holy Spirit. And it would happen. A
+So today as a Christian I emplore myself and anyone reading this that for change to happen as we want , we must have the faith, trust, and courage to invoke change through our LORD the Father, the Son and the Holy Spirit. And it would happen. At the right time, when the timing is just right.

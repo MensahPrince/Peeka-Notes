@@ -3,10 +3,10 @@ id: wffixyft83
 title: "November 24, 2026"
 order: "a0V"
 created: 2026-11-24T07:35:22Z
-updated: 2026-11-25T11:38:31Z
+updated: 2026-11-25T20:45:40Z
 version: 1
 Date: 2026-11-24
-Status: "In progress"
+Status: "Complete"
 Gym: true
 Workout: ["Push", "Legs", "Cardio"]
 Gym min: 150
@@ -14,7 +14,7 @@ Reading: true
 Pages: 10
 Book: "Bible: 1st John c1&2"
 Writing: true
-Project Dev: false
+Project Dev: true
 Dev hours: 3
 Project: "Peeka"
 SR: true
@@ -32,7 +32,7 @@ Energy: 3
 Win: "Yes"
 Lesson: "Trading (Oct–Nov review): size lots from the stop (1–2% risk, ~0.03–0.06 lots now), not by habit; never stack two positions after a loss; stop for the day after 2 losses or −3%; no flipping direction within 15 min of a loss; let winners run (the 3 longest runs made all the profit); go easy on Fridays; log setup, plan and notes on every trade."
 "Tomorrow's focus": "re"
-fired: ["adevauto01", "agymauto01", "areadauto1", "astarted01", "awriteaut1"]
+fired: ["aaddtomor1", "acomplete1", "adevauto01", "agymauto01", "areadauto1", "awriteaut1"]
 ---
 
 # Reading Session
