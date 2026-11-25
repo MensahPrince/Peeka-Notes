@@ -359,6 +359,11 @@
         "id": "26xaphlcix",
         "name": "M60 Solid and Rendered views",
         "color": "pink"
+      },
+      {
+        "id": "qclmg8u4kp",
+        "name": "M61 Drawing ink on the model",
+        "color": "red"
       }
     ]
   }
