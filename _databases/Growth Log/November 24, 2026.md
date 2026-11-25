@@ -32,7 +32,7 @@ Energy: 3
 Win: "Yes"
 Lesson: "Trading (Oct–Nov review): size lots from the stop (1–2% risk, ~0.03–0.06 lots now), not by habit; never stack two positions after a loss; stop for the day after 2 losses or −3%; no flipping direction within 15 min of a loss; let winners run (the 3 longest runs made all the profit); go easy on Fridays; log setup, plan and notes on every trade."
 "Tomorrow's focus": "re"
-fired: ["aaddtomor1", "acomplete1", "adevauto01", "agymauto01", "areadauto1", "awriteaut1"]
+fired: ["aaddtomor1", "acomplete1", "adevauto01", "agymauto01", "areadauto1", "astarted01", "awriteaut1"]
 ---
 
 # Reading Session
