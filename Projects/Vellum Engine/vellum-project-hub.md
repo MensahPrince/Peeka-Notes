@@ -639,3 +639,9 @@ The plan, the comparison and the result are in [Chrome: Cel Metal, Second Round 
 - 📌 **The user's *Anime Rendering Engine* blueprint compared with Vellum:** its architecture, compositor and screen-space lines are Vellum's already. Full comparison: [Anime Blueprint Comparison](page:twet3v9vld).
 - ❓ **Planned from the gaps:** M51 ramps with any number of bands, M52 texture strength and simplification, M53 lines fading with distance, M54 a look panel with presets, M55 highlight and rim thresholds and edge cleanup, M56 cloth folds and pleats, M57 background materials, M58 inverted-hull outlines. 18 tasks in the tracker.
 - 💡 **Ambient light from the world:** the World tab's sky/ground fill is there already. Taking it from Blender's World is about ½ day, from the panorama 1–2 days (about 0.05 ms), ambient occlusion 3–5 days (1–3 ms). **Planned as M59:** the panorama's light stepped into the ramp's bands (4 tasks).
+
+<callout icon="✅">
+
+**2026-11-25: M59 and M60 shipped to main.** The world now lights the shadows: a dark blue background makes a night, with stepped sky/ground ambient light and cel-cut ambient occlusion in the World tab. Each 3D view can switch between **Solid** and **Rendered** (header buttons or `Z`), and Solid skips every pass but geometry, for heavy scenes. Open: GPU timings, Blender add-on properties.
+
+</callout>

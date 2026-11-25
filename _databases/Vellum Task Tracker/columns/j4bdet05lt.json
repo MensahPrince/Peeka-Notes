@@ -354,6 +354,11 @@
         "id": "8i4kzh09p5",
         "name": "M59 World ambient",
         "color": "purple"
+      },
+      {
+        "id": "26xaphlcix",
+        "name": "M60 Solid and Rendered views",
+        "color": "pink"
       }
     ]
   }
