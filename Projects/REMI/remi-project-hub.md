@@ -31,7 +31,9 @@ Reported galamsey sites gathered from news, government and research (12 reports;
 
 **New (2026-11-26): all 914 candidates labelled.** 592 have the galamsey look, 114 are large-scale mines (a new label), and 205 are unsure. Claude made 903 of the labels, so they still need checking, test split first ([REMI M3 Labelled Data Report](page:spbr0bdedd), step 3).
 
-**Next up:** redo the tile split on the labelled mining, then start M4. Check Claude's test-split labels in QGIS, place the five reported villages OSM doesn't know, and send the [REMI Concession Data Request](page:jnd1xbtqpj).
+The tile split is now balanced on the reviewed labels, so every split holds both galamsey and large-scale mining.
+
+**Next up:** start M4 (land classification). Check Claude's 202 test-split labels in QGIS, place the five reported villages OSM doesn't know, and send the [REMI Concession Data Request](page:jnd1xbtqpj).
 
 **Code:** `github.com/MensahPrince/REMI` (git since 2026-11-21).
 

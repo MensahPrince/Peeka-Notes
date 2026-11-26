@@ -137,11 +137,21 @@ Each tile's **mask** file now has **4 bands**: clear, water change, **land class
 
 **Every split now holds riverside galamsey.** **Val:** a north-west corridor and Bogoso. **Test:** another north-west corridor and the southern strip. **Train:** the Tarkwa mine, the Himan–Prestea stretch of the Ankobra (where the July 2025 raid was), and the rest. Three targets can't all be met exactly with only 25 blocks: mining comes out 73 / 9 / 18 %.
 
-<callout background="yellow" icon="⚠️">
+<callout background="green" icon="✅">
 
-**Redo the split once the candidates are reviewed.** It balances on candidates that aren't confirmed yet. After step 3, balance on the patches labelled **mining** instead. `tiles.py` would need a small change to read the `label` column.
+**Split redone on the reviewed labels (2026-11-26).** The old split left **val with no large-scale mining at all** and only 13 % of the galamsey in test. `tiles.py` now balances **galamsey-look** and **large-scale** mining separately, once every candidate has a label. Two more changes: after the random tries it **hill-climbs**, moving one block at a time while that helps, and it gives every split **at least 5 %** of each kind. Large-scale mining sits in very few blocks (one 7.68 km block holds 57 % of it, another 27 %), so 85 / 9 / 5 % is close to the best possible.
 
 </callout>
+
+| Split | Sentinel-2 patches | Mining outlines (either set) | Galamsey (reviewed) | Large-scale (reviewed) | Land |
+| --- | --: | --: | --: | --: | --: |
+| Train | 117 | 10,035 ha (71 %) | 1,112 ha (71 %) | 467 ha (82 %) | 70 % |
+| Val | 23 | 1,302 ha (9 %) | 240 ha (15 %) | 69 ha (12 %) | 14 % |
+| Test | 27 | 2,776 ha (20 %) | 212 ha (14 %) | 31 ha (5 %) | 16 % |
+
+![Split balanced on the reviewed labels (2026-11-26): every split holds galamsey and large-scale mining](_assets/338f2e90677baf9fb74c38ff5a1aa4c3.png)
+
+**Test** is now a western galamsey corridor, Prestea town and the Bogoso mine pits. **Val** is a north-west galamsey corridor and the edge of the Tarkwa mine. 509 candidates changed split; the `split` column was refreshed in place, without touching any labels. **Test holds 202 of Claude's labels (81 of them unsure):** those are the ones to check first.
 
 ---
 
@@ -189,7 +199,7 @@ The groups behave as they should: large-scale sites sit almost entirely inside t
 
 <callout background="yellow" icon="⚠️">
 
-**Claude's labels are a first pass, not ground truth.** They were made at thumbnail size from 10 m images. Before they're used to *measure* a model, check: **(1) the 117 in the test split** (accuracy on unchecked labels flatters the model), then **(2) the 204 unsure**. In QGIS, filter the candidates layer with `"labelled_by" = 'claude' AND "split" = 'test'`. When you change one, set `labelled_by` to `person`. No farms were found: as expected, the crops here stay green.
+**Claude's labels are a first pass, not ground truth.** They were made at thumbnail size from 10 m images. Before they're used to *measure* a model, check: **(1) the 202 in the test split** (after the new split below) (accuracy on unchecked labels flatters the model), then **(2) the 204 unsure**. In QGIS, filter the candidates layer with `"labelled_by" = 'claude' AND "split" = 'test'`. When you change one, set `labelled_by` to `person`. No farms were found: as expected, the crops here stay green.
 
 </callout>
 
