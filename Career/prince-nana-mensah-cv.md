@@ -7,19 +7,19 @@ version: 1
 
 **Software Engineer: Systems, Backend and Healthcare Software**
 
-Accra, Ghana · +233 50 026 0063 · +233 53 046 7958 · mensahp5888@gmail.com
+Accra, Ghana · +233 55 840 3778 · +233 53 046 7958 · mensahp5888@gmail.com
 
-Portfolio: [codemesh3d.vercel.app](https://codemesh3d.vercel.app/) · GitHub: \[add your GitHub link\]
+Portfolio: [codemesh3d.vercel.app](https://codemesh3d.vercel.app/) · GitHub: [github.com/MensahPrince](https://github.com/MensahPrince)
 
 ## Summary
 
-Software engineer who spent a year building software and running IT support at Korle-Bu Teaching Hospital, Ghana's largest referral hospital. Works mostly in Rust, Go and Python. Has built FHIR-based hospital systems in Django and Docker, desktop apps in Rust with Slint and Iced, and a bare-metal x86\_64 kernel. His largest project is Peeka, a local-first workspace app like Notion, which runs on a block-editor engine he also wrote. A management system he built now runs a physiotherapy clinic's daily operations. Looking for a software engineering role in backend, systems or health tech.
+Software engineer who spent a year building software and running IT support at Korle-Bu Teaching Hospital, Ghana's largest referral hospital. Works mostly in Rust, Go and Python. Has built FHIR-based hospital systems in Django and Docker, desktop apps in Rust with Slint and egui, and a bare-metal x86\_64 kernel. His largest project is Peeka, a local-first workspace app like Notion, which runs on a block-editor engine he also wrote. A management system he built now runs a physiotherapy clinic's daily operations. Looking for a software engineering role in backend, systems or health tech.
 
 ## Technical skills
 
 - **Languages:** Rust, Go, Python, SQL, RISC-V assembly
 - **Backend and web:** REST API design, React, Next.js, MySQL, Redis, GoFiber, Actix Web
-- **Desktop and systems:** Slint, Iced, Electron, Tauri; CRDTs (Loro); bare-metal x86\_64 (paging, interrupts, IDT), QEMU
+- **Desktop and systems:** Slint, eGUI; CRDTs (Loro); bare-metal x86\_64 (paging, interrupts, IDT), QEMU
 - **Infrastructure and tools:** Docker, Linux (Fedora, Ubuntu), Git, pnpm, Postman
 - **Healthcare standards:** HL7 FHIR
 - **3D and graphics:** Blender, non-photorealistic (NPR) rendering
