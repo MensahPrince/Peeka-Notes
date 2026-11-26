@@ -62,7 +62,7 @@ touch src/lib.rs
 
 You now have **two crates in one package**. `src/lib.rs` is a library called `shop`, the package name with `-` turned into `_`. `src/main.rs` is a program that can use that library. Cargo builds the library first, then the program.
 
-- [ ] `cargo build` works with an empty `lib.rs`
+- [x] `cargo build` works with an empty `lib.rs`
 
 ### Step 2: add a module file, and see it ignored
 
