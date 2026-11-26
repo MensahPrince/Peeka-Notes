@@ -3,7 +3,7 @@ id: wffixyft83
 title: "November 24, 2026"
 order: "a0V"
 created: 2026-11-24T07:35:22Z
-updated: 2026-11-25T20:45:40Z
+updated: 2026-11-26T08:30:29Z
 version: 1
 Date: 2026-11-24
 Status: "Complete"
@@ -25,7 +25,7 @@ Sugar sources: ["Cereal"]
 Sleep h: 8
 Water L: 3
 Steps: 500
-Screen h: 68
+Screen h: 6.8
 Weight kg: 84
 Mood: 4
 Energy: 3
