@@ -68,17 +68,6 @@ Software engineer who spent a year building software and running IT support at K
 
 Class: 2nd Class Upper.
 
-final-year project title: Design and implementation of
+final-year project title: **Design and Development of A Hospital Management System For Interoperability Using Fast Healthcare Interoperabillity Resource (FHIR).**
 
 **WASSCE (Biological Science), Saint John's School, Sekondi-Takoradi** · 2017 to 2020
-
-## Editing notes (delete before sending)
-
-The CV now leads with a year of hospital experience instead of asking for an internship, and fits on two pages.
-
-- **Changed:** Summary rewritten in third person. Skills grouped, with Python, Go, Docker and FHIR added (Python was in your summary but missing from skills; Go was listed as "Golang"). Soft-skills section removed, since recruiters skip it and your projects show teamwork better. Experience moved above projects. Projects cut from 19 to 11 and grouped by theme.
-- **Removed as too vague or duplicated:** Responsive Web Development, Rust CLI Applications, Django Web Applications, Download Manager UI, PHP client app, Hudly, 3D Modeling (now a skill line).
-- **Fill in:** your exact job title at Korle-Bu, numbers in the bracketed bullets, your GitHub link, and CGPA if it's strong.
-- **Check:** is Jasynthex the same library as jsonpathfinder? If so, use one name and mention it's published.
-- **Consider adding:** REMI, your satellite-imagery system for detecting galamsey and deforestation, once it has a working prototype.
-- **Before sending:** export to PDF, name it Prince\_Mensah\_CV.pdf, and drop the P.O. Box; a city is enough.
