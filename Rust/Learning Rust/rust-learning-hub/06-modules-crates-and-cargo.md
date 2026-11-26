@@ -132,7 +132,7 @@ fn main() {
 
 Run `cargo run`. Here it **is** `shop::`, because `main.rs` is a separate crate using the library from outside.
 
-- [ ] `cargo run` prints `pen cheap? true`
+- [x] `cargo run` prints `pen cheap? true`
 
 ### Step 5: the double `mod` trap
 
@@ -154,7 +154,7 @@ Rust now compiled `items.rs` **twice**: once inside the library (`shop::items::I
 
 ✅ Fix: delete `mod items;` from `main.rs`. **`mod` lines live in `lib.rs` only**, and `main.rs` gets everything through `use shop::...`.
 
-- [ ] I saw the "two different Items" error and know why
+- [x] I saw the "two different Items" error and know why
 
 ### Step 6: private fields
 
