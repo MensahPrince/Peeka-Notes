@@ -30,8 +30,6 @@ Software engineer who spent a year building software and running IT support at K
 
 - Built and maintained software for hospital departments and private healthcare clients, from gathering requirements with clinical staff to deployment.
 - Handled day-to-day IT support across \[number\] departments, fixing hardware, network and application problems for clinical and admin staff.
-- Led troubleshooting on recurring system faults, cutting repeat tickets by \[X%\] / resolution time by \[X hours\].
-- \[Add one specific win, e.g. a system you rolled out, how many users it serves, or a process you automated.\]
 
 **IT Intern, GLICO Group Ltd., Accra** · Sep 2024 to Oct 2024
 
@@ -49,7 +47,7 @@ Software engineer who spent a year building software and running IT support at K
 **Systems programming**
 
 - **Velora\_OS** (Rust, x86\_64): bare-metal OS kernel with paging, CPU exception handling, hardware interrupts and its own test framework, run under QEMU. *In progress.*
-- **Vellum** (Rust): rendering engine that turns 3D scenes into a hand-drawn, anime-style 2D look.
+- **Vellum** (Rust): rendering engine that turns 3D scenes into a hand-drawn, anime-style 2D look through cel shading.
 - **GMV, Git Minimal Version** (Rust): version control system that reimplements Git's object model and core commands.
 
 **Desktop and productivity**
@@ -62,13 +60,15 @@ Software engineer who spent a year building software and running IT support at K
 
 - **Link-Intel** (Go): API that crawls a site, scores each link from 0 to 1 on how likely it is to lead to downloadable media, and downloads it.
 - **Jasynthex** (Go): library that parses large JSON datasets and pulls out key-value paths.
-- **YouScrape:** deployed API that extracts structured data from YouTube.
+- **YouScrape:** API that extracts structured data from YouTube.
 
 ## Education
 
 **BSc Computer Science, Ghana Communication Technology University, Tesano, Accra** · 2021 to 2025
 
-\[Optional: class/CGPA, final-year project title\]
+Class: 2nd Class Upper.
+
+final-year project title: Design and implementation of
 
 **WASSCE (Biological Science), Saint John's School, Sekondi-Takoradi** · 2017 to 2020
 
