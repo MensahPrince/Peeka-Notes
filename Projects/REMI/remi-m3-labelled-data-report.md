@@ -19,7 +19,7 @@ Progress report for **M3 (Labelled data)**: examples of mining scars and land cl
 | --- | --- | --- |
 | 1 · Weak labels | Land classes from ESA WorldCover 2021; mining outlines from Tang & Werner (2023) | ✅ Done 2026-11-21 |
 | 2 · Candidate list | Places green in 2021 but bare now, ranked, for a person to label | ✅ Done 2026-11-21 |
-| 3 · Review in QGIS | Label the candidates: mining, farm, road, settlement … | ⏳ Next (you) |
+| 3 · Review in QGIS | Label the candidates: mining, farm, road, settlement … | ✅ All 914 labelled 2026-11-26 (11 by you, 903 by Claude, to be checked) |
 | 4 · Known galamsey sites | Sites from news, NGO and government reports, to check the labels | ✅ First pass 2026-11-21 |
 
 ---
@@ -145,6 +145,56 @@ Each tile's **mask** file now has **4 bands**: clear, water change, **land class
 
 ---
 
+## ✅ Step 3 · Review results (2026-11-26)
+
+**Method.** You labelled ranks 1–11 in QGIS. Claude labelled the other 903 by eye from side-by-side crops of each patch (the 2015/16 baseline and 2025-02-04, at least 800 m across), then checked the result against the two mining maps. A new column, **`labelled_by`**, says who labelled each row: `person` or `claude`.
+
+<callout icon="🏷️">
+
+**New label: `mining (large-scale)`** for licensed industrial mines: terraced pits, wide haul roads, waste dumps with straight edges, tailings dams. Plain **`mining`** now means the **galamsey look**: ragged patches, ponds, along streams, fast growth. The images can't prove whether a site is legal (that needs the concession data); the label records what the site **looks like**.
+
+</callout>
+
+| Label | You | Claude | Area |
+| --- | --: | --: | --: |
+| mining (galamsey look) | 5 | 587 | 1,564 ha |
+| mining (large-scale) | 5 | 109 | 566 ha |
+| unsure | 1 | 204 | 326 ha |
+| settlement |  | 2 | 2 ha |
+| other |  | 1 | 10 ha |
+
+![All 914 candidates after the review: red galamsey look, purple large-scale mines, yellow unsure](_assets/6bfdc6e6d6267c334d4c45b4ddae1e79.png)
+
+**The pattern is clear.** Galamsey (red) follows the rivers and streams in the north-west and down the Ankobra. Large-scale mining (purple) is the Tarkwa and Damang mines in the south, plus Bogoso and Prestea. The unsure patches (yellow) cluster around towns.
+
+| Group | Inside Maus | Inside Tang & Werner | New water (mean) | Distance to river (median) | Built-up around |
+| --- | --: | --: | --: | --: | --: |
+| mining | 48 % | 33 % | 0\.14 ha | **0 m** | 1 % |
+| mining (large-scale) | **95 %** | **93 %** | 0 ha | 200 m | 4 % |
+| unsure: village edge | 14 % | 18 % | 0\.01 ha | 89 m | **13 %** |
+| unsure: reddish bare soil | 42 % | 33 % | 0\.02 ha | 170 m | 1 % |
+
+The groups behave as they should: large-scale sites sit almost entirely inside the published maps; galamsey sits on the rivers and is the only group with new water, and **half of it lies outside Maus** (cleared since 2019, or missed).
+
+**Why the 205 unsure:**
+
+| Reason in `note` | Patches |
+| --- | --: |
+| Village edge: roofs and bare ground mixed | 99 |
+| Reddish bare soil, no ponds: a farm clearing or fresh workings | 54 |
+| Narrow strip along a road: road works or workings | 15 |
+| Small compact clearing by a road | 15 |
+| New plots laid out on a road grid | 8 |
+| Others (one or two each, e.g. rank 6, a levelled pad with a road grid) | 14 |
+
+<callout background="yellow" icon="⚠️">
+
+**Claude's labels are a first pass, not ground truth.** They were made at thumbnail size from 10 m images. Before they're used to *measure* a model, check: **(1) the 117 in the test split** (accuracy on unchecked labels flatters the model), then **(2) the 204 unsure**. In QGIS, filter the candidates layer with `"labelled_by" = 'claude' AND "split" = 'test'`. When you change one, set `labelled_by` to `person`. No farms were found: as expected, the crops here stay green.
+
+</callout>
+
+---
+
 ## ✋ Step 3 · How to review the candidates in QGIS
 
 **Open the ready-made project:** `~/gitRepo/REMI/remi_labelling.qgz` (double-click it, or in QGIS **Project → Open**). Everything is loaded and coloured.
@@ -180,8 +230,8 @@ Real places from our own 2025 image, exactly as they look in QGIS. Each square i
 |  | What to look for | Label |
 | --- | --- | --- |
 | **Galamsey** (top left) | Cream sand heaps, holes, **green or brown ponds**, ragged shape, on a stream | **mining** |
-| **Industrial mine** (Tarkwa) | **Huge** terraced pit walls like giant steps, wide pale haul roads | **mining** + note "industrial pit" |
-| **Tailings dam** (part of an industrial mine) | A **huge square or rounded pond** of brown or grey mine waste, inside **high white earth walls** with a road along the top. Tens of hectares. Example: **rank 4** | **mining** + note "tailings dam" |
+| **Industrial mine** (Tarkwa) | **Huge** terraced pit walls like giant steps, wide pale haul roads | **mining (large-scale)** |
+| **Tailings dam** (part of an industrial mine) | A **huge square or rounded pond** of brown or grey mine waste, inside **high white earth walls** with a road along the top. Tens of hectares. Example: **rank 4** | **mining (large-scale)** + note "tailings dam" |
 | **Quarry** | **One compact** bright white or grey rock face cut into a hill, **next to a road**. Small next to a mine. ⚠️ The example in the picture is **not certain**: OpenStreetMap calls it a quarry, but Tang & Werner map it as **mining**. Its new edge is **rank 147**; label it **unsure** (note "OSM quarry, Tang mining") unless you can tell. Real quarries are rare in this box | **quarry** (or **unsure**) |
 | **Road** | **Thin line of the same width all along**, smooth curves, runs a long way and **joins places**. Grey (tarmac) or **orange** (dirt) | **road** |
 | **River** | **Winding** band whose width changes, with trees along the banks. ⚠️ In this box the Ankobra is so silted and mined that it often looks like **pale sand**, not water. Tick **Rivers (OSM)** in QGIS to see where it runs | (not a candidate itself; mining *on* it is **mining**) |
@@ -191,7 +241,7 @@ Real places from our own 2025 image, exactly as they look in QGIS. Each square i
 
 <callout icon="💡">
 
-**Everything that belongs to a gold mine is "mining"**: the pit, waste rock dumps, **tailings dams**, haul roads inside the mine, processing plants. **"Quarry" is only for small building-stone or gravel pits.** In the top 30, the **industrial mines around Tarkwa** (south of the box) are ranks **2, 3, 4, 5, 7, 13, 18, 19 and 25** (pits, waste dumps, a tailings dam). **All the others**, including rank 1, are along the rivers in the **north** of the box: **galamsey**. A quick hint: if the patch is near the bottom of the map, think industrial; if it's in the north on a river, think galamsey.
+**Everything that belongs to an industrial gold mine is "mining (large-scale)"**: the pit, waste rock dumps, **tailings dams**, haul roads inside the mine, processing plants. **"Quarry" is only for small building-stone or gravel pits.** In the top 30, the **industrial mines around Tarkwa** (south of the box) are ranks **2, 3, 4, 5, 7, 13, 18, 19 and 25** (pits, waste dumps, a tailings dam). **All the others**, including rank 1, are along the rivers in the **north** of the box: **galamsey**. A quick hint: if the patch is near the bottom of the map, think industrial; if it's in the north on a river, think galamsey.
 
 **Road or mined stream?** Ask two questions. *Does it keep the same width?* Roads do; mined streams bulge and narrow. *Does it connect two places?* Roads do; mined streams follow the valley bottom and end in blobs of sand. Tick **Roads (OSM)** or **Rivers (OSM)** in QGIS: if an OSM road runs along it, it's a road.
 
@@ -247,11 +297,12 @@ Real places from our own 2025 image, exactly as they look in QGIS. Each square i
 
 | Label | What it looks like |
 | --- | --- |
-| **mining** | **All gold mining**, illegal galamsey and big legal mines alike (legality comes later, from the concession data). Galamsey: pits, sand heaps, coloured ponds, ragged shape, along a stream. Industrial (e.g. the Tarkwa mine): huge terraced pits, wide haul roads, tailings dams; add "industrial pit" in `note` |
+| **mining** | Gold mining with the **galamsey look**: pits, sand heaps, coloured ponds, ragged shape, along a stream |
+| **mining (large-scale)** | Industrial mines (e.g. Tarkwa): huge terraced pits, wide haul roads, waste dumps, tailings dams, plant. *Added 2026-11-26.* Legality still comes later, from the concession data |
 | **farm** | Neat rectangle, even brown, tan or burnt surface, near a village, no ponds |
 | **road** | Long, thin, steady-width line joining places |
 | **settlement** | Roofs: small bright or grey squares packed together, with streets. Also new building plots at a village edge |
-| **quarry** | Stone, gravel or sand dug **for building**: usually small, by a road or town. ⚠️ **Not** the big terraced gold pits near Tarkwa: those are **mining** (note "industrial pit") |
+| **quarry** | Stone, gravel or sand dug **for building**: usually small, by a road or town. ⚠️ **Not** the big terraced gold pits near Tarkwa: those are **mining (large-scale)** |
 | **cloud/shadow** | White puff, or a dark patch beside one |
 | **other** | You know what it is but it fits nothing above: say what in `note` |
 | **unsure** | You can't tell: say why in `note` |
@@ -328,8 +379,9 @@ All in `~/gitRepo/REMI/`. Code is in git (`github.com/MensahPrince/REMI`); `data
 | `data/labels/<grid>_mining.tif` | 1 = inside a Tang & Werner outline |
 | `data/labels/mining_tang2023.gpkg` | The 170 mining outlines that touch the box, in UTM 30N |
 | `data/labels/mining_maus2022.gpkg`, `<grid>_mining_maus.tif` | The 28 Maus et al. outlines that touch the box, and their mask (1 = inside). Source file: `data/raw/external/maus2022/global_mining_polygons_v2.gpkg` |
-| `remi_labelling.qgz`, `make_qgis_project.py` | The QGIS project for labelling, and the script that builds it (`QT_QPA_PLATFORM=offscreen /usr/bin/python3 make_qgis_project.py`; it uses the system Python, which has QGIS, not `.venv`). The project isn't in git: rebuild it on another machine |
-| `data/labels/candidates_s2.gpkg` | The 914 candidates with `area_ha`, `new_since_2024`, `river_m`, `road_m`, `mining_tw2023`, `new_water_ha`, `split`, `rank`, and the empty `label` and `note` |
+| `remi_labelling.qgz`, `make_qgis_project.py` | The QGIS project for labelling, and the script that builds it (`QT_QPA_PLATFORM=offscreen /usr/bin/python3 make_qgis_project.py`; it uses the system Python, which has QGIS, not `.venv`). The project is in git since 2026-11-21, with your saved changes: don't rebuild it from scratch |
+| `data/labels/candidates_s2.gpkg` | The 914 candidates with `area_ha`, `new_since_2024`, `river_m`, `road_m`, `mining_tw2023`, `new_water_ha`, `split`, `rank`, `label`, `note` and `labelled_by` (person or claude). Backups from before each change on 2026-11-26: `candidates_s2.backup-2026-11-26*.gpkg` |
+| `previews/candidates_labelled.png` | The map of labels above |
 | `previews/labels_s2_overview.png`, `candidates_s2_top6.png` | The pictures above |
 | `reported_sites.py` | Places the reported sites and measures what's within 2 km. The reports themselves are listed in the script (`REPORTS`), so add new ones there |
 | `data/labels/reported_sites.gpkg` | One point per report and place: date, what, source, URL, how precise, and candidate and mining area within 2 km. Unlocated reports have no geometry |
