@@ -397,7 +397,8 @@ impl Light {
     fn next(self) -> Light {
         match self {
             Light::Red => Light::Green,
-            // …the other two
+            Light::Green => Light::Yellow,
+            Light::Yellow => Light::Red,
         }
     }
 }
