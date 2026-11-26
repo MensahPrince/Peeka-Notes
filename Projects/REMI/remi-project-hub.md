@@ -37,7 +37,17 @@ The tile split is now balanced on the reviewed labels, so every split holds both
 
 **M4 v2 (same day):** with the labels fixed (a chip-label bug, and 347 chips reviewed), test mining F1 is **0.72** and it now beats the linear baseline (0.65). Most of the gain came from the labels.
 
-**Next up:** M5, change detection. Check Claude's 202 test-split labels in QGIS, place the five reported villages OSM doesn't know, and send the [REMI Concession Data Request](page:jnd1xbtqpj).
+<callout background="blue" icon="⏸️">
+
+**Paused 2026-11-26.** Everything is pushed to GitHub (`main` = `8e8fb14`). **To pick up:**
+
+1. **Settle the test labels.** You went through Claude's 202 test-split labels in QGIS, but no changes reached `candidates_s2.gpkg`. Either you agreed with all of them (then set `labelled_by` to `person` on them), or the edits weren't saved (redo them and press **Save Edits**).
+1. If any labels changed: rerun `landclass.py prepare` and `train` (\~35 min).
+1. **Start M5, change detection**: a Siamese ResNet on before/after chips, against an NDVI-drop baseline.
+
+</callout>
+
+**Then:** check Claude's 202 test-split labels in QGIS, place the five reported villages OSM doesn't know, and send the [REMI Concession Data Request](page:jnd1xbtqpj).
 
 **Code:** `github.com/MensahPrince/REMI` (git since 2026-11-21).
 
