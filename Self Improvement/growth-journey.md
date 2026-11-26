@@ -91,7 +91,7 @@ version: 1
 
 <columns>
 
-<column>
+<column width=0.4883>
 
 ### Gym minutes per week
 
@@ -99,7 +99,7 @@ version: 1
 
 </column>
 
-<column>
+<column width=0.5117>
 
 ### Training split
 
