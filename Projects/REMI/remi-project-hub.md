@@ -33,7 +33,9 @@ Reported galamsey sites gathered from news, government and research (12 reports;
 
 The tile split is now balanced on the reviewed labels, so every split holds both galamsey and large-scale mining.
 
-**Next up:** start M4 (land classification). Check Claude's 202 test-split labels in QGIS, place the five reported villages OSM doesn't know, and send the [REMI Concession Data Request](page:jnd1xbtqpj).
+**M4 first result (2026-11-26):** a ResNet-18 labels 160 m chips as forest, other vegetation, bare, built-up or mining. Test accuracy 0.90, mining F1 0.60. That's no better than a linear baseline yet, and most of its "false" mining is real mining the 2021 labels call forest ([REMI M4 Land Classification Report](page:hyxwfpn7xd)).
+
+**Next up:** fix the forest-labelled mining the model found, then retrain. Check Claude's 202 test-split labels in QGIS, place the five reported villages OSM doesn't know, and send the [REMI Concession Data Request](page:jnd1xbtqpj).
 
 **Code:** `github.com/MensahPrince/REMI` (git since 2026-11-21).
 
