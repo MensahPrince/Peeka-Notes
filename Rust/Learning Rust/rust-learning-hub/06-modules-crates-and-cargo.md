@@ -179,7 +179,7 @@ You can fix it in two ways:
 
 <columns>
 
-<column>
+<column width=0.3655>
 
 **A. Make the field `pub`**
 
@@ -191,7 +191,7 @@ Good for plain data with no rules.
 
 </column>
 
-<column>
+<column width=0.6345>
 
 **B. Keep it private and add methods**
 
@@ -605,10 +605,10 @@ For stdin vs file, take a `Box<dyn BufRead>`: `Box::new(io::stdin().lock())` or 
 
 ## Checklist
 
-- [ ] I know `mod` creates a module once (in `lib.rs`) and `use` only shortens paths
-- [ ] I use `crate::` inside the library and the package name in `main.rs`
+- [x] I know `mod` creates a module once (in `lib.rs`) and `use` only shortens paths
+- [x] I use `crate::` inside the library and the package name in `main.rs`
 - [ ] I can lay out a crate across files and folders
-- [ ] I know the visibility levels, that fields need their own `pub`, and use `pub use` for a clean API
+- [x] I know the visibility levels, that fields need their own `pub`, and use `pub use` for a clean API
 - [ ] I can add dependencies, features and dev-dependencies
 - [ ] I can set up a workspace
 
