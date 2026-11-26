@@ -87,7 +87,7 @@ pub mod items;     // "compile src/items.rs as the module `items`"
 
 Add the typo again and this time `cargo build` complains, which proves the file is part of the library now. Remove the typo.
 
-- [ ] I added `pub mod items;` to `lib.rs` and saw the file get compiled
+- [x] I added `pub mod items;` to `lib.rs` and saw the file get compiled
 
 ### Step 3: one module uses another (`crate::`)
 
@@ -115,7 +115,7 @@ error[E0433]: cannot find module or crate `shop` in this scope
 use crate::items::Item;
 ```
 
-- [ ] I saw E0433, then fixed it with `crate::`
+- [x] I saw E0433, then fixed it with `crate::`
 
 ### Step 4: use the library from `main.rs`
 
