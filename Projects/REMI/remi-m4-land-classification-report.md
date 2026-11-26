@@ -13,6 +13,41 @@ Progress report for **M4 (Land classification)**: a model that says what each pi
 
 </callout>
 
+## ✅ v2 (2026-11-26): labels fixed, now it beats the baseline
+
+**What changed.** The v1 results below showed that the labels were the problem, so v2 fixes them and changes nothing in the model:
+
+1. **A bug in the chip labels.** In mining ground, the bare pixels were dropped as stale (WorldCover 2021 green, 2025 bare), so only the green between the pits was left to label the chip, and it came out "forest". Now a chip where stale pixels cover 30 % or more **is not called vegetation**.
+1. **347 chips reviewed by eye**: every chip labelled vegetation that v1 called mining. **243 are mining**, 36 built-up, 12 really vegetation, 56 unsure. Of the 78 in test, **68 are mining**: v1 was mostly right. Kept in `data/labels/chip_review_s2.gpkg` (`labelled_by` = claude), separate from the candidates file.
+1. **Forest and other vegetation merged** into **vegetation**.
+
+| Test | v1 (old labels) | v1 (v2 labels) | **v2** | Linear baseline |
+| --- | --: | --: | --: | --: |
+| Accuracy | 0\.90 | 0\.96 | **0.96** | 0\.96 |
+| Macro F1 | 0\.57 | 0\.70 | **0.70** | 0\.69 |
+| **Mining F1** | 0\.60 | 0\.77 | **0.72** | 0\.65 |
+| Mining precision / recall | 0\.47 / 0.82 | 0\.68 / 0.88 | **0.67 / 0.79** |  |
+| Built-up F1 | 0\.74 | 0\.70 | **0.75** | 0\.65 |
+| Bare ground F1 | 0\.39 | 0\.37 | 0\.35 | **0.47** |
+
+<callout background="yellow" icon="⚖️">
+
+**The fair comparison leaves out the chips reviewed by eye.** They were chosen *because* v1 called them mining, so they flatter v1. Without them (6,275 test chips): **v2 mining F1 0.71, v1 0.68**; macro F1 **0.71 against 0.68**. So most of the jump from v1's 0.60 comes from **fixing the labels**, and v2 adds a little on top.
+
+</callout>
+
+**The ResNet now beats the simple model** on mining (0.72 against 0.65) and built-up (0.75 against 0.65), the two classes that matter for alerts. Bare ground stays weak: only 54 test chips, mostly mine ground at Tarkwa that sits between "bare" and "mining".
+
+![v2 land classes, 2025-02-04, 160 m chips: vegetation, bare ground, built-up, mining](_assets/9b2e6977ac76c98e9e226aff9bef4454.png)
+
+![v2 confusion matrices, val and test (rows = label, columns = prediction)](_assets/a9f3368a168122be772d26b981acff49.png)
+
+**Where v2 still errs on test:** 54 vegetation chips called mining (precision 0.67), and 19 mining chips called built-up (villages built among the workings). Test labels are still mostly Claude's, so check them in QGIS before trusting the last digit.
+
+---
+
+*Below: v1, the first run (kept for the record; its files are `data/models/landclass_v1_*` and `previews/landclass_v1_*`).*
+
 ## Method
 
 `landclass.py` cuts the **2025-02-04 Sentinel-2 image** into **160 m chips** (16 × 16 pixels, five bands) and trains a **ResNet-18** to label each one.
@@ -44,7 +79,7 @@ Why not water, and why 160 m
 
 ## Results
 
-![ResNet-18 land classes for the whole box, 2025-02-04, 160 m chips](_assets/a2a0e8be8c6d62ba7a2d2908d8af883d.png)
+![v1: ResNet-18 land classes for the whole box, 2025-02-04, 160 m chips](_assets/a2a0e8be8c6d62ba7a2d2908d8af883d.png)
 
 **The map makes sense.** Galamsey (magenta) follows the north-west streams and the Ankobra; Prestea, Bogoso and Tarkwa are built-up (red); the Tarkwa mine pit is bare ground (tan), because outside the reviewed patches WorldCover calls it bare.
 
