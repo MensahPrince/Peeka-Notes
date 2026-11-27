@@ -51,7 +51,7 @@ ESA WorldCover 2021 v200 (Zanaga et al., 2022) provides land cover at 10 m. Two 
 ## 3 Methods
 
 ```mermaid
-flowchart LR
+flowchart TD
   A[Sentinel-2 dates] --> B[Cloud mask<br/>OmniCloudMask]
   B --> C[Seam removal and<br/>IR-MAD matching]
   C --> D[2015/16 composite<br/>least hazy first]
