@@ -266,14 +266,14 @@ The final checklist of the architecture notes \[11\] was reviewed with the autho
 - Post-processing is set per shot only, and the shadow bias is a constant, so a few parameters still have no per-object override.
 - Motion vectors ignore the lens, and lamp shadows are limited to 32 atlas tiles per frame.
 - A painting cast from a camera is taken from where the camera stands unanimated. Surfaces the camera does not see take a flat colour, so a large camera move shows flat patches. The painting's transparency can cut into a shape but cannot extend it, cut-out shadows still use the UV-mapped alpha, and brushing in the Paint workspace follows the UVs.
-- Face shadow maps do not yet blend between expressions, so an open mouth or closed eyes keep the neutral face's map.
-- There is no dedicated cloth shading; folds are approximated with painted vertex shadow, proxy normals and edge bands.
+- Face shadow maps do not change with expression; an open mouth or closed eyes keep the neutral face's map. This follows most anime references, which keep one designed face shadow through expressions, and a shot can swap the map where a cut needs another.
+- Cloth folds come from a painted fold mask (M56a, on the branch `m56-cloth`): its red moves the shadow edge and its green marks pleat highlights. Fold direction does not yet follow a painted tangent, and pleats are not found from the mesh.
 - Vellum has been measured only on an integrated Intel GPU; it has not been run on an NVIDIA or AMD GPU.
 - Performance on integrated GPUs is about 30 fps at 1080p for a two-object shot.
 
 ## 8\. Future work
 
-Planned work comprises face-map keys blended by shape-key weight (M34); fold masks and pleat highlights for cloth (M56); the remainder of the timeline (M47c); the workflow baseline and the side-by-side comparison of §6.3; a run on discrete GPUs; and a painting cast from a camera that also cuts shadows. A larger step under consideration is Vellum inside Blender: first as a render engine in the existing add-on, with the core built as a Python extension module that draws Blender's viewport and final renders from Blender's own data, and a fork of Blender with Vellum beside Cycles only if the add-on proves insufficient.
+Planned work comprises the rest of cloth shading, with fold direction from a painted tangent, pleats found from the mesh's creases and fold lines (M56b); the remainder of the timeline (M47c); the workflow baseline and the side-by-side comparison of §6.3; a run on discrete GPUs; and a painting cast from a camera that also cuts shadows. A larger step under consideration is Vellum inside Blender: first as a render engine in the existing add-on, with the core built as a Python extension module that draws Blender's viewport and final renders from Blender's own data, and a fork of Blender with Vellum beside Cycles only if the add-on proves insufficient.
 
 ## 9\. Conclusion
 
