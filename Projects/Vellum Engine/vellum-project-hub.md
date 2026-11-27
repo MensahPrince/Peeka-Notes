@@ -646,10 +646,18 @@ The plan, the comparison and the result are in [Chrome: Cel Metal, Second Round 
 
 </callout>
 
-**2026-11-27 · M48a: paintings cast from a camera** (built on branch `m48a-projection`, not merged yet)
+**2026-11-27 · M48a: paintings cast from a camera** (merged into `main` as `54fb75f` and pushed)
 
 - ✅ **`projection: "Camera"` on a material** casts its image from that camera, as a projector would, instead of laying it by the UVs. From that camera the render is the painting; from near it the painting stays on the surfaces with real parallax, and characters still pass behind and in front.
 - ✅ **Where to set it:** the shot file, **Material › Image › cast from** in the window, and **Cast from** (`vellum_projection`) in the Blender add-on. Surfaces the camera doesn't see get the image's average colour.
 - 📌 **Built as a projector table beside the materials** (its own GPU buffer), so the five shaders that declare the material table are untouched. Strength, simplify, fade and full-size images all still apply.
 - ⚠️ **Not yet tried by hand** on a painted background. Cut-out shadows still use the UVs.
 - 💡 **Later:** Vellum inside Blender, first as a render engine extension (a PyO3 wheel), and a fork only if that falls short. Noted under Later in `milestones.md`.
+
+**2026-11-27 · M56a: cloth folds** (built on branch `m56-cloth`)
+
+- ✅ **A fold mask on the UVs:** red moves the shadow edge (128 leaves it, darker into shadow), so pleat valleys stay dark from any light; green becomes pleat highlights in the highlight colour, only where the key light reaches.
+- ✅ **`underside: true`** paints back faces in shadow, like the inside of a skirt.
+- ✅ **Where to set it:** the shot file, **Material › Cloth** in the window, **Cloth** in the Blender add-on, and a new **Folds** mode in the Paint tab that paints the mask on the model.
+- 📌 **Sample:** `assets/models/pleated-skirt`, a smooth skirt whose 16 pleats live only in its mask. Golden images `folds` and `folds_off`.
+- ❓ **Left for M56b:** directional fold shading from a painted tangent, pleats found from mesh creases, fold lines, a fabric ramp, and a skirt modelled in Blender.
