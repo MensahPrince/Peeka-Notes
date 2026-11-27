@@ -74,6 +74,7 @@ The tile split is now balanced on the reviewed labels, so every split holds both
 - [REMI Tuning Log: How Each Value Was Chosen](page:hrtvqupqy9): every threshold and setting, what it started at, and what changed it
 - [REMI Identify a Place](page:cig1amq06k): `identify.py`, give it a coordinate and get REMI's answer for that 160 m square
 - [REMI Areas: Running the Pipeline on a New Place](page:fpk4rpe5tv): run REMI on any box (first test: Itaituba, Brazil)
+- [REMI Brazil Test: Munduruku Region, Upper Tapajós](page:7q6zbf0s6f): Prestea's models on Brazilian garimpo, 2025 → 2026 (precision 1.00, recall 0.68)
 - [REMI Sources](page:841cvgtq57): every dataset, method, paper and news report used, where it's used and why (for citing)
 - Data sources: below
 
