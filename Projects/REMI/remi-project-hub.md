@@ -37,13 +37,13 @@ The tile split is now balanced on the reviewed labels, so every split holds both
 
 **M4 v2 (same day):** with the labels fixed (a chip-label bug, and 347 chips reviewed), test mining F1 is **0.72** and it now beats the linear baseline (0.65). Most of the gain came from the labels.
 
-<callout background="blue" icon="⏸️">
+**Test labels settled (2026-11-27):** you agreed with all of Claude's test-split labels, so all 202 test candidates are now `labelled_by = person`. No labels changed, so M4 stands.
 
-**Paused 2026-11-26.** Everything is pushed to GitHub (`main` = `8e8fb14`). **To pick up:**
+**M5 first pass (2026-11-27):** a Siamese ResNet-18 flags 160 m chips with new mining between two dates. On clean test chips it gets **F1 0.98**, against 0.95 for a linear model and 0.80 for NDVI drop. But on the full map, two-thirds of its flags are cloud, 2016 haze, or change nobody has labelled ([REMI M5 Change Detection Report](page:56h06s9n5l)).
 
-1. **Settle the test labels.** You went through Claude's 202 test-split labels in QGIS, but no changes reached `candidates_s2.gpkg`. Either you agreed with all of them (then set `labelled_by` to `person` on them), or the edits weren't saved (redo them and press **Save Edits**).
-1. If any labels changed: rerun `landclass.py prepare` and `train` (\~35 min).
-1. **Start M5, change detection**: a Siamese ResNet on before/after chips, against an NDVI-drop baseline.
+<callout background="blue" icon="➡️">
+
+**Next:** (1) mask cloud and haze before alerting; (2) label the \~900 chips with unknown-cause change, so there's an "other clearing" class and a hard test; (3) retrain and compare with the linear model again.
 
 </callout>
 
@@ -69,6 +69,7 @@ The tile split is now balanced on the reviewed labels, so every split holds both
 - [REMI Concession Data Request](page:jnd1xbtqpj): the email asking the Minerals Commission for licence boundaries (draft, not sent)
 - [REMI M3 Labelled Data Report](page:spbr0bdedd): weak labels, the candidate list, how to label it in QGIS, and reported galamsey sites
 - [REMI Mining Maps Explained](page:eezqbdbynt): pictures of the two published mining maps, and what "a pixel is mining" means
+- [REMI M5 Change Detection Report](page:56h06s9n5l): Siamese ResNet on before/after chips, the baselines, and why the map overflags
 - [REMI Sources](page:841cvgtq57): every dataset, method, paper and news report used, where it's used and why (for citing)
 - Data sources: below
 
