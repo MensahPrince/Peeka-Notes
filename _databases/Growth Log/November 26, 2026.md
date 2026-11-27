@@ -3,10 +3,10 @@ id: wvlzpmz3ls
 title: "November 26, 2026"
 order: "a2V"
 created: 2026-11-24T07:35:22Z
-updated: 2026-11-26T20:19:46Z
+updated: 2026-11-27T21:20:26Z
 version: 1
 Date: 2026-11-26
-Status: "In progress"
+Status: "Complete"
 Gym: true
 Workout: ["Legs"]
 Gym min: 40
