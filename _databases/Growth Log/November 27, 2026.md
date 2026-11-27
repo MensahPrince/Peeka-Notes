@@ -3,7 +3,7 @@ id: qw0pb03l88
 title: "November 27, 2026"
 order: "a3V"
 created: 2026-11-24T07:35:22Z
-updated: 2026-11-27T21:25:48Z
+updated: 2026-11-27T21:31:03Z
 version: 1
 Date: 2026-11-27
 Status: "In progress"
@@ -30,3 +30,5 @@ fired: ["adevauto01", "astarted01"]
 # Jesus Teaches Nicodemus
 
 ---
+
+There was a Pharasee, he was named Nicodemus, He was a member of the ruling council. The went to Jesus and said, Teacher, We know you are  a teacher whom has come from God because the
