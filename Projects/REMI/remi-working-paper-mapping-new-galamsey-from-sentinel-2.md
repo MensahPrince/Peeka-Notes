@@ -250,5 +250,6 @@ Appendix A. Detailed results and project pages
 - Land classification, v1 and v2: [REMI M4 Land Classification Report](page:hyxwfpn7xd)
 - Change detection: [REMI M5 Change Detection Report](page:56h06s9n5l)
 - Every dataset, paper and report with licences: [REMI Sources](page:841cvgtq57)
+- How each threshold and setting was chosen: [REMI Tuning Log: How Each Value Was Chosen](page:hrtvqupqy9)
 
 </toggle>
