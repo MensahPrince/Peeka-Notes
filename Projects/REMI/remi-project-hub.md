@@ -73,6 +73,7 @@ The tile split is now balanced on the reviewed labels, so every split holds both
 - [REMI Working Paper: Mapping New Galamsey from Sentinel-2](page:x6ahznsl6e): the study so far (M1 to M5) written up as an academic paper
 - [REMI Tuning Log: How Each Value Was Chosen](page:hrtvqupqy9): every threshold and setting, what it started at, and what changed it
 - [REMI Identify a Place](page:cig1amq06k): `identify.py`, give it a coordinate and get REMI's answer for that 160 m square
+- [REMI Areas: Running the Pipeline on a New Place](page:fpk4rpe5tv): run REMI on any box (first test: Itaituba, Brazil)
 - [REMI Sources](page:841cvgtq57): every dataset, method, paper and news report used, where it's used and why (for citing)
 - Data sources: below
 
