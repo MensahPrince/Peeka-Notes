@@ -645,3 +645,11 @@ The plan, the comparison and the result are in [Chrome: Cel Metal, Second Round 
 **2026-11-25: M59 and M60 shipped to main.** The world now lights the shadows: a dark blue background makes a night, with stepped sky/ground ambient light and cel-cut ambient occlusion in the World tab. Each 3D view can switch between **Solid** and **Rendered** (header buttons or `Z`), and Solid skips every pass but geometry, for heavy scenes. Open: GPU timings, Blender add-on properties.
 
 </callout>
+
+**2026-11-27 · M48a: paintings cast from a camera** (built on branch `m48a-projection`, not merged yet)
+
+- ✅ **`projection: "Camera"` on a material** casts its image from that camera, as a projector would, instead of laying it by the UVs. From that camera the render is the painting; from near it the painting stays on the surfaces with real parallax, and characters still pass behind and in front.
+- ✅ **Where to set it:** the shot file, **Material › Image › cast from** in the window, and **Cast from** (`vellum_projection`) in the Blender add-on. Surfaces the camera doesn't see get the image's average colour.
+- 📌 **Built as a projector table beside the materials** (its own GPU buffer), so the five shaders that declare the material table are untouched. Strength, simplify, fade and full-size images all still apply.
+- ⚠️ **Not yet tried by hand** on a painted background. Cut-out shadows still use the UVs.
+- 💡 **Later:** Vellum inside Blender, first as a render engine extension (a PyO3 wheel), and a fork only if that falls short. Noted under Later in `milestones.md`.
