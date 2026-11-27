@@ -1,8 +1,8 @@
 ---
 id: ckbvimllzp
 title: "🛰️R.E.M.I"
-cover: "_assets/1d26ec77658656976da1028ecbfa497e.jpg"
-cover_position: 13
+cover: "_assets/017fb7a95cf8d45a917dd209818f5bc7.jpg"
+cover_position: 37
 sort: 1000
 version: 1
 ---
